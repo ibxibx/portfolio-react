@@ -1,0 +1,12 @@
+/* src/styles/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles */
+@layer components {
+  .size-full {
+    width: 100%;
+    height: 100%;
+  }
+}
