@@ -3,10 +3,10 @@ import { useMemo } from 'react';
 const About = () => {
   const yearStarted = 2021;
   
-  const getCurrentExperience = useMemo(() => {
+  const getCurrentExperience = () => {
     const currentYear = new Date().getFullYear();
     return currentYear - yearStarted;
-  }, []);
+  };
 
   return (
     <main className="container py-20">
@@ -35,3 +35,5 @@ const About = () => {
     </main>
   );
 };
+
+export default About;

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const WidgetBreadcrumbs = () => {
   const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
 
   const getBreadcrumbs = () => {
     const pathArray = location.pathname.split("/").filter((x) => x);
