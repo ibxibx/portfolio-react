@@ -5,17 +5,18 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-import "./styles/index.css";
-import "./assets/css/decorations.css";
+import './styles/main.css';
+import './styles/decorations.css';
+import './styles/variables.css';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Remove loading state after initial render
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

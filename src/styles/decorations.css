@@ -1,0 +1,47 @@
+/* Existing styles */
+.spotlight-top {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spotlight-bottom {
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Breadcrumb styles */
+.breadcrumbs {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.breadcrumbs a {
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.5;
+}
+
+.glass-panel {
+  @apply bg-neutral-900/50 backdrop-blur-md border-white/10;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  background: linear-gradient(to bottom, transparent, white, transparent);
+  animation: scrollAnimation 3s linear infinite;
+}
+
+@keyframes scrollAnimation {
+  0% { transform: translateY(-100%); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}

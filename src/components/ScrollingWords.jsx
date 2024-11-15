@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { motion } from 'framer-motion';
 
 const ScrollingWords = () => {
   const scrollingTextRef = useRef(null);
@@ -23,8 +24,7 @@ const ScrollingWords = () => {
         ref={scrollingTextRef}
         className="BOX whitespace-nowrap text-[20rem] font-extrabold lowercase leading-none text-[black] opacity-10 md:text-[30rem] xl:text-[40rem]"
       >
-        discipline aspiration faith principles structure self fulfilling
-        prophecy
+        discipline aspiration faith principles achievement
       </span>
     </div>
   );

@@ -4,58 +4,44 @@ import SectionHero from '../components/home/SectionHero';
 import ScrollingWords from '../components/ScrollingWords';
 
 const Home = () => {
-  const spotlight = useRef(null);
+  const spotlightTopRef = useRef(null);
+  const spotlightBottomRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(spotlight.current, {
+    const tl = gsap.timeline();
+    
+    tl.to(spotlightTopRef.current, {
       scale: 0.5,
-      duration: 1,
+      duration: 1.5,
       ease: "power2.inOut",
-      transformOrigin: "center center",
-    });
+    }).to(spotlightBottomRef.current, {
+      scale: 0.7,
+      duration: 1.5,
+      ease: "power2.inOut",
+    }, "<");
+
+    return () => tl.kill();
   }, []);
 
   return (
-    <main className="bg-zinc-900 min-h-svh min-w-full relative">
-      <SectionHero
-        title="Hi, I'm Ian, 
-        a creative developer 
-        with a design background"
-        subtitle="I love solving problems and passionate about building modern web applications"
-      />
+    <main className="bg-black min-h-screen w-full relative overflow-hidden">
+      <SectionHero />
       <ScrollingWords />
-      <div className="absolute inset-0">
+      
+      {/* Top-right spotlight */}
+      <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
         <div
-          className="fixed aspect-square w-full sm:w-3/4 md:w-10/12 lg:w-1/3 xl:min-h-[50%] xl:w-auto xl:min-w-[30%] -right-1/2 -top-8 sm:-right-1/4 sm:-top-20 lg:right-0 lg:top-0 spotlight-top"
-          style={{
-            transform: 'translate(0px, -0.0165%)',
-            bottom: 'unset',
-            top: '0.0165%'
-          }}
-        >
-          <div
-            ref={spotlight}
-            className="size-full rounded-full bg-primary opacity-50 blur-[100px] transition [transform:translate3d(0,0,0)] md:blur-[150px] lg:blur-[100px] xl:blur-[200px]"
-            style={{
-              transform: 'translate3d(0px, 0px, 0px) scale(1, 1)'
-            }}
-          />
-        </div>
+          ref={spotlightTopRef}
+          className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+        />
+      </div>
+
+      {/* Bottom-left spotlight */}
+      <div className="fixed aspect-square w-full xl:w-[800px] -left-1/4 -bottom-1/4">
         <div
-          className="fixed aspect-square w-full sm:w-3/4 md:w-10/12 lg:w-1/3 xl:min-h-[50%] xl:w-auto xl:min-w-[30%] -bottom-8 -left-1/2 sm:-bottom-20 sm:-left-1/4 lg:bottom-0 lg:left-0 spotlight-bottom"
-          style={{
-            transform: 'translate(0px, 0.0165%)',
-            bottom: '0.0165%',
-            top: 'unset'
-          }}
-        >
-          <div
-            className="size-full rounded-full bg-primary opacity-50 blur-[100px] transition [transform:translate3d(0,0,0)] md:blur-[150px] lg:blur-[100px] xl:blur-[200px]"
-            style={{
-              transform: 'translate3d(0px, 0px, 0px) scale(0.7325, 0.7325)'
-            }}
-          />
-        </div>
+          ref={spotlightBottomRef}
+          className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+        />
       </div>
     </main>
   );

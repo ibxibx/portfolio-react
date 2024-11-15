@@ -1,34 +1,27 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./public/index.html"
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#3498db',
+        background: '#0f0f0f',
+        primary: '#4ADE80',
       },
-      minHeight: {
-        'svh': '100svh',
+      fontFamily: {
+        'sans': ['PP Object Sans', 'sans-serif'],
+        'mono': ['PP Neue Machina', 'monospace'],
       },
-      blur: {
-        '100px': '100px',
-        '150px': '150px',
-        '200px': '200px',
+      keyframes: {
+        scrollAnimation: {
+          '0%': { transform: 'translateY(-100%)', opacity: 0 },
+          '15%': { opacity: 1 },
+          '85%': { opacity: 1 },
+          '100%': { transform: 'translateY(100%)', opacity: 0 },
+        }
       },
-    },
+      animation: {
+        scroll: 'scrollAnimation 3s linear infinite',
+      }
+    }
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwindcss-animate')
-  ],
-}
-
-// .eslintrc.js
-module.exports = {
-  extends: ["react-app"],
-  rules: {
-    // Custom rules here
-  }
+  plugins: []
 }
