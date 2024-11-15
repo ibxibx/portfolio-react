@@ -6,6 +6,9 @@ module.exports = {
         background: '#0f0f0f',
         primary: '#4ADE80',
       },
+      backdropBlur: {
+        md: '12px',
+      },
       fontFamily: {
         'sans': ['PP Object Sans', 'sans-serif'],
         'mono': ['PP Neue Machina', 'monospace'],

@@ -1,12 +1,16 @@
 // src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import './styles/index.css'; // Import Tailwind styles
-import './styles/variables.css'; // Your custom variables
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import "./styles/fonts.css";
+import "./styles/main.css";
+import "./styles/variables.css";
+import "./styles/decorations.css";
+import "./styles/index.css"; // Import Tailwind styles
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ScrollingWords = () => {
   const scrollingTextRef = useRef(null);
@@ -8,7 +8,7 @@ const ScrollingWords = () => {
   useEffect(() => {
     gsap.to(".BOX", {
       x: "-100vw",
-      duration: 50,
+      duration: 150,
       ease: "none",
       stagger: 5,
       repeat: -1,
@@ -17,12 +17,12 @@ const ScrollingWords = () => {
 
   return (
     <div
-      className="absolute z-10 inset-0 flex select-none w-full items-center overflow-hidden"
+      className="fixed z-[1] inset-0 flex select-none w-full items-center overflow-hidden pointer-events-none"
       tabIndex={0}
     >
       <span
         ref={scrollingTextRef}
-        className="BOX whitespace-nowrap text-[20rem] font-extrabold lowercase leading-none text-[black] opacity-10 md:text-[30rem] xl:text-[40rem]"
+        className="BOX whitespace-nowrap text-[20rem] font-extrabold lowercase leading-none text-white/5 opacity-10 md:text-[30rem] xl:text-[40rem]"
       >
         discipline aspiration faith principles achievement
       </span>

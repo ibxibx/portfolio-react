@@ -33,7 +33,9 @@
       "react-app",
       "react-app/jest"
     ],
-    "plugins": ["react"]
+    "plugins": [
+      "react"
+    ]
   },
   "browserslist": {
     "production": [
