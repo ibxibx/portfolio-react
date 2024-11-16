@@ -1,62 +1,63 @@
 /* src/styles/fonts.css */
 @font-face {
-  font-family: 'PP Neue Machina';
-  src: url('../assets/fonts/NeueMachina-Regular.woff2') format('woff2'),
-       url('../assets/fonts/NeueMachina-Regular.woff') format('woff');
+  font-family: "PP Neue Machina";
+  src: url("../../src/assets/fonts/NeueMachina-Regular.woff2") format("woff2"),
+    url("../../src/assets/fonts/NeueMachina-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Neue Machina';
-  src: url('../assets/fonts/NeueMachina-Light.woff2') format('woff2'),
-       url('../assets/fonts/NeueMachina-Light.woff') format('woff');
+  font-family: "PP Neue Machina";
+  src: url("../../src/assets/fonts/NeueMachina-Light.woff2") format("woff2"),
+    url("../../src/assets/fonts/NeueMachina-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Neue Machina';
-  src: url('../assets/fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
-       url('../assets/fonts/NeueMachina-Ultrabold.woff') format('woff');
+  font-family: "PP Neue Machina";
+  src: url("../../src/assets/fonts/NeueMachina-Ultrabold.woff2") format("woff2"),
+    url("../../src/assets/fonts/NeueMachina-Ultrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Object Sans';
-  src: url('../assets/fonts/ObjectSans-Regular.woff2') format('woff2'),
-       url('../assets/fonts/ObjectSans-Regular.woff') format('woff');
+  font-family: "PP Object Sans";
+  src: url("../../src/assets/fonts/ObjectSans-Regular.woff2") format("woff2"),
+    url("../../src/assets/fonts/ObjectSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Object Sans';
-  src: url('../assets/fonts/ObjectSans-Heavy.woff2') format('woff2'),
-       url('../assets/fonts/ObjectSans-Heavy.woff') format('woff');
+  font-family: "PP Object Sans";
+  src: url("../../src/assets/fonts/ObjectSans-Heavy.woff2") format("woff2"),
+    url("../../src/assets/fonts/ObjectSans-Heavy.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Object Sans';
-  src: url('../assets/fonts/ObjectSans-Slanted.woff2') format('woff2'),
-       url('../assets/fonts/ObjectSans-Slanted.woff') format('woff');
+  font-family: "PP Object Sans";
+  src: url("../../src/assets/fonts/ObjectSans-Slanted.woff2") format("woff2"),
+    url("../../src/assets/fonts/ObjectSans-Slanted.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PP Object Sans';
-  src: url('../assets/fonts/ObjectSans-HeavySlanted.woff2') format('woff2'),
-       url('../assets/fonts/ObjectSans-HeavySlanted.woff') format('woff');
+  font-family: "PP Object Sans";
+  src: url("../../src/assets/fonts/ObjectSans-HeavySlanted.woff2")
+      format("woff2"),
+    url("../../src/assets/fonts/ObjectSans-HeavySlanted.woff") format("woff");
   font-weight: 800;
   font-style: italic;
   font-display: swap;

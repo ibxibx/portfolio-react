@@ -1,10 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "../../styles/fonts.css";
 
-const SectionHero = ({
-  title = "Junior Developer",
-  subtitle = "Building modern web applications",
-}) => {
+const SectionHero = () => {
+  const title = (
+    <div
+      className="flex flex-col text-[94px] leading-tight"
+      style={{ fontFamily: "PP Object Sans Regular" }}
+    >
+      <span className="text-white">Hi, I'm Ian,</span>
+      <span className="text-white">
+        a <span className="text-green-500">creative</span> developer
+      </span>
+      <span className="text-white">
+        with a <span className="text-green-500">design</span> background
+      </span>
+    </div>
+  );
+
+  const subtitle =
+    "I love solving problems and I bring a combined experience in development and design, which gives me a unique perspective to creating modern user-friendly applications.";
+
   return (
     <section
       className="hero relative flex items-center justify-center"
@@ -12,16 +28,16 @@ const SectionHero = ({
     >
       <div className="container">
         <div className="flex flex-col items-center gap-10 text-center">
-          <motion.h1
-            className="text-4xl font-bold md:text-6xl text-green-500"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             {title}
-          </motion.h1>
+          </motion.div>
           <motion.p
-            className="max-w-2xl text-xl opacity-80"
+            className="max-w-2xl text-[16px] opacity-80"
+            style={{ fontFamily: "PP NeueMachina-Regular", color: "#999999" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}

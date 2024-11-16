@@ -42,7 +42,7 @@ const Layout = ({ children, isLoading }) => {
           {/* Content container */}
           <div className="relative h-full font-['PP_Object_Sans'] text-white">
             {/* Logo in top-left corner square - centered in corner square */}
-            <div className="absolute top-0 left-0 w-10 h-10 flex items-center justify-center">
+            <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center">
               <Link to="/" className="scale-70">
                 <LogoMonogram />
               </Link>

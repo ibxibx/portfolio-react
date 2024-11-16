@@ -2,11 +2,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import "./styles/fonts.css";
-import "./styles/main.css";
-import "./styles/variables.css";
-import "./styles/decorations.css";
-import "./styles/index.css"; // Import Tailwind styles
+import "./styles/fonts.css"; // Load fonts first
+import "./styles/index.css"; // Tailwind base
+import "./styles/variables.css"; // Variables
+import "./styles/decorations.css"; // Decorations and animations
 
 import App from "./App";
 

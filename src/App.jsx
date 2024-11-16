@@ -5,9 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-import './styles/main.css';
-import './styles/decorations.css';
-import './styles/variables.css';
+import "./styles/decorations.css";
+import "./styles/variables.css";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
