@@ -25,7 +25,7 @@ const About = () => {
 
             <div className="space-y-6 text-sm text-white/80">
               <div className="flex gap-4">
-                <span className="text-white/50">01.</span>
+                <span className="text-white/50">1.</span>
                 <p>
                   Recent Career Foundry Full Stack Development graduate with a
                   passion for React development and exploring cutting-edge
@@ -34,7 +34,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-4">
-                <span className="text-white/50">02.</span>
+                <span className="text-white/50">2.</span>
                 <p>
                   Startup entrepreneur who has launched three startups, bringing
                   a unique blend of business acumen to software development
@@ -42,7 +42,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-4">
-                <span className="text-white/50">03.</span>
+                <span className="text-white/50">3.</span>
                 <p>
                   Managed and marketed diverse real estate portfolios across
                   Europe and USA, developing both digital and traditional
@@ -51,7 +51,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-4">
-                <span className="text-white/50">04.</span>
+                <span className="text-white/50">4.</span>
                 <p>
                   Proven track record in building and leading international
                   teams across multiple industries and markets
@@ -59,7 +59,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-4">
-                <span className="text-white/50">05.</span>
+                <span className="text-white/50">5.</span>
                 <p>
                   Tech enthusiast transitioning from successful business
                   ventures to full-stack development, combining entrepreneurial
@@ -68,7 +68,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-4">
-                <span className="text-white/50">06.</span>
+                <span className="text-white/50">6.</span>
                 <p>
                   Currently seeking opportunities to merge business experience
                   with newly acquired technical skills to create innovative
