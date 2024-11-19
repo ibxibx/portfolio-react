@@ -45,7 +45,7 @@ const ProjectBox = ({
             {technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-xs bg-black/30 border border-white/10 rounded-full"
+                className="px-3 py-1 text-xs bg-black/30 border border-white/10 rounded-full text-white/50"
               >
                 {tech}
               </span>
@@ -106,7 +106,7 @@ const Work = () => {
     },
     {
       number: 2,
-      title: "NextChat - A React Native Mobile Chat Application",
+      title: "NextChat - A React Native Mobile Chat App",
       technologies: [
         "JavaScript",
         "React Native",
@@ -120,7 +120,7 @@ const Work = () => {
     },
     {
       number: 3,
-      title: "MeetLink - The PWA for Meetups and Events",
+      title: "MeetLink - A PWA for Meetups and Events",
       technologies: ["JavaScript", "HTML", "CSS"],
       imageNumber: 4,
       githubLink: "https://github.com/ibxibx/meetlink",
