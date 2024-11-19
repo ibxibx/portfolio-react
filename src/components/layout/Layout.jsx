@@ -101,8 +101,31 @@ const Layout = ({ children, isLoading }) => {
               </div>
             </nav>
 
-            {/* Main Content - removed scrollbar */}
-            <main className="absolute top-10 left-10 right-0 bottom-10 overflow-hidden">
+            {/* Main Content - with custom scrollbar */}
+            <main className="absolute top-10 left-10 right-0 bottom-10 overflow-y-auto scrollbar-thin">
+              <style jsx global>{`
+                .scrollbar-thin {
+                  scrollbar-width: thin;
+                  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar {
+                  width: 6px;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-track {
+                  background: transparent;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-thumb {
+                  background-color: rgba(255, 255, 255, 0.3);
+                  border-radius: 3px;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+                  background-color: rgba(255, 255, 255, 0.5);
+                }
+              `}</style>
               <div className="relative h-full p-4">{children}</div>
             </main>
 
