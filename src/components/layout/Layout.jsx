@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Home,
@@ -16,8 +16,8 @@ const Layout = ({ children, isLoading }) => {
   const location = useLocation();
 
   return (
-    <div className="p-4 h-screen bg-black flex items-stretch">
-      <div className="relative w-full">
+    <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
+      <div className="relative w-full min-w-[320px]">
         {/* Main outer frame - thinner lines */}
         <div
           className={`relative w-full h-full rounded-lg ${
@@ -42,7 +42,7 @@ const Layout = ({ children, isLoading }) => {
           {/* Content container */}
           <div className="relative h-full font-['PP_Object_Sans'] text-white">
             {/* Logo in top-left corner square - centered in corner square */}
-            <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center">
+            <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center z-10">
               <Link to="/" className="scale-70">
                 <LogoMonogram />
               </Link>
@@ -56,7 +56,7 @@ const Layout = ({ children, isLoading }) => {
             </div>
 
             {/* Left Navigation Bar - smaller icons */}
-            <nav className="absolute left-0 top-10 bottom-10 w-10 flex flex-col items-center justify-center">
+            <nav className="absolute left-0 top-10 bottom-10 w-10 flex flex-col items-center justify-center z-20">
               <div className="flex flex-col gap-6">
                 <Link
                   to="/"
@@ -104,6 +104,7 @@ const Layout = ({ children, isLoading }) => {
             {/* Main Content - with custom scrollbar */}
             <main className="absolute top-10 left-10 right-0 bottom-10 overflow-y-auto scrollbar-thin">
               <style jsx global>{`
+                /* Custom Scrollbar Styles */
                 .scrollbar-thin {
                   scrollbar-width: thin;
                   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
@@ -130,7 +131,7 @@ const Layout = ({ children, isLoading }) => {
             </main>
 
             {/* Footer - adjusted for thinner frame */}
-            <div className="absolute bottom-0 left-10 right-0 h-10 flex items-center justify-between px-4">
+            <div className="absolute bottom-0 left-10 right-0 h-10 flex items-center justify-between px-4 overflow-x-auto">
               <div className="flex-1 flex items-center justify-center gap-8 text-sm text-white/60">
                 <div className="flex items-center gap-2">
                   <span>Based in</span>
@@ -153,7 +154,7 @@ const Layout = ({ children, isLoading }) => {
               </div>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://linkedin.com/in/avoian"
+                  href="https://linkedin.com/in/avoiann"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-white transition-colors duration-200"
