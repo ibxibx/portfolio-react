@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Spotlight from "../Spotlight";
 import {
   Home,
   User,
@@ -14,9 +15,16 @@ import LogoMonogram from "./LogoMonogram";
 
 const Layout = ({ children, isLoading }) => {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
 
   return (
     <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
+      <Spotlight position="top-right" />
+      <Spotlight position="bottom-left" />
       <div className="relative w-full min-w-[320px]">
         {/* Main outer frame - thinner lines */}
         <div
@@ -185,7 +193,10 @@ const Layout = ({ children, isLoading }) => {
                 >
                   <Instagram size={14} />
                 </a>
-                <button className="ml-4 px-3 py-1 border border-white/20 rounded text-xs hover:bg-white/10 transition-colors duration-200">
+                <button
+                  onClick={handleContactClick}
+                  className="ml-4 px-3 py-1 border border-white/20 rounded text-xs hover:bg-white/10 transition-colors duration-200"
+                >
                   let's-get-in-touch →
                 </button>
               </div>
