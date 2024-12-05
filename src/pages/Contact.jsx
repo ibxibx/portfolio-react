@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +12,16 @@ const Contact = () => {
     agreedToPolicy: false,
   });
 
+  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // To add - integration with the email service
     console.log("Form submitted:", formData);
-    // To add  - email sending logic here
+  };
+
+  const handlePolicyAccept = () => {
+    setFormData((prev) => ({ ...prev, agreedToPolicy: true }));
+    setIsPolicyModalOpen(false);
   };
 
   return (
@@ -108,14 +113,13 @@ const Contact = () => {
             />
             <label htmlFor="privacy" className="text-sm">
               I agree with the terms of the{" "}
-              <Link
-                to="/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsPolicyModalOpen(true)}
                 className="text-primary hover:underline"
               >
                 Privacy Policy
-              </Link>
+              </button>
             </label>
           </div>
 
@@ -127,6 +131,12 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
+
+      <PrivacyPolicyModal
+        isOpen={isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+        onAccept={handlePolicyAccept}
+      />
     </div>
   );
 };
