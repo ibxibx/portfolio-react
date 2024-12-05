@@ -1,7 +1,6 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import SectionHero from '../components/home/SectionHero';
-import ScrollingWords from '../components/ScrollingWords';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import SectionHero from "../components/home/SectionHero";
 
 const Home = () => {
   const spotlightTopRef = useRef(null);
@@ -9,16 +8,20 @@ const Home = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    
+
     tl.to(spotlightTopRef.current, {
       scale: 0.5,
       duration: 1.5,
       ease: "power2.inOut",
-    }).to(spotlightBottomRef.current, {
-      scale: 0.7,
-      duration: 1.5,
-      ease: "power2.inOut",
-    }, "<");
+    }).to(
+      spotlightBottomRef.current,
+      {
+        scale: 0.7,
+        duration: 1.5,
+        ease: "power2.inOut",
+      },
+      "<"
+    );
 
     return () => tl.kill();
   }, []);
@@ -27,8 +30,7 @@ const Home = () => {
     <div className="h-full w-full relative overflow-auto">
       <div className="min-h-full relative">
         <SectionHero />
-        <ScrollingWords />
-        
+
         <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
           <div
             ref={spotlightTopRef}

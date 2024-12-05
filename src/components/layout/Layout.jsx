@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Spotlight from "../Spotlight";
+import ScrollingWords from "../ScrollingWords";
 import {
   Home,
   User,
@@ -50,6 +51,7 @@ const Layout = ({ children, isLoading }) => {
 
   return (
     <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
+      <ScrollingWords />
       <Spotlight position="top-right" />
       <Spotlight position="bottom-left" />
       <div className="relative w-full min-w-[320px]">
@@ -136,7 +138,6 @@ const Layout = ({ children, isLoading }) => {
               </div>
             </nav>
 
-            {/* Main Content - with custom scrollbar */}
             {/* Main Content - with custom scrollbar */}
             <main className="absolute top-10 left-10 right-0 bottom-10 overflow-y-auto scrollbar-thin">
               <style jsx global>{`

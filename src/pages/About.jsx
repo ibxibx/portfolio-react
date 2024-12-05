@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import profile500x500 from "../assets/images/profile500x500.jpg";
 
 const About = () => {
   return (
@@ -96,13 +97,20 @@ const About = () => {
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm text-white/80">
-                  <li>React development</li>
-                  <li>Full-stack technologies</li>
-                  <li>Public speaking</li>
-                  <li>Team leadership</li>
-                  <li>Strategic partnerships</li>
-                  <li>SAAS solutions</li>
-                  <li>Real estate management</li>
+                  <li>React Development</li>
+                  <li>JavaScript</li>
+                  <li>Node.js</li>
+                  <li>API</li>
+                  <li>Angular</li>
+                  <li>HTML and CSS / SCSS</li>
+                  <li>Full-Stack Technologies</li>
+                  <li>Public Speaking</li>
+                  <li>Team Leadership</li>
+                  <li>Web Design</li>
+                  <li>Wireframing</li>
+                  <li>SAAS Solutions</li>
+                  <li>Real Estate Management</li>
+                  <li>Adobe Suite</li>
                 </ul>
               </motion.div>
             </div>
@@ -124,7 +132,7 @@ const About = () => {
                   </div>
                 </div>
                 <img
-                  src="/images/profile500x500.jpg"
+                  src={profile500x500}
                   alt="Ian Baumeister"
                   className="w-full rounded-lg object-cover"
                 />

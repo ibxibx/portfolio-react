@@ -4,22 +4,24 @@ import "../../styles/fonts.css";
 
 const SectionHero = () => {
   const title = (
-    <div
-      className="flex flex-col text-[94px] leading-tight"
-      style={{ fontFamily: "PP Object Sans Regular" }}
-    >
-      <span className="text-white">Hi, I'm Ian,</span>
-      <span className="text-white">
-        a <span className="text-green-500">creative</span> developer
-      </span>
-      <span className="text-white">
-        with a <span className="text-green-500">design</span> background
-      </span>
-    </div>
+    <h1 className="font-['PP_Object_Sans'] text-[96px] leading-tight tracking-[-0.04em]">
+      Hi, I'm Ian,
+      <br />a <span className="text-[#4ADE80]">creative</span> developer
+      <br />
+      with a <span className="text-[#4ADE80]">design</span> background
+    </h1>
   );
 
-  const subtitle =
-    "I love solving problems and I bring a combined experience in development and design, which gives me a unique perspective to creating modern user-friendly applications.";
+  const subtitle = (
+    <p
+      className="max-w-2xl text-[16px] opacity-80"
+      style={{ fontFamily: "PP Neue Machina", color: "#999999" }}
+    >
+      I love solving problems and I bring a combined experience in development
+      and design, which gives me a unique perspective to creating modern
+      user-friendly applications.
+    </p>
+  );
 
   return (
     <section
@@ -35,15 +37,13 @@ const SectionHero = () => {
           >
             {title}
           </motion.div>
-          <motion.p
-            className="max-w-2xl text-[16px] opacity-80"
-            style={{ fontFamily: "PP NeueMachina-Regular", color: "#999999" }}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {subtitle}
-          </motion.p>
+          </motion.div>
           <div className="scroll-line absolute bottom-8 h-12 opacity-30"></div>
         </div>
       </div>

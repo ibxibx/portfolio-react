@@ -1,15 +1,42 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Spotlight = ({ position = "top-right" }) => {
   const spotlightRef = useRef(null);
+  const location = useLocation();
+
+  // Define colors for different pages
+  const getSpotlightColor = () => {
+    switch (location.pathname) {
+      case "/":
+        return "#4ADE80"; // Green
+      case "/work":
+        return "#FF4D4D"; // Red
+      case "/about":
+        return "#4D79FF"; // Blue
+      case "/contact":
+        return "#FFD700"; // Yellow
+      default:
+        return "#4ADE80";
+    }
+  };
+
+  const pulseAnimation = {
+    scale: [1, 1.7, 1],
+    opacity: [0.8, 0.4, 0.8],
+    transition: {
+      duration: 15, // Increased from 7 to 15 seconds
+      ease: [0.4, 0, 0.2, 1], // Custom cubic-bezier for smoother easing
+      repeat: Infinity,
+      repeatType: "reverse", // Added smooth reversal
+    },
+  };
 
   useEffect(() => {
     if (spotlightRef.current) {
-      spotlightRef.current.style.transform =
-        position === "top-right"
-          ? "translate3d(0px, 0px, 0px) scale(0.5, 0.5)"
-          : "translate3d(0px, 0px, 0px) scale(0.7, 0.7)";
+      const baseScale = position === "top-right" ? 0.65 : 0.91;
+      spotlightRef.current.style.transform = `translate3d(0px, 0px, 0px) scale(${baseScale}, ${baseScale})`;
     }
   }, [position]);
 
@@ -34,14 +61,16 @@ const Spotlight = ({ position = "top-right" }) => {
     >
       <motion.div
         ref={spotlightRef}
-        className="size-full rounded-full bg-[#4ADE80]/30 blur-[100px] transition [transform:translate3d(0,0,0)] md:blur-[150px] lg:blur-[100px] xl:blur-[200px]"
+        className="size-full rounded-full blur-[100px] transition [transform:translate3d(0,0,0)] md:blur-[150px] lg:blur-[100px] xl:blur-[200px]"
         data-gsap="spotlight"
         initial={{ scale: 1 }}
-        animate={{ scale: 1 }}
+        animate={pulseAnimation}
         style={{
           translate: "none",
           rotate: "none",
           scale: "none",
+          backgroundColor: getSpotlightColor(),
+          opacity: 0.3,
         }}
       />
     </motion.div>

@@ -6,12 +6,18 @@ const ScrollingWords = () => {
   const scrollingTextRef = useRef(null);
 
   useEffect(() => {
+    const textElement = scrollingTextRef.current;
+    const textWidth = textElement.offsetWidth;
+
     gsap.to(".BOX", {
-      x: "-100vw",
-      duration: 150,
+      x: `-${textWidth}px`, // Using the full width of the text
+      duration: 330,
       ease: "none",
-      stagger: 5,
       repeat: -1,
+      stagger: {
+        each: 0, // No stagger between elements
+        repeat: -1,
+      },
     });
   }, []);
 
@@ -22,9 +28,9 @@ const ScrollingWords = () => {
     >
       <span
         ref={scrollingTextRef}
-        className="BOX whitespace-nowrap text-[20rem] font-extrabold lowercase leading-none text-white/5 opacity-10 md:text-[30rem] xl:text-[40rem]"
+        className="BOX whitespace-nowrap text-[20rem] font-extrabold lowercase leading-none text-black/15 opacity-60 md:text-[30rem] xl:text-[40rem]"
       >
-        discipline aspiration faith principles achievement
+        discipline aspiration achievement
       </span>
     </div>
   );
