@@ -135,36 +135,61 @@ const Layout = ({ children, isLoading }) => {
               </div>
             </nav>
 
-            <main className="absolute top-10 left-10 right-0 bottom-10 overflow-hidden">
-              <div className="relative w-full h-full overflow-auto scrollbar-thin">
-                <div className="min-h-full p-4">{children}</div>
-              </div>
+            {/* Main Content - with custom scrollbar */}
+            {/* Main Content - with custom scrollbar */}
+            <main className="absolute top-10 left-10 right-0 bottom-10 overflow-y-auto scrollbar-thin">
+              <style jsx global>{`
+                /* Custom Scrollbar Styles */
+                .scrollbar-thin {
+                  scrollbar-width: thin;
+                  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar {
+                  width: 6px;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-track {
+                  background: transparent;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-thumb {
+                  background-color: rgba(255, 255, 255, 0.3);
+                  border-radius: 3px;
+                }
+
+                .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+                  background-color: rgba(255, 255, 255, 0.5);
+                }
+              `}</style>
+              <div className="relative h-full p-4">{children}</div>
             </main>
 
             <div className="absolute bottom-0 left-10 right-0">
-              <div className="relative flex items-center justify-between px-4 h-10">
-                <div className="flex-1 flex items-center justify-center gap-8 text-sm text-white/60">
+              <div className="relative flex flex-col lg:flex-row items-center h-auto lg:h-10 px-4 py-4 lg:py-0">
+                {/* Center info section */}
+                <div className="w-full lg:absolute lg:left-1/2 lg:-translate-x-1/2 flex flex-col lg:flex-row items-center gap-4 lg:gap-8 text-sm text-white/60 mb-4 lg:mb-0">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
                     <span className="text-white">Berlin, Germany</span>
                   </div>
-                  <div className="h-4 w-px bg-white/10" />
+                  <div className="hidden lg:block h-4 w-px bg-white/10" />
                   <div className="flex items-center gap-2">
                     <span>Local time</span>
                     <span className="text-white">
                       {new Date().toLocaleTimeString()}
                     </span>
                   </div>
-                  <div className="h-4 w-px bg-white/10" />
+                  <div className="hidden lg:block h-4 w-px bg-white/10" />
                   <div className="flex items-center gap-2">
                     <span>email:</span>
                     <span className="text-white">ian@ianworks.dev</span>
                   </div>
-                  <div className="h-4 w-px bg-white/10" />
+                  <div className="hidden lg:block h-4 w-px bg-white/10" />
                   <span className="text-white">+4917636127937</span>
                 </div>
 
-                <div className="relative flex items-center gap-4">
+                <div className="relative ml-auto flex items-center gap-4">
                   <IconTooltip text="linkedin" position="top">
                     <a
                       href="https://linkedin.com/in/avoiann"
