@@ -16,8 +16,8 @@ import LogoMonogram from "./LogoMonogram";
 const IconTooltip = ({ text, children, position = "right" }) => {
   const tooltipClasses = {
     right:
-      "left-full ml-2 -translate-y-1/2 top-1/2 before:absolute before:left-[-6px] before:top-1/2 before:-translate-y-1/2 before:border-[6px] before:border-transparent before:border-r-white before:rotate-0",
-    top: "bottom-full mb-2 -translate-x-1/2 left-1/2 before:absolute before:left-1/2 before:-translate-x-1/2 before:top-full before:border-[6px] before:border-transparent before:border-t-white",
+      "left-full ml-2 -translate-y-1/2 top-1/2 before:content-[''] before:absolute before:left-[-6px] before:top-1/2 before:-translate-y-1/2 before:border-[6px] before:border-transparent before:border-r-white",
+    top: "bottom-full mb-2 -translate-x-1/2 left-1/2 before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:top-full before:border-[6px] before:border-transparent before:border-t-white",
   };
 
   return (
@@ -29,6 +29,7 @@ const IconTooltip = ({ text, children, position = "right" }) => {
           bg-white text-black text-xs py-2 px-3 rounded
           opacity-0 group-hover:opacity-100 transition-opacity duration-200
           whitespace-nowrap z-[100]
+          before:block
           pointer-events-none
           ${tooltipClasses[position]}
         `}
@@ -166,26 +167,25 @@ const Layout = ({ children, isLoading }) => {
             </main>
 
             <div className="absolute bottom-0 left-10 right-0">
-              <div className="relative flex flex-col lg:flex-row items-center h-auto lg:h-10 px-4 py-4 lg:py-0">
-                {/* Center info section */}
-                <div className="w-full lg:absolute lg:left-1/2 lg:-translate-x-1/2 flex flex-col lg:flex-row items-center gap-4 lg:gap-8 text-sm text-white/60 mb-4 lg:mb-0">
+              <div className="relative flex items-center justify-between px-4 h-10">
+                <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
                     <span className="text-white">Berlin, Germany</span>
                   </div>
-                  <div className="hidden lg:block h-4 w-px bg-white/10" />
+                  <div className="h-4 w-px bg-white/10" />
                   <div className="flex items-center gap-2">
                     <span>Local time</span>
                     <span className="text-white">
                       {new Date().toLocaleTimeString()}
                     </span>
                   </div>
-                  <div className="hidden lg:block h-4 w-px bg-white/10" />
+                  <div className="h-4 w-px bg-white/10" />
                   <div className="flex items-center gap-2">
                     <span>email:</span>
                     <span className="text-white">ian@ianworks.dev</span>
                   </div>
-                  <div className="hidden lg:block h-4 w-px bg-white/10" />
+                  <div className="h-4 w-px bg-white/10" />
                   <span className="text-white">+4917636127937</span>
                 </div>
 

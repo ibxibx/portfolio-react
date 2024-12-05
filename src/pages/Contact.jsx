@@ -108,12 +108,14 @@ const Contact = () => {
             />
             <label htmlFor="privacy" className="text-sm">
               I agree with the terms of the{" "}
-              <a
-                href="/privacy-policy"
+              <Link
+                to="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </label>
           </div>
 
