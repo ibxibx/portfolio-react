@@ -24,26 +24,26 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="bg-black min-h-screen w-full relative overflow-hidden">
-      <SectionHero />
-      <ScrollingWords />
-      
-      {/* Top-right spotlight */}
-      <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
-        <div
-          ref={spotlightTopRef}
-          className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
-        />
-      </div>
+    <div className="h-full w-full relative overflow-auto">
+      <div className="min-h-full relative">
+        <SectionHero />
+        <ScrollingWords />
+        
+        <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
+          <div
+            ref={spotlightTopRef}
+            className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+          />
+        </div>
 
-      {/* Bottom-left spotlight */}
-      <div className="fixed aspect-square w-full xl:w-[800px] -left-1/4 -bottom-1/4">
-        <div
-          ref={spotlightBottomRef}
-          className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
-        />
+        <div className="fixed aspect-square w-full xl:w-[800px] -left-1/4 -bottom-1/4">
+          <div
+            ref={spotlightBottomRef}
+            className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+          />
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 

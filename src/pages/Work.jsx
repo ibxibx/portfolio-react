@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-
-// Import project images (keeping all imports the same)
 import project1 from "../assets/images/project-1.jpg";
 import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/project-3.jpg";
@@ -35,7 +33,6 @@ const ProjectBox = ({
       transition={{ duration: 0.5, delay }}
     >
       <div className="flex h-full">
-        {/* Left side - Content */}
         <div className="flex-1 p-6">
           <div className="mb-2 text-white/50 text-sm">
             {number.toString().padStart(2, "0")}
@@ -53,7 +50,6 @@ const ProjectBox = ({
           </div>
         </div>
 
-        {/* Middle - Image */}
         <a
           href={githubLink}
           target="_blank"
@@ -70,7 +66,6 @@ const ProjectBox = ({
           </div>
         </a>
 
-        {/* Right side - Empty space with year and arrow */}
         <div className="w-[200px] p-6 flex items-start">
           <div className="flex items-center gap-2">
             <span className="text-white/50 text-sm">2024</span>
@@ -155,45 +150,22 @@ const Work = () => {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-thin">
-      <style jsx global>{`
-        /* Custom Scrollbar Styles */
-        .scrollbar-thin {
-          scrollbar-width: thin;
-          scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar {
-          width: 6px;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-track {
-          background: transparent;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-          background-color: rgba(255, 255, 255, 0.3);
-          border-radius: 3px;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-          background-color: rgba(255, 255, 255, 0.5);
-        }
-      `}</style>
-
-      <div className="flex flex-col items-center p-8">
-        <motion.h1
-          className="text-6xl mb-16 font-light"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Projects
-        </motion.h1>
-        <div className="max-w-[1000px] w-full">
-          {projects.map((project, index) => (
-            <ProjectBox key={index} {...project} delay={index * 0.1} />
-          ))}
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="h-full overflow-y-auto scrollbar-thin">
+        <div className="min-h-full flex flex-col items-center p-8">
+          <motion.h1
+            className="text-6xl mb-16 font-light"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Projects
+          </motion.h1>
+          <div className="max-w-[1000px] w-full">
+            {projects.map((project, index) => (
+              <ProjectBox key={index} {...project} delay={index * 0.1} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
