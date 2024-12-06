@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Spotlight from "../Spotlight";
 import ScrollingWords from "../ScrollingWords";
@@ -11,6 +11,8 @@ import {
   Linkedin,
   Instagram,
   Youtube,
+  Menu,
+  X,
 } from "lucide-react";
 import LogoMonogram from "./LogoMonogram";
 
@@ -44,9 +46,11 @@ const IconTooltip = ({ text, children, position = "right" }) => {
 const Layout = ({ children, isLoading }) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleContactClick = () => {
     navigate("/contact");
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -66,12 +70,20 @@ const Layout = ({ children, isLoading }) => {
           }}
         >
           <div className="absolute top-[1px] left-[1px] right-[1px] bottom-[1px] rounded-lg">
-            <div className="absolute left-10 top-0 bottom-0 border-l-[1px] border-white/30" />
+            <div className="absolute left-10 top-0 bottom-0 border-l-[1px] border-white/30 md:block hidden" />
             <div className="absolute top-10 left-0 right-0 border-t-[1px] border-white/30" />
             <div className="absolute bottom-10 left-0 right-0 border-t-[1px] border-white/30" />
           </div>
 
           <div className="relative h-full font-['PP_Object_Sans'] text-white">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="absolute top-1 right-1 p-2 md:hidden z-20 text-white/60 hover:text-white"
+            >
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+
             <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center z-10">
               <Link to="/" className="scale-70">
                 <LogoMonogram />
@@ -84,8 +96,18 @@ const Layout = ({ children, isLoading }) => {
               </span>
             </div>
 
-            <nav className="absolute left-0 top-10 bottom-10 w-10 flex flex-col items-center justify-center z-20">
-              <div className="flex flex-col gap-6">
+            {/* Navigation - Desktop and Mobile */}
+            <nav
+              className={`
+              ${mobileMenuOpen ? "flex" : "hidden"} 
+              md:flex
+              absolute left-0 top-10 bottom-10 w-10 
+              md:flex-col items-center justify-center z-20
+              md:relative md:bg-transparent
+              bg-black/95 w-full md:w-10 p-4 md:p-0
+            `}
+            >
+              <div className="flex md:flex-col gap-6">
                 <IconTooltip text="home" position="right">
                   <Link
                     to="/"
@@ -94,6 +116,7 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Home size={16} />
                   </Link>
@@ -107,6 +130,7 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <User size={16} />
                   </Link>
@@ -120,6 +144,7 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Briefcase size={16} />
                   </Link>
@@ -133,6 +158,7 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Mail size={16} />
                   </Link>
@@ -140,10 +166,9 @@ const Layout = ({ children, isLoading }) => {
               </div>
             </nav>
 
-            {/* Main Content - with custom scrollbar */}
-            <main className="absolute top-10 left-10 right-0 bottom-10 overflow-y-auto scrollbar-thin">
+            {/* Main Content - with custom scrollbar and 1px offset */}
+            <main className="absolute top-[41px] left-10 right-0 bottom-[41px] overflow-y-auto scrollbar-thin">
               <style jsx global>{`
-                /* Custom Scrollbar Styles */
                 .scrollbar-thin {
                   scrollbar-width: thin;
                   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
@@ -169,9 +194,10 @@ const Layout = ({ children, isLoading }) => {
               <div className="relative h-full p-4">{children}</div>
             </main>
 
+            {/* Footer */}
             <div className="absolute bottom-0 left-10 right-0">
-              <div className="relative flex items-center justify-between px-4 h-10">
-                <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8 text-sm text-white/60">
+              <div className="relative flex items-center justify-between px-4 h-10 overflow-x-auto">
+                <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
                     <span className="text-white">Berlin, Germany</span>
@@ -192,7 +218,7 @@ const Layout = ({ children, isLoading }) => {
                   <span className="text-white">+4917636127937</span>
                 </div>
 
-                <div className="relative ml-auto flex items-center gap-4">
+                <div className="relative ml-auto flex items-center gap-4 flex-wrap">
                   <IconTooltip text="linkedin" position="top">
                     <a
                       href="https://linkedin.com/in/avoiann"
