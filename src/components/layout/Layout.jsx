@@ -51,10 +51,12 @@ const Layout = ({ children, isLoading }) => {
 
   return (
     <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
-      <ScrollingWords />
-      <Spotlight position="top-right" />
-      <Spotlight position="bottom-left" />
-      <div className="relative w-full min-w-[320px]">
+      <div className="absolute inset-0 z-[1]">
+        <ScrollingWords />
+        <Spotlight position="top-right" />
+        <Spotlight position="bottom-left" />
+      </div>
+      <div className="relative w-full min-w-[320px] z-[2]">
         <div
           className={`relative w-full h-full rounded-lg ${
             isLoading ? "site-loading" : ""
