@@ -99,15 +99,15 @@ const Layout = ({ children, isLoading }) => {
             {/* Navigation - Desktop and Mobile */}
             <nav
               className={`
-              ${mobileMenuOpen ? "flex" : "hidden"} 
-              md:flex
-              absolute left-0 top-10 bottom-10 w-10 
-              md:flex-col items-center justify-center z-20
-              md:relative md:bg-transparent
-              bg-black/95 w-full md:w-10 p-4 md:p-0
-            `}
+  ${mobileMenuOpen ? "block" : "hidden"} 
+  md:block
+  absolute left-0 top-10 bottom-10 w-10 
+  md:flex md:flex-col md:items-center md:justify-center z-20
+  bg-black/95 md:bg-transparent
+  w-screen md:w-10 p-4 md:p-0
+`}
             >
-              <div className="flex md:flex-col gap-6">
+              <div className="flex md:flex-col gap-6 h-full md:h-auto md:justify-center justify-center items-center">
                 <IconTooltip text="home" position="right">
                   <Link
                     to="/"

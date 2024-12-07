@@ -4,7 +4,7 @@ import "../../styles/fonts.css";
 
 const SectionHero = () => {
   const title = (
-    <h1 className="font-['PP_Object_Sans'] text-[96px] leading-tight tracking-[-0.04em]">
+    <h1 className="font-['PP_Object_Sans'] text-[32px] sm:text-[48px] md:text-[64px] lg:text-[96px] leading-tight tracking-[-0.04em]">
       Hi, I'm Ian,
       <br />a <span className="text-[#4ADE80]">creative</span> developer
       <br />
@@ -14,7 +14,7 @@ const SectionHero = () => {
 
   const subtitle = (
     <p
-      className="max-w-2xl text-[16px] opacity-80"
+      className="mx-auto max-w-[280px] sm:max-w-xl md:max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] opacity-80"
       style={{ fontFamily: "PP Neue Machina", color: "#999999" }}
     >
       I love solving problems and I bring a combined experience in development
@@ -25,15 +25,16 @@ const SectionHero = () => {
 
   return (
     <section
-      className="hero relative flex items-center justify-center"
+      className="hero relative flex items-center justify-center px-4 sm:px-6 md:px-8"
       style={{ height: "calc(100dvh - 6rem)" }}
     >
-      <div className="container">
-        <div className="flex flex-col items-center gap-10 text-center">
+      <div className="container max-w-7xl mx-auto">
+        <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="w-full"
           >
             {title}
           </motion.div>
@@ -41,10 +42,11 @@ const SectionHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-full"
           >
             {subtitle}
           </motion.div>
-          <div className="scroll-line absolute bottom-8 h-12 opacity-30"></div>
+          <div className="scroll-line absolute bottom-8 h-12 opacity-30 hidden md:block"></div>
         </div>
       </div>
 
@@ -85,6 +87,13 @@ const SectionHero = () => {
             bottom: 0;
             opacity: 0;
             top: 100%;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .hero {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
           }
         }
       `}</style>
