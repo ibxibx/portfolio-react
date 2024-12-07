@@ -19,7 +19,7 @@ const About = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex justify-between items-center mb-4 sm:mb-6 border-b border-white/10 pb-2">
-                  <h2 className="text-sm">about-me</h2>
+                  <h2 className="text-2xl font-mono mb-2">about-me</h2>
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                     <div className="w-3 h-3 rounded-full bg-white/20" />
@@ -90,7 +90,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
-                  <h2 className="text-sm">skilled-in</h2>
+                  <h2 className="text-2xl font-mono mb-2">skilled-in</h2>
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                     <div className="w-3 h-3 rounded-full bg-white/20" />
@@ -125,7 +125,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
-                  <h2 className="text-sm">portrait</h2>
+                  <h2 className="text-2xl font-mono mb-2">portrait</h2>
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                     <div className="w-3 h-3 rounded-full bg-white/20" />
@@ -146,7 +146,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
-                  <h2 className="text-sm">where-i-work</h2>
+                  <h2 className="text-2xl font-mono mb-2">where-i-work</h2>
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                     <div className="w-3 h-3 rounded-full bg-white/20" />
@@ -175,7 +175,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
-                  <h2 className="text-sm">me-online</h2>
+                  <h2 className="text-2xl font-mono mb-2">me-online</h2>
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                     <div className="w-3 h-3 rounded-full bg-white/20" />

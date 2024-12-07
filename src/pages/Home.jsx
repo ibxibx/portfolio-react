@@ -27,22 +27,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-full w-full relative overflow-auto">
-      <div className="min-h-full relative">
-        <SectionHero />
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="h-full overflow-y-auto scrollbar-thin">
+        <div className="min-h-full relative">
+          <SectionHero />
 
-        <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
-          <div
-            ref={spotlightTopRef}
-            className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
-          />
-        </div>
+          <div className="fixed aspect-square w-full xl:w-[800px] -right-1/4 -top-1/4">
+            <div
+              ref={spotlightTopRef}
+              className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+            />
+          </div>
 
-        <div className="fixed aspect-square w-full xl:w-[800px] -left-1/4 -bottom-1/4">
-          <div
-            ref={spotlightBottomRef}
-            className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
-          />
+          <div className="fixed aspect-square w-full xl:w-[800px] -left-1/4 -bottom-1/4">
+            <div
+              ref={spotlightBottomRef}
+              className="w-full h-full rounded-full bg-[#4ADE80] opacity-30 blur-[200px]"
+            />
+          </div>
         </div>
       </div>
     </div>
