@@ -142,10 +142,10 @@ const Work = () => {
     },
     {
       number: 6,
-      title: "Pokédex - Pokemon Index App",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      title: "My Portfolio Website in React",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
       imageNumber: 1,
-      githubLink: "https://github.com/ibxibx/pokemon-js-app",
+      githubLink: "https://github.com/ibxibx/portfolio-react",
     },
   ];
 
