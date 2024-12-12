@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, FileText } from "lucide-react";
+import { ArrowUpRight, FileText, X } from "lucide-react";
 import profile500x500 from "../assets/images/profile500x500.jpg";
 import resumePDF from "../assets/docs/Ian Buimistr - Junior Full Stack Developer Resume.pdf";
+import hobbies1 from "../assets/images/hobbies1.jpg";
+import hobbies2 from "../assets/images/hobbies2.jpg";
+import hobbies3 from "../assets/images/hobbies3.jpg";
+import hobbies4 from "../assets/images/hobbies4.jpg";
+import hobbies5 from "../assets/images/hobbies5.jpg";
+import hobbies6 from "../assets/images/hobbies6.jpg";
 
 const About = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const hobbiesImages = [
+    { src: hobbies1, alt: "Waterfalls" },
+    { src: hobbies2, alt: "Jungle" },
+    { src: hobbies3, alt: "Beach Volleyball" },
+    { src: hobbies4, alt: "Sailing" },
+    { src: hobbies5, alt: "Mountain Climbing" },
+    { src: hobbies6, alt: "Swimming" },
+  ];
+
   return (
     <div className="absolute inset-0 overflow-hidden font-['PP_Neue_Machina']">
       <div className="h-full overflow-y-auto scrollbar-thin">
-        <div className="min-h-full flex items-center justify-center p-4 sm:p-6 md:p-8">
-          <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-[1fr] lg:grid-cols-[600px_350px] gap-4">
+        <div className="min-h-full flex items-center justify-center p-4 sm:p-4 md:p-6">
+          <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-[1fr] lg:grid-cols-[600px_350px] gap-6">
             {/* Left Column */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               {/* About Me Box */}
               <motion.div
-                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
+                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-6 sm:p-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -27,59 +44,110 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="space-y-4 sm:space-y-6 text-sm text-white/80">
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">1.</span>
+                <div className="space-y-6 text-sm text-white/80">
+                  {/* Global Explorer */}
+                  <div className="space-y-2">
+                    <h3 className="text-white font-medium text-base">
+                      Global Perspective
+                    </h3>
                     <p>
-                      Career Foundry Full Stack Development graduate with a
-                      passion for React development and exploring cutting-edge
-                      frameworks
+                      A world traveler at heart, having lived in 4 countries and
+                      explored all 5 continents, visiting over 250 cities. This
+                      global exposure has shaped my perspective on technology's
+                      role in connecting and improving lives across cultures.
                     </p>
                   </div>
 
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">2.</span>
+                  {/* Creative Origins */}
+                  <div className="space-y-2">
+                    <h3 className="text-white font-medium text-base">
+                      From Arts to Tech
+                    </h3>
                     <p>
-                      Startup enthusiast who has launched three startups,
-                      bringing a unique blend of business acumen to software
-                      development
+                      My journey began in fine arts, where I discovered a
+                      natural talent for drawing and painting, leading to a
+                      degree in art education. Growing up alongside the digital
+                      revolution, my passion for computers and gaming naturally
+                      evolved into exploring digital and interior design. This
+                      creative foundation became the springboard for my entry
+                      into the tech world.
                     </p>
                   </div>
 
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">3.</span>
+                  {/* Entrepreneurial Journey */}
+                  <div className="space-y-2">
+                    <h3 className="text-white font-medium text-base">
+                      Startup Adventures
+                    </h3>
                     <p>
-                      Managed and marketed diverse real estate portfolios across
-                      Europe and USA, developing both digital and traditional
-                      marketing strategies
+                      The intersection of creativity and technology led me to
+                      co-found three startups, where I managed and marketed
+                      diverse real estate portfolios across Europe and the USA.
+                      Working closely with developers and immersing myself in
+                      the tech ecosystem sparked a deeper fascination with
+                      software development.
                     </p>
                   </div>
 
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">4.</span>
+                  {/* Tech Transition */}
+                  <div className="space-y-2">
+                    <h3 className="text-white font-medium text-base">
+                      Embracing Development
+                    </h3>
                     <p>
-                      Proven track record in building and leading international
-                      teams across multiple industries and markets
+                      Recently graduated from Career Foundry's Full Stack
+                      Development program, I've built a strong foundation in
+                      coding with expertise in React, JavaScript, Node.js, and
+                      Angular. My background in design and marketing brings a
+                      unique perspective to creating user-centric solutions.
                     </p>
                   </div>
 
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">5.</span>
+                  {/* Vision */}
+                  <div className="space-y-2">
+                    <h3 className="text-white font-medium text-base">
+                      Looking Forward
+                    </h3>
                     <p>
-                      Tech enthusiast transitioning from successful business
-                      ventures to full-stack development, combining
-                      entrepreneurial mindset with coding expertise
+                      I'm fascinated by today's rapidly evolving tech landscape,
+                      particularly in AI and automation. Seeking opportunities
+                      to merge my business experience with technical skills, I
+                      aim to contribute to forward-thinking companies that
+                      create innovative solutions and meaningful impact in
+                      people's lives.
                     </p>
                   </div>
+                </div>
+              </motion.div>
 
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-white/50 flex-shrink-0">6.</span>
-                    <p>
-                      Currently seeking opportunities to merge business
-                      experience with newly acquired technical skills to create
-                      innovative digital solutions
-                    </p>
+              {/* My Hobbies Box */}
+              <motion.div
+                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <div className="flex justify-between items-center mb-4 sm:mb-6 border-b border-white/10 pb-2">
+                  <h2 className="text-2xl font-mono mb-2">my-hobbies</h2>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
                   </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {hobbiesImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="relative aspect-[4/3] cursor-pointer overflow-hidden rounded-lg"
+                      onClick={() => setSelectedImage(image)}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
                 </div>
               </motion.div>
 
@@ -118,7 +186,7 @@ const About = () => {
             </div>
 
             {/* Right Column */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               {/* Portrait Box */}
               <motion.div
                 className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
@@ -208,7 +276,7 @@ const About = () => {
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                   </div>
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
+                <div className="space-y-4 text-sm text-white/80">
                   <a
                     href="https://www.linkedin.com/in/avoiann"
                     target="_blank"
@@ -275,6 +343,28 @@ const About = () => {
           </div>
         </div>
       </div>
+      {/* Modal for full-size image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-full max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-4 -right-4 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+            >
+              <X className="text-white" size={24} />
+            </button>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
