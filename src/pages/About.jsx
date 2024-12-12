@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 import profile500x500 from "../assets/images/profile500x500.jpg";
+import resumePDF from "../assets/docs/Ian Buimistr - Junior Full Stack Developer Resume.pdf";
 
 const About = () => {
   return (
@@ -100,16 +101,17 @@ const About = () => {
                   <li>React Development</li>
                   <li>JavaScript</li>
                   <li>Node.js</li>
-                  <li>API</li>
                   <li>Angular</li>
+                  <li>API</li>
                   <li>HTML and CSS / SCSS</li>
                   <li>Full-Stack Technologies</li>
-                  <li>Public Speaking</li>
-                  <li>Team Leadership</li>
+                  <li>Agile Methodologies</li>
                   <li>Web Design</li>
                   <li>Wireframing</li>
-                  <li>SAAS Solutions</li>
-                  <li>Real Estate Management</li>
+                  <li>Coding</li>
+                  <li>Troubleshooting</li>
+                  <li>Debugging</li>
+                  <li>Testing</li>
                   <li>Adobe Suite</li>
                 </ul>
               </motion.div>
@@ -165,6 +167,31 @@ const About = () => {
                     </p>
                   </div>
                 </div>
+              </motion.div>
+
+              {/* Resume Download Box */}
+              <motion.div
+                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+              >
+                <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
+                  <h2 className="text-2xl font-mono mb-2">my-resume</h2>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
+                  </div>
+                </div>
+                <a
+                  href={resumePDF}
+                  download="Ian Buimistr - Junior Full Stack Developer Resume.pdf"
+                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <span className="text-white/50">1.</span>
+                  <span>Download Resume</span>
+                  <FileText size={16} className="ml-1" />
+                </a>
               </motion.div>
 
               {/* Me Online Box */}
