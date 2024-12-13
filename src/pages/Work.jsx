@@ -17,67 +17,74 @@ const projectImages = {
   6: project6,
 };
 
+const ProjectLink = ({ href, text }) =>
+  href ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-200 text-sm"
+    >
+      {text}
+      <ArrowUpRight size={16} />
+    </a>
+  ) : null;
+
 const ProjectBox = ({
   number,
   title,
   technologies,
   imageNumber,
   githubLink,
+  demoLink,
+  caseStudyLink,
   delay = 0,
 }) => {
   return (
     <motion.div
-      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 h-[240px]"
+      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className="flex h-full">
-        <div className="flex-1 p-6">
-          <div className="mb-2 text-white/50 text-sm">
-            {number.toString().padStart(2, "0")}
-          </div>
-          <h2 className="text-4xl mb-4 font-light leading-tight">{title}</h2>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 text-xs bg-black/30 border border-white/10 rounded-full text-white/50"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+      <div className="flex-1 p-6">
+        <div className="mb-2 text-white/50 text-sm">
+          {number.toString().padStart(2, "0")}
         </div>
-
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative w-[240px] group"
-        >
-          <img
-            src={projectImages[imageNumber]}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-            <ArrowUpRight className="text-white" size={24} />
-          </div>
-        </a>
-
-        <div className="w-[200px] p-6 flex items-start">
-          <div className="flex items-center gap-2">
-            <span className="text-white/50 text-sm">2024</span>
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/50 hover:text-white transition-colors duration-200"
+        <h2 className="text-2xl lg:text-4xl mb-4 font-light leading-tight">
+          {title}
+        </h2>
+        <div className="flex flex-wrap gap-2 mb-4 lg:mb-0">
+          {technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-xs bg-black/30 border border-white/10 rounded-full text-white/50"
             >
-              <ArrowUpRight size={16} />
-            </a>
-          </div>
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full lg:w-[240px] h-[200px] lg:h-auto relative group">
+        <img
+          src={projectImages[imageNumber]}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+          <ArrowUpRight className="text-white" size={24} />
+        </div>
+      </div>
+
+      <div className="p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
+        <span className="text-white/50 text-sm">2024</span>
+        <div className="flex flex-row lg:flex-col gap-4 lg:mt-4">
+          <ProjectLink href={githubLink} text="GitHub" />
+          {demoLink && <ProjectLink href={demoLink} text="Demo" />}
+          {caseStudyLink && (
+            <ProjectLink href={caseStudyLink} text="Case Study" />
+          )}
         </div>
       </div>
     </motion.div>
@@ -98,6 +105,7 @@ const Work = () => {
       ],
       imageNumber: 6,
       githubLink: "https://github.com/ibxibx/mymdb-angular-client",
+      demoLink: "https://ibxibx.github.io/mymdb-angular-client/welcome",
     },
     {
       number: 2,
@@ -112,6 +120,7 @@ const Work = () => {
       ],
       imageNumber: 5,
       githubLink: "https://github.com/ibxibx/nextchat",
+      caseStudyLink: "/case-study-nextchat",
     },
     {
       number: 3,
@@ -119,6 +128,7 @@ const Work = () => {
       technologies: ["JavaScript", "HTML", "CSS"],
       imageNumber: 4,
       githubLink: "https://github.com/ibxibx/meetlink",
+      demoLink: "https://ibxibx.github.io/meetlink/",
     },
     {
       number: 4,
@@ -132,6 +142,7 @@ const Work = () => {
       ],
       imageNumber: 3,
       githubLink: "https://github.com/ibxibx/mymdb/tree/clean-mymdb-client",
+      demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
       number: 5,
@@ -139,6 +150,7 @@ const Work = () => {
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "CORS"],
       imageNumber: 2,
       githubLink: "https://github.com/ibxibx/mymdb",
+      demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
       number: 6,
@@ -152,9 +164,9 @@ const Work = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
-        <div className="min-h-full flex flex-col items-center p-8">
+        <div className="min-h-full flex flex-col items-center p-4 sm:p-6 md:p-8">
           <motion.h1
-            className="text-6xl mb-16 font-light"
+            className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

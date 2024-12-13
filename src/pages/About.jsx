@@ -106,7 +106,7 @@ const About = () => {
                   {/* Vision */}
                   <div className="space-y-2">
                     <h3 className="text-white font-medium text-base">
-                      Looking Forward
+                      Pursuing My Dream
                     </h3>
                     <p>
                       I'm fascinated by today's rapidly evolving tech landscape,
@@ -150,39 +150,6 @@ const About = () => {
                   ))}
                 </div>
               </motion.div>
-
-              {/* Skills Box */}
-              <motion.div
-                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
-                  <h2 className="text-2xl font-mono mb-2">skilled-in</h2>
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 rounded-full bg-white/20" />
-                    <div className="w-3 h-3 rounded-full bg-white/20" />
-                  </div>
-                </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-white/80">
-                  <li>React Development</li>
-                  <li>JavaScript</li>
-                  <li>Node.js</li>
-                  <li>Angular</li>
-                  <li>API</li>
-                  <li>HTML and CSS / SCSS</li>
-                  <li>Full-Stack Technologies</li>
-                  <li>Agile Methodologies</li>
-                  <li>Web Design</li>
-                  <li>Wireframing</li>
-                  <li>Coding</li>
-                  <li>Troubleshooting</li>
-                  <li>Debugging</li>
-                  <li>Testing</li>
-                  <li>Adobe Suite</li>
-                </ul>
-              </motion.div>
             </div>
 
             {/* Right Column */}
@@ -206,6 +173,46 @@ const About = () => {
                   alt="Ian Baumeister"
                   className="w-full h-auto rounded-lg object-cover"
                 />
+              </motion.div>
+
+              {/* Skills Box */}
+              <motion.div
+                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-4 sm:p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
+                  <h2 className="text-2xl font-mono mb-2">skilled-in</h2>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
+                    <div className="w-3 h-3 rounded-full bg-white/20" />
+                  </div>
+                </div>
+                {/* Changed from grid to columns */}
+                <ul className="columns-2 gap-8 text-sm text-white/80">
+                  <li className="break-inside-avoid mb-3">React Development</li>
+                  <li className="break-inside-avoid mb-3">JavaScript</li>
+                  <li className="break-inside-avoid mb-3">Node.js</li>
+                  <li className="break-inside-avoid mb-3">Angular</li>
+                  <li className="break-inside-avoid mb-3">API</li>
+                  <li className="break-inside-avoid mb-3">
+                    HTML and CSS / SCSS
+                  </li>
+                  <li className="break-inside-avoid mb-3">
+                    Full-Stack Technologies
+                  </li>
+                  <li className="break-inside-avoid mb-3">
+                    Agile Methodologies
+                  </li>
+                  <li className="break-inside-avoid mb-3">Web Design</li>
+                  <li className="break-inside-avoid mb-3">Wireframing</li>
+                  <li className="break-inside-avoid mb-3">Coding</li>
+                  <li className="break-inside-avoid mb-3">Troubleshooting</li>
+                  <li className="break-inside-avoid mb-3">Debugging</li>
+                  <li className="break-inside-avoid mb-3">Testing</li>
+                  <li className="break-inside-avoid mb-3">Adobe Suite</li>
+                </ul>
               </motion.div>
 
               {/* Where I Work Box */}
