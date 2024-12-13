@@ -66,7 +66,12 @@ const ProjectBox = ({
         </div>
       </div>
 
-      <div className="w-full lg:w-[240px] h-[200px] lg:h-auto relative group">
+      <a
+        href={githubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full lg:w-[240px] h-[200px] lg:h-auto relative group"
+      >
         <img
           src={projectImages[imageNumber]}
           alt={title}
@@ -75,7 +80,7 @@ const ProjectBox = ({
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
           <ArrowUpRight className="text-white" size={24} />
         </div>
-      </div>
+      </a>
 
       <div className="p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
         <span className="text-white/50 text-sm">2024</span>
