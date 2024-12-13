@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 🚀 Ian Baumeister - Full Stack Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Portfolio](https://img.shields.io/badge/Portfolio-4ADE80?style=for-the-badge&logo=react&logoColor=white)](https://ibxibx.github.io/portfolio-react)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/avoiann)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ibxibx)
 
-## Available Scripts
+## 🌟 Overview
 
-In the project directory, you can run:
+A modern, responsive portfolio website showcasing my journey from arts to tech, built with React and styled with Tailwind CSS. The site features a clean, minimalist design with interactive elements and smooth animations.
 
-### `npm start`
+## 💻 Featured Projects
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **MyMDB - Movie Database (Angular)** 
+   - Angular-based client application
+   - Material UI & TypeScript implementation
+   - [Demo](https://ibxibx.github.io/mymdb-angular-client/welcome)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **NextChat - Mobile Chat App**
+   - React Native & Expo
+   - Firebase Authentication
+   - Real-time chat functionality
 
-### `npm test`
+3. **MeetLink - PWA**
+   - Progressive Web App for events
+   - JavaScript, HTML, CSS
+   - Mobile-responsive design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **MyMDB - Movie Database (MERN Stack)**
+   - Full-stack implementation
+   - RESTful API
+   - MongoDB & Express.js backend
+   - React frontend with Bootstrap UI
 
-### `npm run build`
+## 🛠️ Technical Skills
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:** React, Angular, JavaScript, TypeScript
+- **Backend:** Node.js, Express.js, MongoDB
+- **Mobile:** React Native, Expo
+- **Design:** HTML5, CSS3, SCSS, Material UI, Tailwind CSS
+- **Tools:** RESTful APIs, JWT, CORS, Git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 About Me
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Former fine arts graduate turned tech enthusiast, I bring a unique blend of creative design and technical expertise to web development. Having lived in 4 countries and explored all 5 continents, my global perspective influences my approach to creating user-centric solutions.
 
-### `npm run eject`
+## 🌐 Website Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Responsive Design:** Fully responsive across all devices
+- **Interactive UI:** Smooth animations and transitions using Framer Motion
+- **Modern Stack:** Built with React, Tailwind CSS, and GSAP
+- **Project Showcase:** Detailed project cards with live demos
+- **Dark Theme:** Modern, sleek dark mode interface
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone the repository
+git clone https://github.com/ibxibx/portfolio-react.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Install dependencies
+npm install
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run development server
+npm start
