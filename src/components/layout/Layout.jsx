@@ -31,7 +31,7 @@ const IconTooltip = ({ text, children, position = "right" }) => {
           absolute invisible group-hover:visible 
           bg-white text-black text-xs py-2 px-3 rounded
           opacity-0 group-hover:opacity-100 transition-opacity duration-200
-          whitespace-nowrap z-[100]
+          whitespace-nowrap z-[200]
           before:block
           pointer-events-none
           ${tooltipClasses[position]}
@@ -60,22 +60,24 @@ const Layout = ({ children, isLoading }) => {
         <Spotlight position="top-right" />
         <Spotlight position="bottom-left" />
       </div>
+
+      {/* Main content wrapper */}
       <div className="relative w-full min-w-[320px] z-[2]">
         <div
-          className={`relative w-full h-full rounded-lg ${
-            isLoading ? "site-loading" : ""
-          }`}
+          className="relative w-full h-full rounded-lg"
           style={{
             border: "1px solid rgba(255, 255, 255, 0.3)",
           }}
         >
-          <div className="absolute top-[1px] left-[1px] right-[1px] bottom-[1px] rounded-lg">
+          {/* Frame lines - moved to lower z-index */}
+          <div className="absolute top-[1px] left-[1px] right-[1px] bottom-[1px] rounded-lg z-[1]">
             <div className="absolute left-10 top-0 bottom-0 border-l-[1px] border-white/30 md:block hidden" />
             <div className="absolute top-10 left-0 right-0 border-t-[1px] border-white/30" />
             <div className="absolute bottom-10 left-0 right-0 border-t-[1px] border-white/30" />
           </div>
 
-          <div className="relative h-full font-['PP_Object_Sans'] text-white">
+          {/* Content area - higher z-index */}
+          <div className="relative h-full font-['PP_Object_Sans'] text-white z-[2]">
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -195,7 +197,7 @@ const Layout = ({ children, isLoading }) => {
             </main>
 
             {/* Footer */}
-            <div className="absolute bottom-0 left-10 right-0">
+            <div className="absolute bottom-0 left-10 right-0 z-[3]">
               <div className="relative flex items-center justify-between px-4 h-10 overflow-x-auto">
                 <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
