@@ -21,6 +21,7 @@ const IconTooltip = ({ text, children, position = "right" }) => {
     right:
       "left-full ml-2 -translate-y-1/2 top-1/2 before:content-[''] before:absolute before:left-[-6px] before:top-1/2 before:-translate-y-1/2 before:border-[6px] before:border-transparent before:border-r-white",
     top: "bottom-full mb-2 -translate-x-1/2 left-1/2 before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:top-full before:border-[6px] before:border-transparent before:border-t-white",
+    left: "right-full mr-2 -translate-y-1/2 top-1/2 before:content-[''] before:absolute before:right-[-6px] before:top-1/2 before:-translate-y-1/2 before:border-[6px] before:border-transparent before:border-l-white", // New
   };
 
   return (
@@ -28,14 +29,14 @@ const IconTooltip = ({ text, children, position = "right" }) => {
       {children}
       <span
         className={`
-          absolute invisible group-hover:visible 
-          bg-white text-black text-xs py-2 px-3 rounded
-          opacity-0 group-hover:opacity-100 transition-opacity duration-200
-          whitespace-nowrap z-[200]
-          before:block
-          pointer-events-none
-          ${tooltipClasses[position]}
-        `}
+    absolute invisible group-hover:visible 
+    bg-white text-black text-xs py-2 px-3 rounded
+    opacity-0 group-hover:opacity-100 transition-opacity duration-200
+    whitespace-nowrap z-[300] 
+    before:block
+    pointer-events-none
+    ${tooltipClasses[position]}
+  `}
       >
         {text}
       </span>
@@ -54,7 +55,7 @@ const Layout = ({ children, isLoading }) => {
   };
 
   return (
-    <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
+    <div className="p-4 h-screen bg-black flex items-stretch overflow-visible">
       <div className="absolute inset-0 z-[1]">
         <ScrollingWords />
         <Spotlight position="top-right" />
@@ -77,7 +78,7 @@ const Layout = ({ children, isLoading }) => {
           </div>
 
           {/* Content area - higher z-index */}
-          <div className="relative h-full font-['PP_Object_Sans'] text-white z-[2]">
+          <div className="relative h-full font-['PP_Object_Sans'] text-white z-[2] overflow-visible">
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

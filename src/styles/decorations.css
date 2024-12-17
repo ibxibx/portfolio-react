@@ -1,19 +1,19 @@
 /* Existing styles */
 .spotlight-top {
   pointer-events: none;
-  z-index: 0;
+  z-index: -1; /* Move behind tooltips */
 }
 
 .spotlight-bottom {
   pointer-events: none;
-  z-index: 0;
+  z-index: -1; /* Move behind tooltips */
 }
 
 /* Breadcrumb styles */
 .breadcrumbs {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible; /* Allow tooltip visibility */
   padding: 0.5rem 0;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .scroll-line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 100%;
@@ -40,8 +40,18 @@
 }
 
 @keyframes scrollAnimation {
-  0% { transform: translateY(-100%); opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { transform: translateY(100%); opacity: 0; }
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
 }
