@@ -13,15 +13,44 @@ const Contact = () => {
   });
 
   const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handlePolicyAccept = () => {
     setFormData((prev) => ({ ...prev, agreedToPolicy: true }));
     setIsPolicyModalOpen(false);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/send-email.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Failed to send email");
+
+      setSubmitStatus("success");
+      setFormData({
+        fullName: "",
+        company: "",
+        website: "",
+        email: "",
+        message: "",
+        agreedToPolicy: false,
+      });
+    } catch (error) {
+      setSubmitStatus("error");
+      console.error("Failed to send email:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -34,11 +63,19 @@ const Contact = () => {
       >
         <div className="mb-8">
           <h2 className="text-2xl font-mono mb-2">write-me</h2>
+          <p className="text-sm font-neue-machina">
+            Seeking full-time roles in technology companies.
+            <br />
+            Onsite, hybrid or remote working arrangements are welcome.
+            <br />
+            Email me via the form or to ian(at)ianworks.dev
+            <br />I reply within a day, max. within 48 hours.
+          </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 font-mono">
           <div>
-            <label className="block text-sm mb-2">01 full-name *</label>
+            <label className="block text-sm mb-2">1 full-name *</label>
             <input
               type="text"
               required
@@ -51,7 +88,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">02 company</label>
+            <label className="block text-sm mb-2">2 company</label>
             <input
               type="text"
               className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
@@ -63,7 +100,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">03 website</label>
+            <label className="block text-sm mb-2">3 website</label>
             <input
               type="url"
               className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
@@ -75,7 +112,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">04 email *</label>
+            <label className="block text-sm mb-2">4 email *</label>
             <input
               type="email"
               required
@@ -88,7 +125,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">05 your-message *</label>
+            <label className="block text-sm mb-2">5 your-message *</label>
             <textarea
               required
               rows={4}

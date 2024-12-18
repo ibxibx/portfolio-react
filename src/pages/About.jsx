@@ -55,6 +55,8 @@ const About = () => {
                       explored all 5 continents, visiting over 250 cities. This
                       global exposure has shaped my perspective on technology's
                       role in connecting and improving lives across cultures.
+                      Besides travel my hobbies include sailing, rock climbing,
+                      volleyball and filming.
                     </p>
                   </div>
 
@@ -109,12 +111,12 @@ const About = () => {
                       Pursuing My Dream
                     </h3>
                     <p>
-                      I'm fascinated by today's rapidly evolving tech landscape,
-                      particularly in AI and automation. Seeking opportunities
-                      to merge my business experience with technical skills, I
-                      aim to contribute to forward-thinking companies that
-                      create innovative solutions and meaningful impact in
-                      people's lives.
+                      I'm fascinated by today's rapidly evolving technology
+                      landscape, particularly in AI and automation. Seeking
+                      opportunities to merge my business experience with
+                      technical skills, I aim to contribute to forward-thinking
+                      companies that create innovative solutions that have a
+                      meaningful impact on people's lives.
                     </p>
                   </div>
                 </div>

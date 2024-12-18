@@ -70,7 +70,7 @@ const ProjectBox = ({
         href={githubLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full lg:w-[240px] h-[200px] lg:h-auto relative group"
+        className="w-full lg:w-[340px] h-[200px] lg:h-auto relative group"
       >
         <img
           src={projectImages[imageNumber]}
@@ -114,7 +114,7 @@ const Work = () => {
     },
     {
       number: 2,
-      title: "NextChat - A React Native Mobile Chat App",
+      title: "NextChat - A React Native Mobile App",
       technologies: [
         "JavaScript",
         "React Native",
@@ -152,7 +152,14 @@ const Work = () => {
     {
       number: 5,
       title: "MyMDB - My Movie Database (Server Side)",
-      technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "CORS"],
+      technologies: [
+        "Node.js",
+        "JavaScript",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "CORS",
+      ],
       imageNumber: 2,
       githubLink: "https://github.com/ibxibx/mymdb",
       demoLink: "https://mymdb-app.netlify.app/login",
