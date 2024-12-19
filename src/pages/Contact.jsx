@@ -102,7 +102,7 @@ const Contact = () => {
           <div>
             <label className="block text-sm mb-2">3 website</label>
             <input
-              type="url"
+              type="text"
               className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
               value={formData.website}
               onChange={(e) =>
@@ -112,7 +112,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-2">4 email *</label>
+            <label className="block text-sm mb-2">4 email-address*</label>
             <input
               type="email"
               required
