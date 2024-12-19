@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import PrivacyPolicyModal from "./PrivacyPolicyModal";
+import SuccessModal from "./SuccessModal";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,8 +15,8 @@ const Contact = () => {
   });
 
   const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handlePolicyAccept = () => {
     setFormData((prev) => ({ ...prev, agreedToPolicy: true }));
@@ -26,17 +28,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/send-email.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await emailjs.send(
+        "service_63epcvo",
+        "template_n3eywkk",
+        {
+          fullName: formData.fullName,
+          email: formData.email,
+          company: formData.company || "N/A",
+          website: formData.website || "N/A",
+          message: formData.message,
         },
-        body: JSON.stringify(formData),
-      });
+        "IKsGAAyvOtFhskRi9"
+      );
 
-      if (!response.ok) throw new Error("Failed to send email");
-
-      setSubmitStatus("success");
+      setIsSuccessModalOpen(true);
       setFormData({
         fullName: "",
         company: "",
@@ -46,8 +51,8 @@ const Contact = () => {
         agreedToPolicy: false,
       });
     } catch (error) {
-      setSubmitStatus("error");
       console.error("Failed to send email:", error);
+      alert("Failed to send email. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -68,7 +73,8 @@ const Contact = () => {
             <br />
             Onsite, hybrid or remote working arrangements are welcome.
             <br />
-            Email me via the form or to ian(at)ianworks.dev
+            <br />
+            Reach me via this form or at ian(at)ianworks.dev
             <br />I reply within a day, max. within 48 hours.
           </p>
         </div>
