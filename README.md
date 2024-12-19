@@ -13,7 +13,7 @@ A modern, responsive portfolio website showcasing my journey from arts to tech, 
 1. **MyMDB - Movie Database (Angular)** 
    - Angular-based client application
    - Material UI & TypeScript implementation
-   - [Demo](https://ibxibx.github.io/mymdb-angular-client/welcome)
+   - Demo
 
 2. **NextChat - Mobile Chat App**
    - React Native & Expo
