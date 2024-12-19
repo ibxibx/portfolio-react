@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import PrivacyPolicyModal from "./PrivacyPolicyModal";
@@ -13,6 +13,10 @@ const Contact = () => {
     message: "",
     agreedToPolicy: false,
   });
+
+  useEffect(() => {
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
@@ -29,8 +33,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_63epcvo",
-        "template_n3eywkk",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           fullName: formData.fullName,
           email: formData.email,
@@ -38,7 +42,7 @@ const Contact = () => {
           website: formData.website || "N/A",
           message: formData.message,
         },
-        "IKsGAAyvOtFhskRi9"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
 
       setIsSuccessModalOpen(true);
@@ -179,6 +183,11 @@ const Contact = () => {
         isOpen={isPolicyModalOpen}
         onClose={() => setIsPolicyModalOpen(false)}
         onAccept={handlePolicyAccept}
+      />
+
+      <SuccessModal
+        isOpen={isSuccessModalOpen}
+        onClose={() => setIsSuccessModalOpen(false)}
       />
     </div>
   );
