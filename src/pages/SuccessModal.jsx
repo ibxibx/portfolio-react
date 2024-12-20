@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import Confetti from "react-confetti";
 
 const SuccessModal = ({ isOpen, onClose }) => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   if (!isOpen) return null;
 
   return (
@@ -13,6 +31,13 @@ const SuccessModal = ({ isOpen, onClose }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
+        <Confetti
+          width={windowSize.width}
+          height={windowSize.height}
+          numberOfPieces={200}
+          recycle={false}
+          gravity={0.2}
+        />
         <motion.div
           className="w-full max-w-xl bg-neutral-900/50 backdrop-blur-md rounded-lg p-8 relative"
           initial={{ opacity: 0, y: 20 }}
@@ -26,15 +51,23 @@ const SuccessModal = ({ isOpen, onClose }) => {
             <X className="w-6 h-6" />
           </button>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-mono mb-4">message-sent</h2>
-            <p className="text-sm font-neue-machina">
-              Your email has been sent. Thank you very much for your message.
+          <div className="mb-8 space-y-6">
+            <h2 className="text-2xl font-mono">message-sent</h2>
+            <div className="space-y-4">
               <br />
-              <br />
-              I'll get back to you within 24 hours (max. 48 hours if over the
-              weekend time).
-            </p>
+              <h3 className="text-3xl font-neue-machina text-primary font-bold">
+                Success!
+              </h3>
+              <p className="text-sm font-mono">
+                Thank you very much for your message. Your email has been sent!
+              </p>
+              <p className="text-sm font-mono">
+                I'll get back to you within 24 hours
+                <br />
+                <br />
+                (maximum 48 hours if over the weekend time).
+              </p>
+            </div>
           </div>
 
           <div className="mt-8 flex justify-end">

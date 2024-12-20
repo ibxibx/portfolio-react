@@ -6,9 +6,9 @@ const LogoMonogram = () => {
     <Link to="/" className="animate-logo inline-block">
       <svg
         className="logo-monogram"
-        width="36"
-        height="36"
-        viewBox="0 0 48 48"
+        width="34"
+        height="34"
+        viewBox="0 0 50 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

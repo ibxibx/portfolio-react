@@ -1,8 +1,43 @@
 :root {
-  --primary: #4ADE80;
+  --primary: #4ade80;
   --background: #0f0f0f;
-  --text: #FFFFFF;
+  --text: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+/* Scrollbar Styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Scrollbar Override */
+@media (max-width: 768px) {
+  .scrollbar-thin {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Location Widget Styles */
@@ -214,31 +249,25 @@
 /* Animation Classes */
 .widget-enter-active,
 .widget-leave-active {
-    transition-duration: .3s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.615,.19,.305,.91);
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.615, 0.19, 0.305, 0.91);
 }
 
 .widget-enter-from {
-    --tw-translate-y: 1rem;
-    opacity: 0;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) 
-               rotate(var(--tw-rotate)) 
-               skew(var(--tw-skew-x)) 
-               skewY(var(--tw-skew-y)) 
-               scaleX(var(--tw-scale-x)) 
-               scaleY(var(--tw-scale-y));
+  --tw-translate-y: 1rem;
+  opacity: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .widget-leave-to {
-    --tw-translate-y: -1rem;
-    opacity: 0;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) 
-               rotate(var(--tw-rotate)) 
-               skew(var(--tw-skew-x)) 
-               skewY(var(--tw-skew-y)) 
-               scaleX(var(--tw-scale-x)) 
-               scaleY(var(--tw-scale-y));
+  --tw-translate-y: -1rem;
+  opacity: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 /* Mobile Menu Animation Classes */
@@ -267,9 +296,6 @@
   --tw-translate-x: -1rem;
   opacity: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-             rotate(var(--tw-rotate))
-             skew(var(--tw-skew-x))
-             skewY(var(--tw-skew-y))
-             scaleX(var(--tw-scale-x))
-             scaleY(var(--tw-scale-y));
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

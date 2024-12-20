@@ -93,8 +93,8 @@ const Layout = ({ children, isLoading }) => {
               </Link>
             </div>
 
-            <div className="absolute top-0 left-14 right-0 h-10 flex items-center justify-center">
-              <span className="text-base font-light tracking-wide">
+            <div className="absolute top-0 left-0 right-0 h-10 flex items-center justify-center md:justify-start md:left-14">
+              <span className="text-base font-light tracking-wide text-center">
                 ian <span className="text-[#4ade80]">baumeister</span>
               </span>
             </div>
@@ -199,7 +199,7 @@ const Layout = ({ children, isLoading }) => {
 
             {/* Footer */}
             <div className="absolute bottom-0 left-10 right-0 z-[3]">
-              <div className="relative flex items-center justify-between px-4 h-10 overflow-x-auto">
+              <div className="relative flex items-center justify-end px-4 h-10 overflow-x-auto">
                 <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
@@ -221,7 +221,8 @@ const Layout = ({ children, isLoading }) => {
                   <span className="text-white">+4917636127937</span>
                 </div>
 
-                <div className="relative ml-auto flex items-center gap-4 flex-wrap">
+                {/* Social icons - always visible, centered on mobile */}
+                <div className="flex items-center gap-4 mx-auto md:mx-0">
                   <IconTooltip text="linkedin" position="top">
                     <a
                       href="https://linkedin.com/in/avoiann"
@@ -306,7 +307,7 @@ const Layout = ({ children, isLoading }) => {
 
                   <button
                     onClick={handleContactClick}
-                    className="ml-4 px-3 py-1 border border-white/20 rounded text-xs hover:bg-white/10 transition-colors duration-200"
+                    className="hidden md:block ml-4 px-3 py-1 border border-white/20 rounded text-xs hover:bg-white/10 transition-colors duration-200"
                   >
                     let's-get-in-touch →
                   </button>
