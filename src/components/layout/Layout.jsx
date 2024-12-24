@@ -198,9 +198,9 @@ const Layout = ({ children, isLoading }) => {
             </main>
 
             {/* Footer */}
-            <div className="absolute bottom-0 left-10 right-0 z-[3]">
-              <div className="relative flex items-center justify-end px-4 h-10 overflow-x-auto">
-                <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-8 text-sm text-white/60">
+            <div className="absolute bottom-0 left-0 right-0 z-[3] md:left-10">
+              <div className="relative flex items-center justify-center md:justify-end h-10 overflow-x-auto">
+                <div className="absolute left-1/2 -translate-x-1/2 hidden 2xl:flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
                     <span className="text-white">Berlin, Germany</span>
@@ -222,7 +222,7 @@ const Layout = ({ children, isLoading }) => {
                 </div>
 
                 {/* Social icons - always visible, centered on mobile */}
-                <div className="flex items-center gap-4 mx-auto md:mx-0">
+                <div className="flex items-center gap-4">
                   <IconTooltip text="linkedin" position="top">
                     <a
                       href="https://linkedin.com/in/avoiann"
