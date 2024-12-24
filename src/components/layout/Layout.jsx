@@ -93,7 +93,7 @@ const Layout = ({ children, isLoading }) => {
               </Link>
             </div>
 
-            <div className="absolute top-0 left-0 right-0 h-10 flex items-center justify-center md:justify-start md:left-14">
+            <div className="absolute top-0 left-0 right-0 h-10 flex items-center justify-center">
               <span className="text-base font-light tracking-wide text-center">
                 ian <span className="text-[#4ade80]">baumeister</span>
               </span>
@@ -170,7 +170,7 @@ const Layout = ({ children, isLoading }) => {
             </nav>
 
             {/* Main Content - with custom scrollbar and 1px offset */}
-            <main className="absolute top-[43px] left-10 right-0 bottom-[43px] overflow-y-auto scrollbar-thin">
+            <main className="absolute top-[43px] left-0 right-0 bottom-[43px] overflow-y-auto scrollbar-thin md:pl-10">
               <style jsx global>{`
                 .scrollbar-thin {
                   scrollbar-width: thin;
