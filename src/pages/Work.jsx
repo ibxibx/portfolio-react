@@ -7,6 +7,7 @@ import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.jpg";
 import project5 from "../assets/images/project-5.jpg";
 import project6 from "../assets/images/project-6.jpg";
+import { useInView } from "react-intersection-observer";
 
 const projectImages = {
   1: project1,
@@ -17,10 +18,8 @@ const projectImages = {
   6: project6,
 };
 
-const ProjectLink = ({ href, text }) => {
-  if (!href) return null;
-
-  return (
+const ProjectLink = ({ href, text }) =>
+  href ? (
     <a
       href={href}
       target="_blank"
@@ -30,8 +29,7 @@ const ProjectLink = ({ href, text }) => {
       {text}
       <ArrowUpRight size={16} />
     </a>
-  );
-};
+  ) : null;
 
 const ProjectBox = ({
   number,
@@ -42,28 +40,22 @@ const ProjectBox = ({
   demoLink,
   caseStudyLink,
   delay = 0,
-  deviceType,
 }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
     <motion.div
-      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row"
-      style={{ height: deviceType === "mobile" ? "auto" : "280px" }}
+      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row min-h-[300px]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      onMouseEnter={() => deviceType === "desktop" && setIsHovered(true)}
-      onMouseLeave={() => deviceType === "desktop" && setIsHovered(false)}
-      onViewportEnter={() => deviceType !== "desktop" && setIsVisible(true)}
-      onViewportLeave={() => deviceType !== "desktop" && setIsVisible(false)}
+      ref={ref}
     >
-      <div className="flex-1 p-4 sm:p-6 overflow-y-auto">
+      <div className="flex-1 p-6">
         <div className="mb-2 text-white/50 text-sm">
           {number.toString().padStart(2, "0")}
         </div>
-        <h2 className="text-xl sm:text-2xl lg:text-4xl mb-4 font-light leading-tight">
+        <h2 className="text-2xl lg:text-4xl mb-4 font-light leading-tight min-h-[72px]">
           {title}
         </h2>
         <div className="flex flex-wrap gap-2 mb-4 lg:mb-0">
@@ -78,25 +70,21 @@ const ProjectBox = ({
         </div>
       </div>
 
-      <motion.div className="w-full lg:w-[340px] h-[200px] lg:h-auto relative">
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full h-full relative group"
-        >
-          <img
-            src={projectImages[imageNumber]}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-            <ArrowUpRight className="text-white" size={24} />
-          </div>
-        </a>
-      </motion.div>
+      {/* Image Section */}
+      <div
+        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden ${
+          inView ? "opacity-100" : "opacity-0"
+        } transition-opacity duration-500`}
+      >
+        <img
+          src={projectImages[imageNumber]}
+          alt={title}
+          className="w-full h-full object-cover opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500"
+          style={{ display: inView ? "block" : "none" }} // Ensures visibility on scroll
+        />
+      </div>
 
-      <div className="p-4 sm:p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
+      <div className="p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
         <span className="text-white/50 text-sm">2024</span>
         <div className="flex flex-row lg:flex-col gap-4 lg:mt-4">
           <ProjectLink href={githubLink} text="GitHub" />
@@ -111,24 +99,6 @@ const ProjectBox = ({
 };
 
 const Work = () => {
-  const [deviceType, setDeviceType] = React.useState("desktop");
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        setDeviceType("mobile");
-      } else if (window.matchMedia("(max-width: 1024px)").matches) {
-        setDeviceType("tablet");
-      } else {
-        setDeviceType("desktop");
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const projects = [
     {
       number: 1,
@@ -210,27 +180,16 @@ const Work = () => {
       <div className="h-full overflow-y-auto scrollbar-thin">
         <div className="min-h-full flex flex-col items-center p-4 sm:p-6 md:p-8">
           <motion.h1
-            className="text-2xl sm:text-3xl lg:text-6xl mb-6 sm:mb-8 lg:mb-12 font-light"
+            className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             Projects
           </motion.h1>
-          <div
-            className={`max-w-[1000px] w-full ${
-              deviceType === "mobile"
-                ? "flex flex-col gap-6"
-                : "grid grid-cols-1 md:grid-cols-2 gap-6"
-            }`}
-          >
+          <div className="max-w-[1000px] w-full">
             {projects.map((project, index) => (
-              <ProjectBox
-                key={index}
-                {...project}
-                delay={index * 0.1}
-                deviceType={deviceType}
-              />
+              <ProjectBox key={index} {...project} delay={index * 0.1} />
             ))}
           </div>
         </div>
