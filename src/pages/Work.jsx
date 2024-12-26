@@ -45,7 +45,7 @@ const ProjectBox = ({
 
   return (
     <motion.div
-      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row min-h-[300px]"
+      className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row min-h-[300px] group"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
@@ -72,15 +72,14 @@ const ProjectBox = ({
 
       {/* Image Section */}
       <div
-        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden ${
+        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden transition-opacity duration-500 ${
           inView ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-500`}
+        }`}
       >
         <img
           src={projectImages[imageNumber]}
           alt={title}
-          className="w-full h-full object-cover opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500"
-          style={{ display: inView ? "block" : "none" }} // Ensures visibility on scroll
+          className="w-full h-full object-cover opacity-0 group-hover:opacity-100 lg:transition-opacity lg:duration-500"
         />
       </div>
 
