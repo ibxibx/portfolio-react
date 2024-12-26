@@ -43,6 +43,9 @@ const ProjectBox = ({
 }) => {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
+  // Check if the viewport width is less than 1280px
+  const isSmallViewport = window.innerWidth < 1280;
+
   return (
     <motion.div
       className="bg-neutral-900/50 backdrop-blur-md rounded-lg overflow-hidden mb-6 flex flex-col lg:flex-row min-h-[300px] group"
@@ -72,14 +75,18 @@ const ProjectBox = ({
 
       {/* Image Section */}
       <div
-        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden transition-opacity duration-500 ${
-          inView ? "opacity-100" : "opacity-0"
+        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden ${
+          isSmallViewport || inView ? "opacity-100" : "opacity-0"
         }`}
       >
         <img
           src={projectImages[imageNumber]}
           alt={title}
-          className="w-full h-full object-cover opacity-0 group-hover:opacity-100 lg:transition-opacity lg:duration-500"
+          className={`w-full h-full object-cover ${
+            isSmallViewport
+              ? "opacity-100"
+              : "opacity-0 group-hover:opacity-100 lg:transition-opacity lg:duration-500"
+          }`}
         />
       </div>
 
