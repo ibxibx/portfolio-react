@@ -4,7 +4,7 @@ import "../../styles/fonts.css";
 
 const SectionHero = () => {
   const title = (
-    <h1 className="font-['PP_Object_Sans'] text-[32px] sm:text-[48px] md:text-[64px] lg:text-[96px] leading-tight tracking-[-0.04em]">
+    <h1 className="font-['PP_Object_Sans'] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[96px] leading-tight tracking-[-0.04em] max-w-[360px] sm:max-w-[480px] md:max-w-none mx-auto">
       Hi, I'm Ian,
       <br />a <span className="text-[#4ADE80]">creative</span> developer
       <br />
@@ -14,8 +14,12 @@ const SectionHero = () => {
 
   const subtitle = (
     <p
-      className="mx-auto max-w-[280px] sm:max-w-xl md:max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] opacity-80"
-      style={{ fontFamily: "PP Neue Machina", color: "#999999" }}
+      className="mx-auto max-w-[320px] sm:max-w-xl md:max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] opacity-80 sm:opacity-90"
+      style={{
+        fontFamily: "PP Neue Machina",
+        color: "#999999",
+        textShadow: "0px 0px 3px #000000",
+      }}
     >
       I love solving problems and I bring a combined experience in development
       and design, which gives me a unique perspective to creating modern
@@ -94,6 +98,9 @@ const SectionHero = () => {
           .hero {
             padding-top: 2rem;
             padding-bottom: 2rem;
+          }
+          p {
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
           }
         }
       `}</style>

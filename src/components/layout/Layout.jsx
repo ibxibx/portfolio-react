@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Spotlight from "../Spotlight";
 import ScrollingWords from "../ScrollingWords";
+import MobileMenu from "./MobileMenu";
+
 import {
   Home,
   User,
@@ -87,6 +89,12 @@ const Layout = ({ children, isLoading }) => {
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
 
+            {/* Mobile Menu */}
+            <MobileMenu
+              isOpen={mobileMenuOpen}
+              onClose={() => setMobileMenuOpen(false)}
+            />
+
             <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center z-10">
               <Link to="/" className="scale-70">
                 <LogoMonogram />
@@ -102,15 +110,13 @@ const Layout = ({ children, isLoading }) => {
             {/* Navigation - Desktop and Mobile */}
             <nav
               className={`
-               ${mobileMenuOpen ? "block" : "hidden"} 
-               md:block
-               absolute left-0 top-10 bottom-10 w-10 
-               md:flex md:flex-col md:items-center md:justify-center z-20
-               bg-black/95 md:bg-transparent
-              w-screen md:w-10 p-4 md:p-0
-              `}
+   absolute left-0 top-10 bottom-10 w-screen 
+   md:w-10 md:flex md:flex-col md:items-center md:justify-center z-20
+    md:bg-transparent p-4 md:p-0
+  `}
             >
-              <div className="flex md:flex-col gap-6 h-full md:h-auto md:justify-center justify-center items-center">
+              {/* Desktop and Tablet Navigation */}
+              <div className="hidden md:flex md:flex-col gap-6 h-full md:h-auto md:justify-center justify-center items-center">
                 <IconTooltip text="home" position="right">
                   <Link
                     to="/"
@@ -119,7 +125,6 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
-                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Home size={16} />
                   </Link>
@@ -133,7 +138,6 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
-                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <User size={16} />
                   </Link>
@@ -147,7 +151,6 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
-                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Briefcase size={16} />
                   </Link>
@@ -161,7 +164,6 @@ const Layout = ({ children, isLoading }) => {
                         ? "text-green-400 bg-white/10"
                         : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
-                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <Mail size={16} />
                   </Link>

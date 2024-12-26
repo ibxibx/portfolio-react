@@ -75,7 +75,7 @@ const ProjectBox = ({
 
       {/* Image Section */}
       <div
-        className={`w-full lg:w-[340px] h-[200px] lg:h-auto relative overflow-hidden ${
+        className={`w-full lg:w-[340px] h-[250px] lg:h-[250px] relative flex items-center justify-center overflow-hidden ${
           isSmallViewport || inView ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -103,7 +103,6 @@ const ProjectBox = ({
     </motion.div>
   );
 };
-
 const Work = () => {
   const projects = [
     {
