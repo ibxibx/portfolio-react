@@ -1,67 +1,244 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 const LogoMonogram = () => {
+  const [isReversing, setIsReversing] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    const animationCycle = () => {
+      if (!isAnimating) {
+        setIsReversing(false);
+
+        const disappearTimeout = setTimeout(() => {
+          setIsReversing(true);
+        }, 7400);
+
+        const restartTimeout = setTimeout(() => {
+          setIsReversing(false);
+        }, 12800);
+
+        return () => {
+          clearTimeout(disappearTimeout);
+          clearTimeout(restartTimeout);
+        };
+      }
+    };
+
+    const cleanup = animationCycle();
+    const interval = setInterval(animationCycle, 12800);
+
+    return () => {
+      cleanup();
+      clearInterval(interval);
+    };
+  }, [isMounted, isAnimating]);
+
+  const handleClick = () => {
+    setIsAnimating(true);
+    setIsReversing(!isReversing);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 2400);
+  };
+
   return (
-    <Link to="/" className="animate-logo inline-block">
+    <div
+      className="logo-wrapper inline-block cursor-pointer"
+      onClick={handleClick}
+    >
       <svg
-        className="logo-monogram"
         width="34"
         height="34"
-        viewBox="0 0 50 48"
+        viewBox="0 0 200 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={`logo-monogram ${isReversing ? "reverse" : ""}`}
       >
-        {/* B shape */}
-        <path
-          className="letter-b"
-          d="M14 8V40H26C31.5228 40 36 35.5228 36 30C36 26.134 33.7741 22.7782 30.5 21.3M14 8H26C31.5228 8 36 12.4772 36 18C36 21.866 33.7741 25.2218 30.5 26.7M14 8V26.7M30.5 21.3H14M30.5 21.3C31.3819 20.8896 32.1819 20.3237 32.8661 19.6339M30.5 26.7H14M30.5 26.7C31.3819 27.1104 32.1819 27.6763 32.8661 28.3661"
-          stroke="currentColor"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
+        <defs>
+          <mask id="knockout-mask">
+            <rect width="200" height="200" fill="white" />
+            {/* B knockout outline */}
+            <path
+              d="M55 40
+                 V160
+                 H125
+                 C145 160 150 150 150 135
+                 V120
+                 C150 110 145 100 125 100
+                 H55
+                 M55 100
+                 H125
+                 C145 100 150 90 150 75
+                 V60
+                 C150 45 145 40 125 40
+                 H55Z"
+              fill="none"
+              stroke="black"
+              strokeWidth="32"
+              strokeLinejoin="round"
+            />
+            {/* I knockout outline */}
+            <path
+              d="M100 70V130"
+              stroke="black"
+              strokeWidth="32"
+              strokeLinecap="round"
+            />
+            <path
+              d="M80 70H120"
+              stroke="black"
+              strokeWidth="32"
+              strokeLinecap="round"
+            />
+            <path
+              d="M80 130H120"
+              stroke="black"
+              strokeWidth="32"
+              strokeLinecap="round"
+            />
+          </mask>
+        </defs>
+
+        {/* Background X */}
+        <g className="line x-parts" mask="url(#knockout-mask)">
+          <path
+            d="M30 30L170 170"
+            stroke="currentColor"
+            strokeWidth="12"
+            strokeLinecap="round"
+          />
+          <path
+            d="M170 30L30 170"
+            stroke="currentColor"
+            strokeWidth="12"
+            strokeLinecap="round"
+          />
+        </g>
+
         {/* I shape */}
-        <path
-          className="letter-i"
-          d="M24 14V34M20 14H28M20 34H28"
-          stroke="currentColor"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
+        <g className="line i-shape">
+          <path
+            d="M100 70V130"
+            stroke="currentColor"
+            strokeWidth="10"
+            strokeLinecap="round"
+          />
+          <path
+            d="M80 70H120"
+            stroke="currentColor"
+            strokeWidth="10"
+            strokeLinecap="round"
+          />
+          <path
+            d="M80 130H120"
+            stroke="currentColor"
+            strokeWidth="10"
+            strokeLinecap="round"
+          />
+        </g>
+
+        {/* B shape */}
+        <g className="line b-shape">
+          <path
+            d="M55 40
+               V160
+               H125
+               C145 160 150 150 150 135
+               V120
+               C150 110 145 100 125 100
+               H55
+               M55 100
+               H125
+               C145 100 150 90 150 75
+               V60
+               C150 45 145 40 125 40
+               H55Z"
+            stroke="currentColor"
+            strokeWidth="12"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+        </g>
       </svg>
+
       <style jsx>{`
         .logo-monogram {
-          transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-          transform-origin: center;
+          transform: scale(1);
+          transition: transform 0.3s ease;
         }
 
-        .letter-b,
-        .letter-i {
-          transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-          stroke-dasharray: 200;
-          stroke-dashoffset: 0;
-          transform-origin: center;
+        .line {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          opacity: 0;
+          transition: opacity 0.4s ease;
         }
 
-        .animate-logo:hover .letter-b {
-          stroke-dashoffset: 200;
-          transform: rotate(360deg);
+        /* APPEAR: B → I → X */
+        .b-shape {
+          animation: drawLine 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          animation-delay: 0s;
+        }
+        .i-shape {
+          animation: drawLine 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          animation-delay: 0.8s;
+        }
+        .x-parts {
+          animation: drawLine 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          animation-delay: 1.6s;
         }
 
-        .animate-logo:hover .letter-i {
-          stroke-dashoffset: -200;
-          transform: scale(1.2);
+        @keyframes drawLine {
+          0% {
+            stroke-dashoffset: 1000;
+            opacity: 0;
+          }
+          1% {
+            opacity: 1;
+          }
+          100% {
+            stroke-dashoffset: 0;
+            opacity: 1;
+          }
         }
 
-        .animate-logo:hover svg {
-          filter: drop-shadow(0 0 3px currentColor);
+        /* DISAPPEAR: X → I → B */
+        .reverse .x-parts {
+          animation: fadeOut 0.8s ease forwards;
+          animation-delay: 0s;
+        }
+        .reverse .i-shape {
+          animation: fadeOut 0.8s ease forwards;
+          animation-delay: 0.8s;
+        }
+        .reverse .b-shape {
+          animation: fadeOut 0.8s ease forwards;
+          animation-delay: 1.6s;
+        }
+
+        @keyframes fadeOut {
+          0% {
+            opacity: 1;
+            stroke-dashoffset: 0;
+          }
+          100% {
+            opacity: 0;
+            stroke-dashoffset: 0;
+          }
+        }
+
+        .logo-wrapper:hover {
+          cursor: pointer;
+        }
+
+        .logo-wrapper:hover .line {
+          stroke: #4ade80;
         }
       `}</style>
-    </Link>
+    </div>
   );
 };
 
