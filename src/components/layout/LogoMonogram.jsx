@@ -7,30 +7,34 @@ const LogoMonogram = () => {
 
   useEffect(() => {
     setIsMounted(true);
-    const animationCycle = () => {
+    let disappearTimeout;
+    let restartTimeout;
+    let interval;
+
+    const startAnimation = () => {
       if (!isAnimating) {
         setIsReversing(false);
 
-        const disappearTimeout = setTimeout(() => {
+        disappearTimeout = setTimeout(() => {
           setIsReversing(true);
         }, 7400);
 
-        const restartTimeout = setTimeout(() => {
+        restartTimeout = setTimeout(() => {
           setIsReversing(false);
         }, 12800);
-
-        return () => {
-          clearTimeout(disappearTimeout);
-          clearTimeout(restartTimeout);
-        };
       }
     };
 
-    const cleanup = animationCycle();
-    const interval = setInterval(animationCycle, 12800);
+    // Start initial animation
+    startAnimation();
 
+    // Set up interval for subsequent animations
+    interval = setInterval(startAnimation, 12800);
+
+    // Cleanup function
     return () => {
-      cleanup();
+      clearTimeout(disappearTimeout);
+      clearTimeout(restartTimeout);
       clearInterval(interval);
     };
   }, [isMounted, isAnimating]);
