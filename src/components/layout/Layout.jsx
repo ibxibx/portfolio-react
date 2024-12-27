@@ -110,9 +110,10 @@ const Layout = ({ children, isLoading }) => {
             {/* Navigation - Desktop and Mobile */}
             <nav
               className={`
-   absolute left-0 top-10 bottom-10 w-screen 
-   md:w-10 md:flex md:flex-col md:items-center md:justify-center z-20
-    md:bg-transparent p-4 md:p-0
+   absolute left-0 w-10 
+   md:top-10 md:bottom-10
+   md:flex md:flex-col md:items-center md:justify-center 
+   z-20 md:bg-transparent p-4 md:p-0
   `}
             >
               {/* Desktop and Tablet Navigation */}
