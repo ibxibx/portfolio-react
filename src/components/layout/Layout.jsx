@@ -95,8 +95,8 @@ const Layout = ({ children, isLoading }) => {
               onClose={() => setMobileMenuOpen(false)}
             />
 
-            <div className="absolute top-1 left-1 w-9 h-10 flex items-center justify-center z-10">
-              <Link to="/" className="scale-70">
+            <div className="absolute top-1 left-1 w-8 h-10 flex items-center justify-center z-10">
+              <Link to="/" className="scale-50">
                 <LogoMonogram />
               </Link>
             </div>
