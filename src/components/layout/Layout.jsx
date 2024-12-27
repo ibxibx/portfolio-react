@@ -57,7 +57,7 @@ const Layout = ({ children, isLoading }) => {
   };
 
   return (
-    <div className="p-4 h-screen bg-black flex items-stretch overflow-visible">
+    <div className="p-4 h-screen bg-black flex items-stretch overflow-hidden">
       <div className="absolute inset-0 z-[1]">
         <ScrollingWords />
         <Spotlight position="top-right" />
@@ -67,7 +67,7 @@ const Layout = ({ children, isLoading }) => {
       {/* Main content wrapper */}
       <div className="relative w-full min-w-[320px] z-[2]">
         <div
-          className="relative w-full h-full rounded-lg"
+          className="relative w-full h-full rounded-lg overflow-hidden"
           style={{
             border: "1px solid rgba(255, 255, 255, 0.3)",
           }}
@@ -80,7 +80,7 @@ const Layout = ({ children, isLoading }) => {
           </div>
 
           {/* Content area - higher z-index */}
-          <div className="relative h-full font-['PP_Object_Sans'] text-white z-[2] overflow-visible">
+          <div className="relative h-full font-['PP_Object_Sans'] text-white z-[2] overflow-hidden">
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -226,87 +226,75 @@ const Layout = ({ children, isLoading }) => {
 
                 {/* Social icons - always visible, centered on mobile */}
                 <div className="flex items-center gap-4">
-                  <IconTooltip text="linkedin" position="top">
-                    <a
-                      href="https://linkedin.com/in/avoiann"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
-                    >
-                      <Linkedin size={14} />
-                    </a>
-                  </IconTooltip>
+                  <a
+                    href="https://linkedin.com/in/avoiann"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <Linkedin size={14} />
+                  </a>
 
-                  <IconTooltip text="github" position="top">
-                    <a
-                      href="https://github.com/ibxibx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
-                    >
-                      <Github size={14} />
-                    </a>
-                  </IconTooltip>
+                  <a
+                    href="https://github.com/ibxibx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <Github size={14} />
+                  </a>
 
-                  <IconTooltip text="behance" position="top">
-                    <a
-                      href="https://www.behance.net/ianbau"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
+                  <a
+                    href="https://www.behance.net/ianbau"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="112.5 117.5 32.5 20.25"
+                      fill="currentColor"
                     >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="112.5 117.5 32.5 20.25"
-                        fill="currentColor"
-                      >
-                        <g transform="translate(112.26147859922179 112.26147859922176) scale(0.34 0.34)">
-                          <path d="M83.482,24.925h-22.55v-5.601h22.553v5.601H83.482z M45.919,47.892c1.455,2.255,2.18,4.992,2.18,8.203c0,3.323-0.819,6.305-2.486,8.938c-1.061,1.74-2.378,3.211-3.961,4.395c-1.784,1.373-3.893,2.312-6.32,2.815c-2.433,0.503-5.068,0.758-7.906,0.758H2.207V17H29.25c6.817,0.11,11.651,2.087,14.505,5.964c1.712,2.38,2.561,5.233,2.561,8.552c0,3.424-0.859,6.162-2.588,8.243c-0.962,1.167-2.383,2.229-4.264,3.187C42.313,43.99,44.475,45.633,45.919,47.892z M15.12,39.078h11.851c2.434,0,4.403-0.462,5.92-1.387c1.515-0.925,2.271-2.566,2.271-4.925c0-2.605-1.001-4.334-3.007-5.166c-1.725-0.577-3.932-0.876-6.61-0.876H15.12V39.078z M36.303,55.297c0-2.91-1.189-4.92-3.562-5.997c-1.327-0.615-3.2-0.931-5.601-0.951H15.12v14.924h11.835c2.43,0,4.313-0.319,5.671-0.982C35.075,61.07,36.303,58.747,36.303,55.297z M91.849,46.186c0.27,1.832,0.396,4.492,0.345,7.968H62.989c0.161,4.03,1.551,6.847,4.193,8.462c1.591,1.011,3.521,1.505,5.779,1.505c2.384,0,4.326-0.6,5.819-1.838c0.816-0.658,1.534-1.585,2.154-2.752h10.708c-0.281,2.378-1.571,4.794-3.889,7.25c-3.587,3.9-8.622,5.854-15.085,5.854c-5.339,0-10.047-1.649-14.131-4.934c-4.07-3.3-6.115-8.648-6.115-16.07c0-6.958,1.835-12.285,5.518-15.991c3.699-3.714,8.47-5.564,14.35-5.564c3.487,0,6.629,0.623,9.432,1.877c2.798,1.254,5.107,3.227,6.925,5.94C90.298,40.28,91.355,43.041,91.849,46.186z M81.314,47.232c-0.195-2.787-1.126-4.897-2.803-6.339c-1.663-1.446-3.74-2.171-6.216-2.171c-2.697,0-4.779,0.776-6.259,2.301c-1.491,1.522-2.416,3.59-2.795,6.21H81.314L81.314,47.232z" />
-                        </g>
-                      </svg>
-                    </a>
-                  </IconTooltip>
+                      <g transform="translate(112.26147859922179 112.26147859922176) scale(0.34 0.34)">
+                        <path d="M83.482,24.925h-22.55v-5.601h22.553v5.601H83.482z M45.919,47.892c1.455,2.255,2.18,4.992,2.18,8.203c0,3.323-0.819,6.305-2.486,8.938c-1.061,1.74-2.378,3.211-3.961,4.395c-1.784,1.373-3.893,2.312-6.32,2.815c-2.433,0.503-5.068,0.758-7.906,0.758H2.207V17H29.25c6.817,0.11,11.651,2.087,14.505,5.964c1.712,2.38,2.561,5.233,2.561,8.552c0,3.424-0.859,6.162-2.588,8.243c-0.962,1.167-2.383,2.229-4.264,3.187C42.313,43.99,44.475,45.633,45.919,47.892z M15.12,39.078h11.851c2.434,0,4.403-0.462,5.92-1.387c1.515-0.925,2.271-2.566,2.271-4.925c0-2.605-1.001-4.334-3.007-5.166c-1.725-0.577-3.932-0.876-6.61-0.876H15.12V39.078z M36.303,55.297c0-2.91-1.189-4.92-3.562-5.997c-1.327-0.615-3.2-0.931-5.601-0.951H15.12v14.924h11.835c2.43,0,4.313-0.319,5.671-0.982C35.075,61.07,36.303,58.747,36.303,55.297z M91.849,46.186c0.27,1.832,0.396,4.492,0.345,7.968H62.989c0.161,4.03,1.551,6.847,4.193,8.462c1.591,1.011,3.521,1.505,5.779,1.505c2.384,0,4.326-0.6,5.819-1.838c0.816-0.658,1.534-1.585,2.154-2.752h10.708c-0.281,2.378-1.571,4.794-3.889,7.25c-3.587,3.9-8.622,5.854-15.085,5.854c-5.339,0-10.047-1.649-14.131-4.934c-4.07-3.3-6.115-8.648-6.115-16.07c0-6.958,1.835-12.285,5.518-15.991c3.699-3.714,8.47-5.564,14.35-5.564c3.487,0,6.629,0.623,9.432,1.877c2.798,1.254,5.107,3.227,6.925,5.94C90.298,40.28,91.355,43.041,91.849,46.186z M81.314,47.232c-0.195-2.787-1.126-4.897-2.803-6.339c-1.663-1.446-3.74-2.171-6.216-2.171c-2.697,0-4.779,0.776-6.259,2.301c-1.491,1.522-2.416,3.59-2.795,6.21H81.314L81.314,47.232z" />
+                      </g>
+                    </svg>
+                  </a>
 
-                  <IconTooltip text="youtube" position="top">
-                    <a
-                      href="https://www.youtube.com/@avo-mango"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
-                    >
-                      <Youtube size={14} />
-                    </a>
-                  </IconTooltip>
+                  <a
+                    href="https://www.youtube.com/@avo-mango"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <Youtube size={14} />
+                  </a>
 
-                  <IconTooltip text="instagram" position="top">
-                    <a
-                      href="https://instagram.com/avotravel"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
-                    >
-                      <Instagram size={14} />
-                    </a>
-                  </IconTooltip>
+                  <a
+                    href="https://instagram.com/avotravel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <Instagram size={14} />
+                  </a>
 
-                  <IconTooltip text="x" position="top">
-                    <a
-                      href="https://x.com/ibxavo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/60 hover:text-white transition-colors duration-200"
+                  <a
+                    href="https://x.com/ibxavo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
                     >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                    </a>
-                  </IconTooltip>
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
 
                   <button
                     onClick={handleContactClick}
