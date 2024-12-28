@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import nextchat1 from "../assets/images/nextchat1.jpg";
 import nextchat2 from "../assets/images/nextchat2.jpg";
 import nextchat3 from "../assets/images/nextchat3.jpg";
@@ -13,6 +13,72 @@ import nextchat10 from "../assets/images/nextchat10.jpg";
 import nextchat11 from "../assets/images/nextchat11.jpg";
 
 const CaseStudyNextChat = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    // Add a small delay before clearing the image to allow the exit animation to complete
+    setTimeout(() => setSelectedImage(null), 200);
+  };
+
+  const Modal = ({ isOpen, onClose, image }) => {
+    // Early return moved to after AnimatePresence to handle exit animations properly
+    return (
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80"
+            onClick={onClose}
+          >
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              className="relative max-w-4xl w-full max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={image}
+                alt="Full size view"
+                className="w-full h-full object-contain rounded-lg"
+                loading="eager"
+              />
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 text-white hover:text-gray-300 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-colors"
+                aria-label="Close modal"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    );
+  };
+
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
@@ -38,7 +104,8 @@ const CaseStudyNextChat = () => {
                 <img
                   src={nextchat1}
                   alt="NextChat Cover"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg cursor-pointer"
+                  onClick={() => openModal(nextchat1)}
                 />
               </motion.div>
 
@@ -144,7 +211,8 @@ const CaseStudyNextChat = () => {
                 <img
                   src={nextchat3}
                   alt="App.js Code Screenshot"
-                  className="w-full rounded-lg mb-2"
+                  className="w-full rounded-lg mb-2 cursor-pointer"
+                  onClick={() => openModal(nextchat3)}
                 />
                 <p className="text-sm text-center text-gray-400">
                   App.js Code Screenshot in Visual Studio Code
@@ -212,7 +280,8 @@ const CaseStudyNextChat = () => {
                 <img
                   src={nextchat4}
                   alt="App Screens"
-                  className="w-full rounded-lg mb-2"
+                  className="w-full rounded-lg mb-2 cursor-pointer"
+                  onClick={() => openModal(nextchat4)}
                 />
                 <p className="text-sm text-center text-gray-400">
                   NextChat Poster with App Screens
@@ -258,17 +327,20 @@ const CaseStudyNextChat = () => {
                   <img
                     src={nextchat5}
                     alt="Start Screen"
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg cursor-pointer"
+                    onClick={() => openModal(nextchat5)}
                   />
                   <img
                     src={nextchat6}
                     alt="Chat Screen"
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg cursor-pointer"
+                    onClick={() => openModal(nextchat6)}
                   />
                   <img
                     src={nextchat7}
                     alt="Chat Screen Features"
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg cursor-pointer"
+                    onClick={() => openModal(nextchat7)}
                   />
                 </div>
                 <p className="text-sm text-center text-gray-400 mt-2">
@@ -332,12 +404,14 @@ const CaseStudyNextChat = () => {
                   <img
                     src={nextchat8}
                     alt="Google Firestore Integration"
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg cursor-pointer"
+                    onClick={() => openModal(nextchat8)}
                   />
                   <img
                     src={nextchat9}
                     alt="Google Firebase Integration"
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg cursor-pointer"
+                    onClick={() => openModal(nextchat9)}
                   />
                 </div>
                 <p className="text-sm text-center text-gray-400 mt-2">
@@ -455,7 +529,8 @@ const uploadAndSendImage = async (imageURI) => {
                 <img
                   src={nextchat10}
                   alt="Final Testing"
-                  className="w-full rounded-lg"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(nextchat10)}
                 />
                 <p className="text-sm text-center text-gray-400 mt-2">
                   Coding at Home
@@ -483,7 +558,8 @@ const uploadAndSendImage = async (imageURI) => {
                 <img
                   src={nextchat2}
                   alt="NextChat Branding"
-                  className="w-48 rounded-lg"
+                  className="w-48 rounded-lg cursor-pointer"
+                  onClick={() => openModal(nextchat2)}
                 />
               </div>
             </div>
@@ -576,6 +652,7 @@ const uploadAndSendImage = async (imageURI) => {
           </section>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} image={selectedImage} />
     </div>
   );
 };
