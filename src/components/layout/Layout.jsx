@@ -96,7 +96,7 @@ const Layout = ({ children, isLoading }) => {
             />
 
             <div className="absolute top-1 left-1 w-8 h-10 flex items-center justify-center z-10">
-              <Link to="/" className="scale-50">
+              <Link to="/" className="scale-55">
                 <LogoMonogram />
               </Link>
             </div>

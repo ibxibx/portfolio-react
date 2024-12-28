@@ -192,7 +192,7 @@ const Work = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Projects
+            projects
           </motion.h1>
           <div className="max-w-[1000px] w-full">
             {projects.map((project, index) => (

@@ -23,9 +23,17 @@ const About = () => {
   ];
 
   return (
-    <div className="absolute inset-0 overflow-hidden font-['PP_Neue_Machina']">
+    <div className="absolute inset-0 overflow-hidden font-['PP_Object_Sans']">
       <div className="h-full overflow-y-auto scrollbar-thin">
-        <div className="min-h-full flex items-center justify-center p-4 sm:p-4 md:p-6">
+        <div className="min-h-full flex flex-col items-center p-4 sm:p-6 md:p-8">
+          <motion.h1
+            className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            about-me
+          </motion.h1>
           <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-[1fr] lg:grid-cols-[600px_350px] gap-6">
             {/* Left Column */}
             <div className="space-y-6">
