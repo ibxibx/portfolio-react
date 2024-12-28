@@ -14,7 +14,7 @@ import nextchat11 from "../assets/images/nextchat11.jpg";
 
 const CaseStudyNextChat = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden bg-neutral-900">
+    <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <motion.h1
@@ -72,11 +72,14 @@ const CaseStudyNextChat = () => {
                   MyMDB app, I particularly enjoyed working on my NextChat -
                   React Native mobile app for chatting.
                 </p>
+                <br />
                 <p>
                   The objective was to build a chat app for mobile devices using
                   React Native. The app will provide users with a chat interface
                   and options to share images and their location.
                 </p>
+                <br />
+
                 <p>
                   It's quite a feature-rich app that I built and tested with my
                   tutor and mentor. The basic code snippets and parts were
@@ -95,6 +98,7 @@ const CaseStudyNextChat = () => {
                 <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
                   Tech Stack and Specs
                 </h2>
+                <br />
                 <div className="space-y-6 font-['PP_Neue_Machina']">
                   <div>
                     <h3 className="text-xl mb-3">Core Technologies</h3>
@@ -107,6 +111,7 @@ const CaseStudyNextChat = () => {
                       <li>JavaScript</li>
                     </ul>
                   </div>
+                  <br />
 
                   <div>
                     <h3 className="text-xl mb-3">Supported Platforms</h3>
@@ -115,6 +120,7 @@ const CaseStudyNextChat = () => {
                       <li>Android</li>
                     </ul>
                   </div>
+                  <br />
 
                   <div>
                     <h3 className="text-xl mb-3">Data Storage</h3>
@@ -123,6 +129,7 @@ const CaseStudyNextChat = () => {
                       <li>Offline storage: Local device storage</li>
                     </ul>
                   </div>
+                  <br />
 
                   <div>
                     <h3 className="text-xl mb-3">Authentication</h3>
@@ -160,6 +167,7 @@ const CaseStudyNextChat = () => {
                     <li>Store images in Firebase Cloud Storage</li>
                   </ul>
                 </div>
+                <br />
 
                 <div>
                   <h3 className="text-xl mb-4 font-['PP_Object_Sans']">
@@ -170,6 +178,7 @@ const CaseStudyNextChat = () => {
                     <li>Send location data in map view via chat</li>
                   </ul>
                 </div>
+                <br />
 
                 <div>
                   <h3 className="text-xl mb-4 font-['PP_Object_Sans']">
@@ -182,6 +191,7 @@ const CaseStudyNextChat = () => {
                     </li>
                   </ul>
                 </div>
+                <br />
 
                 <div>
                   <h3 className="text-xl mb-4 font-['PP_Object_Sans']">
@@ -210,10 +220,11 @@ const CaseStudyNextChat = () => {
               </div>
             </div>
           </section>
+          <br />
 
           {/* Development Steps */}
           <section className="space-y-16 mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-8">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-8">
               The Development Steps, Challenges & Solutions
             </h2>
 
@@ -455,7 +466,7 @@ const uploadAndSendImage = async (imageURI) => {
             {/* Branding Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 font-['PP_Neue_Machina']">
-                <h2 className="text-2xl font-['PP_Object_Sans'] mb-4">
+                <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-4">
                   Branding
                 </h2>
                 <p>
@@ -476,6 +487,7 @@ const uploadAndSendImage = async (imageURI) => {
                 />
               </div>
             </div>
+            <br />
 
             {/* Final Thoughts Section */}
             <div className="space-y-8">
@@ -530,6 +542,7 @@ const uploadAndSendImage = async (imageURI) => {
                   a React Native project.
                 </p>
               </div>
+              <br />
 
               <div className="mt-16">
                 <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-8">
@@ -554,6 +567,10 @@ const uploadAndSendImage = async (imageURI) => {
                     customization of chat background with images
                   </li>
                 </ul>
+                <br />
+                <br />
+                <br />
+                <br />
               </div>
             </div>
           </section>
