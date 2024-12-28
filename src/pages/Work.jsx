@@ -74,20 +74,22 @@ const ProjectBox = ({
       </div>
 
       {/* Image Section */}
-      <div
-        className={`w-full lg:w-[340px] h-[250px] lg:h-[250px] relative flex items-center justify-center overflow-hidden ${
-          isSmallViewport || inView ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <img
-          src={projectImages[imageNumber]}
-          alt={title}
-          className={`w-full h-full object-cover ${
-            isSmallViewport
-              ? "opacity-100"
-              : "opacity-0 group-hover:opacity-100 lg:transition-opacity lg:duration-500"
+      <div className="flex items-center">
+        <div
+          className={`w-full lg:w-[340px] h-[250px] relative flex items-center justify-center overflow-hidden ${
+            isSmallViewport || inView ? "opacity-100" : "opacity-0"
           }`}
-        />
+        >
+          <img
+            src={projectImages[imageNumber]}
+            alt={title}
+            className={`w-full h-full object-cover ${
+              isSmallViewport
+                ? "opacity-100"
+                : "opacity-0 group-hover:opacity-100 lg:transition-opacity lg:duration-500"
+            }`}
+          />
+        </div>
       </div>
 
       <div className="p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
