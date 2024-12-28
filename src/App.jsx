@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/portfolio-react">
+    <Router>
       <Layout isLoading={isLoading}>
         <Routes>
           <Route path="/" element={<Home />} />
