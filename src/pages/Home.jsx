@@ -292,7 +292,7 @@ const Home = () => {
       id={id}
       className="relative w-full py-32 scroll-mt-32"
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      whileInView={{ opacity: 1, threshold: 0.1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
