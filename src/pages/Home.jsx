@@ -348,8 +348,8 @@ const Home = () => {
                       explored all 5 continents, visiting over 250 cities. This
                       global exposure has shaped my perspective on technology's
                       role in connecting and improving lives across cultures.
-                      Besides travel my hobbies include sailing, rock climbing,
-                      volleyball and filming.
+                      Besides travel, my hobbies include: sailing, rock
+                      climbing, volleyball and filming.
                     </p>
                   </div>
 
@@ -390,7 +390,7 @@ const Home = () => {
                       Embracing Development
                     </h3>
                     <p>
-                      Recently graduated from Career Foundry's Full Stack
+                      Having recently graduated from Career Foundry's Full Stack
                       Development program, I've built a strong foundation in
                       coding with expertise in React, JavaScript, Node.js, and
                       Angular. My background in design and marketing brings a
