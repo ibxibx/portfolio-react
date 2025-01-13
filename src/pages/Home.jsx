@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
@@ -133,6 +134,7 @@ const Home = () => {
   // State management
   const spotlightTopRef = useRef(null);
   const spotlightBottomRef = useRef(null);
+  const contactRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -207,6 +209,10 @@ const Home = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   // Projects data
@@ -287,8 +293,9 @@ const Home = () => {
   ];
 
   // Section component
-  const Section = ({ id, children }) => (
+  const Section = React.forwardRef(({ id, children }, ref) => (
     <motion.section
+      ref={ref}
       id={id}
       className="relative w-full py-32 scroll-mt-32"
       initial={{ opacity: 0 }}
@@ -298,7 +305,7 @@ const Home = () => {
     >
       {children}
     </motion.section>
-  );
+  ));
 
   return (
     <div className="relative">
@@ -665,8 +672,8 @@ const Home = () => {
       </Section>
 
       {/* Contact Section */}
-      <Section id="contact">
-        <div className="container mx-auto px-4 relative">
+      <Section id="contact" ref={contactRef}>
+        <div className="container mx-auto px-4">
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light text-center"
             initial={{ opacity: 0, y: -20 }}
@@ -677,7 +684,7 @@ const Home = () => {
           </motion.h1>
           <div className="max-w-[1000px] mx-auto mb-32">
             <motion.div
-              className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-8"
+              className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-8 relative"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -697,84 +704,86 @@ const Home = () => {
 
               <form
                 onSubmit={handleSubmit}
-                className="space-y-6 font-mono relative"
-                onClick={(e) => e.stopPropagation()}
+                className="space-y-6 font-mono"
+                onClick={(e) => e.stopPropagation()} // Isolates form from unintended clicks
               >
                 <div>
-                  <label className="block text-sm mb-2" htmlFor="fullName">
-                    1 full-name *
-                  </label>
+                  <label className="block text-sm mb-2">1 full-name *</label>
                   <input
-                    id="fullName"
                     type="text"
                     required
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary focus:ring-0 focus-visible:ring-0"
+                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
                     value={formData.fullName}
                     onChange={(e) =>
                       setFormData({ ...formData, fullName: e.target.value })
                     }
+                    onFocus={(e) => {
+                      e.stopPropagation();
+                    }} // Prevents scroll
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-2" htmlFor="company">
-                    2 company
-                  </label>
+                  <label className="block text-sm mb-2">2 company</label>
                   <input
-                    id="company"
                     type="text"
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary focus:ring-0 focus-visible:ring-0"
+                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
                     value={formData.company}
                     onChange={(e) =>
                       setFormData({ ...formData, company: e.target.value })
                     }
+                    onFocus={(e) => {
+                      e.stopPropagation();
+                    }} // Prevents scroll
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-2" htmlFor="website">
-                    3 website
-                  </label>
+                  <label className="block text-sm mb-2">3 website</label>
                   <input
-                    id="website"
                     type="text"
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary focus:ring-0 focus-visible:ring-0"
+                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
                     value={formData.website}
                     onChange={(e) =>
                       setFormData({ ...formData, website: e.target.value })
                     }
+                    onFocus={(e) => {
+                      e.stopPropagation();
+                    }} // Prevents scroll
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-2" htmlFor="email">
-                    4 email-address*
+                  <label className="block text-sm mb-2">
+                    4 email-address *
                   </label>
                   <input
-                    id="email"
                     type="email"
                     required
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary focus:ring-0 focus-visible:ring-0"
+                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
+                    onFocus={(e) => {
+                      e.stopPropagation();
+                    }} // Prevents scroll
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-2" htmlFor="message">
-                    5 your-message *
-                  </label>
+                  <label className="block text-sm mb-2">5 your-message *</label>
                   <textarea
-                    id="message"
                     required
                     rows={4}
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary focus:ring-0 focus-visible:ring-0"
+                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
+                    onFocus={(e) => {
+                      e.stopPropagation();
+                    }} // Prevents scroll
                   />
                 </div>
 
@@ -806,10 +815,9 @@ const Home = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="px-6 py-2 bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-2 bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
                 >
-                  {isSubmitting ? "Sending..." : "submit-message →"}
+                  submit-message →
                 </button>
               </form>
             </motion.div>

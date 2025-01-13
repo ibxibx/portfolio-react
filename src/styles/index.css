@@ -4,15 +4,18 @@
 @tailwind utilities;
 
 /* Base styles */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+/* Disable smooth scroll for the contact form */
+#contact input:focus, #contact textarea:focus {
+  scroll-behavior: auto;
+}
 
-  body {
-    @apply bg-[#0f0f0f] text-white antialiased;
-    font-family: "PP Neue Machina", monospace;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0f0f0f] text-white antialiased;
+  font-family: "PP Neue Machina", monospace;
 }
 
 /* Component styles */
