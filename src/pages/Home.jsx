@@ -8,6 +8,9 @@ import SectionHero from "../components/home/SectionHero";
 import PrivacyPolicyModal from "./PrivacyPolicyModal";
 import SuccessModal from "./SuccessModal";
 import { useInView } from "react-intersection-observer";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Import all images and assets
 import profile500x500 from "../assets/images/profile500x500.jpg";
@@ -70,6 +73,8 @@ const ProjectBox = ({
 }) => {
   const [ref, inView] = useInView({ threshold: 0.1 });
   const isSmallViewport = window.innerWidth < 1280;
+
+  const navigate = useNavigate();
 
   return (
     <motion.div
@@ -674,153 +679,46 @@ const Home = () => {
       {/* Contact Section */}
       <Section id="contact" ref={contactRef}>
         <div className="container mx-auto px-4">
-          <motion.h1
-            className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light text-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            contact
-          </motion.h1>
           <div className="max-w-[1000px] mx-auto mb-32">
-            <motion.div
-              className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-8 relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="mb-8">
-                <h2 className="text-2xl font-mono mb-2">write-me</h2>
-                <p className="text-sm font-neue-machina">
-                  Seeking full-time roles in technology companies.
-                  <br />
-                  Onsite, hybrid or remote working arrangements are welcome.
-                  <br />
-                  <br />
-                  Reach me via this form or at ian(at)ianworks.dev
-                  <br />I reply within a day, max. within 48 hours.
-                </p>
-              </div>
-
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-6 font-mono"
-                onClick={(e) => e.stopPropagation()} // Isolates form from unintended clicks
+            <Link to="/contact" className="block">
+              <motion.div
+                className="bg-neutral-900/50 backdrop-blur-md rounded-lg p-12 relative group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.5 }}
               >
-                <div>
-                  <label className="block text-sm mb-2">1 full-name *</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
-                    value={formData.fullName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, fullName: e.target.value })
-                    }
-                    onFocus={(e) => {
-                      e.stopPropagation();
-                    }} // Prevents scroll
-                  />
-                </div>
+                <div className="flex flex-col items-center justify-center space-y-6">
+                  <motion.h2
+                    className="text-4xl sm:text-5xl lg:text-7xl font-light text-center font-mono"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    let's-get-in-touch
+                  </motion.h2>
 
-                <div>
-                  <label className="block text-sm mb-2">2 company</label>
-                  <input
-                    type="text"
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
-                    value={formData.company}
-                    onChange={(e) =>
-                      setFormData({ ...formData, company: e.target.value })
-                    }
-                    onFocus={(e) => {
-                      e.stopPropagation();
-                    }} // Prevents scroll
-                  />
-                </div>
+                  <motion.div
+                    className="flex items-center gap-3 text-lg sm:text-xl text-white/70 group-hover:text-white transition-colors duration-300"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <span>click to send a message</span>
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                  </motion.div>
 
-                <div>
-                  <label className="block text-sm mb-2">3 website</label>
-                  <input
-                    type="text"
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
-                    value={formData.website}
-                    onChange={(e) =>
-                      setFormData({ ...formData, website: e.target.value })
-                    }
-                    onFocus={(e) => {
-                      e.stopPropagation();
-                    }} // Prevents scroll
+                  <motion.div
+                    className="absolute inset-0 border border-white/10 rounded-lg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
                   />
-                </div>
 
-                <div>
-                  <label className="block text-sm mb-2">
-                    4 email-address *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    onFocus={(e) => {
-                      e.stopPropagation();
-                    }} // Prevents scroll
-                  />
+                  <motion.div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80]/0 via-[#4ADE80]/5 to-[#4ADE80]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-
-                <div>
-                  <label className="block text-sm mb-2">5 your-message *</label>
-                  <textarea
-                    required
-                    rows={4}
-                    className="w-full bg-black/50 border border-white/10 rounded p-3 focus:outline-none focus:border-primary"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    onFocus={(e) => {
-                      e.stopPropagation();
-                    }} // Prevents scroll
-                  />
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    required
-                    className="rounded border-white/10"
-                    checked={formData.agreedToPolicy}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        agreedToPolicy: e.target.checked,
-                      })
-                    }
-                  />
-                  <label htmlFor="privacy" className="text-sm">
-                    I agree with the terms of the{" "}
-                    <button
-                      type="button"
-                      onClick={() => setIsPolicyModalOpen(true)}
-                      className="text-primary hover:underline"
-                    >
-                      Privacy Policy
-                    </button>
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="px-6 py-2 bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
-                >
-                  submit-message →
-                </button>
-              </form>
-            </motion.div>
+              </motion.div>
+            </Link>
           </div>
         </div>
       </Section>

@@ -52,7 +52,9 @@ const Layout = ({ children, isLoading }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleContactClick = () => {
-    navigate("/contact");
+    if (location.pathname !== "/contact") {
+      navigate("/contact");
+    }
     setMobileMenuOpen(false);
   };
 
