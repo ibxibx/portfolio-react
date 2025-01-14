@@ -43,7 +43,7 @@ const hobbiesImages = [
   { src: hobbies3, alt: "Beach Volleyball" },
   { src: hobbies4, alt: "Sailing" },
   { src: hobbies5, alt: "Mountain Climbing" },
-  { src: hobbies6, alt: "Swimming" },
+  { src: hobbies6, alt: "Architecture" },
 ];
 
 // Project Link Component
