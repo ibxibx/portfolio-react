@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import CaseStudyNextChat from "./pages/CaseStudyNextChat";
-import Navigation from "./components/Navigation";
 import "./styles/decorations.css";
 import "./styles/variables.css";
 
@@ -21,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/">
       <Layout isLoading={isLoading}>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -127,7 +127,13 @@ const ProjectBox = ({
           <ProjectLink href={githubLink} text="GitHub" />
           {demoLink && <ProjectLink href={demoLink} text="Demo" />}
           {caseStudyLink && (
-            <ProjectLink href={caseStudyLink} text="Case Study" />
+            <Link
+              to={caseStudyLink}
+              className="flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-200 text-sm"
+            >
+              Case Study
+              <ArrowUpRight size={16} />
+            </Link>
           )}
         </div>
       </div>
