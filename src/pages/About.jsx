@@ -310,7 +310,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
-                    <span className="text-white/50">5.</span>
+                    <span className="text-white/50">2.</span>
                     <span>github</span>
                     <ArrowUpRight size={12} />
                   </a>
@@ -320,7 +320,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
-                    <span className="text-white/50">4.</span>
+                    <span className="text-white/50">3.</span>
                     <span>behance</span>
                     <ArrowUpRight size={12} />
                   </a>
@@ -330,7 +330,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
-                    <span className="text-white/50">3.</span>
+                    <span className="text-white/50">4.</span>
                     <span>youtube</span>
                     <ArrowUpRight size={12} />
                   </a>
@@ -340,7 +340,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
-                    <span className="text-white/50">2.</span>
+                    <span className="text-white/50">5.</span>
                     <span>instagram</span>
                     <ArrowUpRight size={12} />
                   </a>
@@ -350,7 +350,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
                   >
-                    <span className="text-white/50">3.</span>
+                    <span className="text-white/50">6.</span>
                     <span>x twitter</span>
                     <ArrowUpRight size={12} />
                   </a>
