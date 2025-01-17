@@ -88,7 +88,10 @@ const Contact = () => {
                 Onsite, hybrid or remote working arrangements are welcome.
                 <br />
                 <br />
-                Reach me via this form or at ian(at)ianworks.dev
+                Reach me via this form or at{" "}
+                <span className="text-primary hover:underline cursor-pointer">
+                  ian(at)ianworks.dev
+                </span>
                 <br />I reply within a day, max. within 48 hours.
               </p>
             </div>
