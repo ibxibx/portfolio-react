@@ -338,7 +338,7 @@ const Home = () => {
     <motion.section
       ref={ref}
       id={id}
-      className="relative w-full pt-2 pb-32 scroll-mt-32"
+      className="relative w-full pt-1 pb-32 scroll-mt-32"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, threshold: 0.1 }}
       viewport={{ once: true }}
