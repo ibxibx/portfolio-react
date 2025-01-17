@@ -35,6 +35,7 @@ const ProjectLink = ({ href, text }) =>
 const ProjectBox = ({
   number,
   title,
+  description,
   technologies,
   imageNumber,
   githubLink,
