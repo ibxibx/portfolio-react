@@ -40,6 +40,7 @@ const ProjectBox = ({
   githubLink,
   demoLink,
   caseStudyLink,
+  year = "2024",
   delay = 0,
 }) => {
   const [ref, inView] = useInView({ threshold: 0.1 });
@@ -94,7 +95,7 @@ const ProjectBox = ({
       </div>
 
       <div className="p-6 flex flex-row lg:flex-col justify-between lg:justify-start lg:w-[200px]">
-        <span className="text-white/50 text-sm">2024</span>
+        <span className="text-white/50 text-sm">{year}</span>
         <div className="flex flex-row lg:flex-col gap-4 lg:mt-4">
           <ProjectLink href={githubLink} text="GitHub" />
           {demoLink && <ProjectLink href={demoLink} text="Demo" />}
@@ -186,6 +187,7 @@ const Work = () => {
       technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
       imageNumber: 1,
       githubLink: "https://github.com/ibxibx/portfolio-react",
+      year: "2025",
     },
   ];
 
