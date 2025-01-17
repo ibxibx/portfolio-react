@@ -518,6 +518,7 @@ const Home = () => {
                     Agile Methodologies
                   </li>
                   <li className="break-inside-avoid mb-3">Web Design</li>
+                  <li className="break-inside-avoid mb-3">Graphic Design</li>
                   <li className="break-inside-avoid mb-3">Wireframing</li>
                   <li className="break-inside-avoid mb-3">Coding</li>
                   <li className="break-inside-avoid mb-3">Troubleshooting</li>
