@@ -63,6 +63,9 @@ const ProjectBox = ({
         <h2 className="text-2xl lg:text-4xl mb-4 font-light leading-tight min-h-[72px]">
           {title}
         </h2>
+        <p className="text-xs text-white/70 mb-4 leading-loose">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-2 mb-4 lg:mb-0">
           {technologies.map((tech, index) => (
             <span
@@ -118,6 +121,8 @@ const Work = () => {
     {
       number: 1,
       title: "MyMDB - My Movie Database (Angular / Client Side)",
+      description:
+        "A client-side application built with Angular that interfaces with a movie API, allowing users to browse, search, and manage their favorite movies while maintaining their own watchlist and profile information.",
       technologies: [
         "JavaScript",
         "Angular",
@@ -132,6 +137,8 @@ const Work = () => {
     {
       number: 2,
       title: "NextChat - A React Native Mobile App",
+      description:
+        "A React Native mobile chat application using Expo and Firebase that enables real-time communication through text, images, and location sharing with offline capabilities.",
       technologies: [
         "JavaScript",
         "React Native",
@@ -148,6 +155,8 @@ const Work = () => {
     {
       number: 3,
       title: "MeetLink - A PWA for Meetups and Events",
+      description:
+        "A serverless progressive web application built with React that uses Google Calendar API to fetch and display upcoming events for specific cities, featuring data visualization and offline functionality.",
       technologies: [
         "JavaScript",
         "HTML",
@@ -164,6 +173,8 @@ const Work = () => {
     {
       number: 4,
       title: "MyMDB - My Movie Database (Client Side)",
+      description:
+        "A single-page movie database application built with React and Bootstrap that allows users to browse, search, and filter movies while managing their favorites list.",
       technologies: [
         "JavaScript",
         "RESTful API",
@@ -180,6 +191,8 @@ const Work = () => {
     {
       number: 5,
       title: "MyMDB - My Movie Database (Server Side)",
+      description:
+        "A comprehensive MERN stack implementation of the movie database that combines MongoDB, Express.js, React, and Node.js to provide a complete solution for movie browsing and user management.",
       technologies: [
         "Node.js",
         "JavaScript",
@@ -196,6 +209,8 @@ const Work = () => {
     {
       number: 6,
       title: "My Portfolio Website in React",
+      description:
+        "A responsive React-based portfolio website showcasing web development projects, built with Tailwind CSS and featuring smooth animations and interactive elements.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
       imageNumber: 1,
       githubLink: "https://github.com/ibxibx/portfolio-react",
