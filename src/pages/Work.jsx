@@ -67,6 +67,8 @@ const ProjectBox = ({
         <p className="text-xs text-white/70 mb-4 leading-loose">
           {description}
         </p>
+        {/* Separator line with spacing */}
+        <div className="w-full h-px bg-white/10 my-6 mx-auto" />
         <div className="flex flex-wrap gap-2 mb-4 lg:mb-0">
           {technologies.map((tech, index) => (
             <span
