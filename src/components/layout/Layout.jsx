@@ -208,7 +208,7 @@ const Layout = ({ children, isLoading }) => {
                 <div className="absolute left-1/2 -translate-x-1/2 hidden 2xl:flex items-center gap-8 text-sm text-white/60">
                   <div className="flex items-center gap-2">
                     <span>Based in</span>
-                    <span className="text-white">Berlin, Germany</span>
+                    <span className="text-white">Berlin Mitte, Germany</span>
                   </div>
                   <div className="h-4 w-px bg-white/10" />
                   <div className="flex items-center gap-2">
