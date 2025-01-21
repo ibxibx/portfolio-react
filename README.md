@@ -11,11 +11,11 @@ A modern, responsive portfolio website showcasing my journey from arts to tech, 
 ## 📸 Portfolio Preview
 
 <div align="center">
-  <img src="src/assets/images/portfolio-1" alt="Portfolio Homepage" width="45%" />
-  <img src="src/assets/images/portfolio-2" alt="Projects Section" width="45%" />
+  <img src="https://raw.githubusercontent.com/ibxibx/portfolio-react/main/src/assets/images/portfolio-1.jpg" alt="Portfolio Homepage" width="45%" />
+  <img src="https://raw.githubusercontent.com/ibxibx/portfolio-react/main/src/assets/images/portfolio-2.jpg" alt="Projects Section" width="45%" />
   <br/><br/>
-  <img src="src/assets/images/portfolio-3" alt="Skills Section" width="45%" />
-  <img src="src/assets/images/portfolio-4" alt="Contact Section" width="45%" />
+  <img src="https://raw.githubusercontent.com/ibxibx/portfolio-react/main/src/assets/images/portfolio-3.jpg" alt="Skills Section" width="45%" />
+  <img src="https://raw.githubusercontent.com/ibxibx/portfolio-react/main/src/assets/images/portfolio-4.jpg" alt="Contact Section" width="45%" />
 </div>
 
 ## 💻 Featured Projects
