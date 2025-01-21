@@ -8,6 +8,16 @@
 
 A modern, responsive portfolio website showcasing my journey from arts to tech, built with React and styled with Tailwind CSS. The site features a clean, minimalist design with interactive elements and smooth animations.
 
+## 📸 Portfolio Preview
+
+<div align="center">
+  <img src="src/assets/images/portfolio-1" alt="Portfolio Homepage" width="45%" />
+  <img src="src/assets/images/portfolio-2" alt="Projects Section" width="45%" />
+  <br/><br/>
+  <img src="src/assets/images/portfolio-3" alt="Skills Section" width="45%" />
+  <img src="src/assets/images/portfolio-4" alt="Contact Section" width="45%" />
+</div>
+
 ## 💻 Featured Projects
 
 1. **MyMDB - Movie Database (Angular)** 
@@ -62,3 +72,4 @@ npm install
 
 # Run development server
 npm start
+```
