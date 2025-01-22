@@ -223,7 +223,10 @@ const Layout = ({ children, isLoading }) => {
                     <span className="text-white">ian@ianworks.dev</span>
                   </div>
                   <div className="h-4 w-px bg-white/10" />
-                  <span className="text-white">+49 17 636 127 937</span>
+                  <div className="flex items-center gap-2">
+                    <span>tel:</span>
+                    <span className="text-white">+49 17 636 127 937</span>
+                  </div>
                 </div>
 
                 {/* Social icons - always visible, centered on mobile */}
