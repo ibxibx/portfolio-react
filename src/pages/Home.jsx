@@ -537,6 +537,7 @@ const Home = () => {
                 <ul className="columns-2 gap-8 text-sm text-white/80">
                   <li className="break-inside-avoid mb-3">React Development</li>
                   <li className="break-inside-avoid mb-3">JavaScript</li>
+                  <li className="break-inside-avoid mb-3">MERN Stack</li>
                   <li className="break-inside-avoid mb-3">Node.js</li>
                   <li className="break-inside-avoid mb-3">Angular</li>
                   <li className="break-inside-avoid mb-3">API</li>
@@ -553,9 +554,9 @@ const Home = () => {
                   <li className="break-inside-avoid mb-3">Graphic Design</li>
                   <li className="break-inside-avoid mb-3">Wireframing</li>
                   <li className="break-inside-avoid mb-3">Coding</li>
+                  <li className="break-inside-avoid mb-3">Testing</li>
                   <li className="break-inside-avoid mb-3">Troubleshooting</li>
                   <li className="break-inside-avoid mb-3">Debugging</li>
-                  <li className="break-inside-avoid mb-3">Testing</li>
                   <li className="break-inside-avoid mb-3">Adobe Suite</li>
                 </ul>
               </motion.div>
