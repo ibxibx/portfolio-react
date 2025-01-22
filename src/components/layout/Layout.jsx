@@ -103,8 +103,8 @@ const Layout = ({ children, isLoading }) => {
               </Link>
             </div>
 
-            <div className="absolute top-0 left-0 right-0 h-10 flex items-center justify-center">
-              <span className="text-base font-light tracking-wide text-center">
+            <div className="absolute top-0 left-0 right-0 h-10 flex items-center">
+              <span className="absolute left-[51%] -translate-x-1/2 text-base font-light tracking-wide">
                 ian <span className="text-[#4ade80]">baumeister</span>
               </span>
             </div>
