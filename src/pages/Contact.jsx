@@ -66,6 +66,9 @@ const Contact = () => {
     <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
         <div className="min-h-full flex flex-col items-center p-4 sm:p-6 md:p-8">
+          <br />
+          <br />
+          <br />
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 lg:mb-16 font-light"
             initial={{ opacity: 0, y: -20 }}
@@ -194,6 +197,10 @@ const Contact = () => {
               </button>
             </form>
           </motion.div>
+          <br />
+          <br />
+          <br />
+          <br />
 
           <PrivacyPolicyModal
             isOpen={isPolicyModalOpen}

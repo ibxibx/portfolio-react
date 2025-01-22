@@ -11,6 +11,7 @@ import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import ScrollLine from "../components/ScrollLine";
 
 // Import all images and assets
 import profile500x500 from "../assets/images/profile500x500.jpg";
@@ -356,6 +357,9 @@ const Home = () => {
       <Section id="hero">
         <SectionHero />
       </Section>
+      <ScrollLine className="my-6" />
+      <br />
+      <br />
 
       {/* About Section */}
       <Section id="about">
@@ -696,6 +700,9 @@ const Home = () => {
           </div>
         </div>
       </Section>
+      <ScrollLine className="my-6" />
+      <br />
+      <br />
 
       {/* Work Section */}
       <Section id="work">
@@ -715,6 +722,9 @@ const Home = () => {
           </div>
         </div>
       </Section>
+      <ScrollLine className="my-6" />
+      <br />
+      <br />
 
       {/* Contact Section */}
       <Section id="contact" ref={contactRef}>
