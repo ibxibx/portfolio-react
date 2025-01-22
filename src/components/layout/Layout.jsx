@@ -307,6 +307,7 @@ const Layout = ({ children, isLoading }) => {
                   >
                     let's-get-in-touch →
                   </button>
+                  <br />
                 </div>
               </div>
             </div>
