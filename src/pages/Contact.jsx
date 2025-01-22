@@ -138,7 +138,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm mb-2">4 email-address*</label>
+                <label className="block text-sm mb-2">4 email-address *</label>
                 <input
                   type="email"
                   required
