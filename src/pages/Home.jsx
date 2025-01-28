@@ -463,7 +463,11 @@ const Home = () => {
                       opportunities to merge my business experience with
                       technical skills, I aim to contribute to forward-thinking
                       companies that create innovative solutions that have a
-                      meaningful impact on people's lives.
+                      meaningful impact on people's lives. I particularly like
+                      AI-, bio-, fin-tech, auto-motive, health-, robotics-,
+                      media-tech and related fields. If you’re interested in
+                      working together or learning more about what I do, feel
+                      free to message me or use the contact form below.
                     </p>
                   </div>
                 </div>
