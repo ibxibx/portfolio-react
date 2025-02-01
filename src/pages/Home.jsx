@@ -15,7 +15,7 @@ import ScrollLine from "../components/ScrollLine";
 
 // Import all images and assets
 import profile500x500 from "../assets/images/profile500x500.jpg";
-import resumePDF from "../assets/docs/Ian Buimistr - Junior Full Stack Developer Resume.pdf";
+import resumePDF from "../assets/docs/Ian Baumeister - Junior Full Stack Developer - Resume.pdf";
 import hobbies1 from "../assets/images/hobbies1.jpg";
 import hobbies2 from "../assets/images/hobbies2.jpg";
 import hobbies3 from "../assets/images/hobbies3.jpg";
@@ -614,7 +614,7 @@ const Home = () => {
                 </div>
                 <a
                   href={resumePDF}
-                  download="Ian Buimistr - Junior Full Stack Developer Resume.pdf"
+                  download="Ian Baumeister - Junior Full Stack Developer - Resume.pdf"
                   className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
                 >
                   <span className="text-white/50">1.</span>
