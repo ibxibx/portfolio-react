@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c2c3d959.css",
-    "main.js": "/static/js/main.e1ede406.js",
+    "main.js": "/static/js/main.a60ce672.js",
     "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
     "static/media/hobbies5.jpg": "/static/media/hobbies5.fde514b339bea34e4930.jpg",
     "static/media/hobbies3.jpg": "/static/media/hobbies3.496ea166e8946b46220e.jpg",
@@ -15,7 +15,7 @@
     "static/media/profile500x500.jpg": "/static/media/profile500x500.928d87c47fa13eac65b7.jpg",
     "static/media/nextchat10.jpg": "/static/media/nextchat10.d70efbf09e0192c790c2.jpg",
     "static/media/nextchat9.jpg": "/static/media/nextchat9.8d23b43d96d5a7159952.jpg",
-    "static/media/Ian Buimistr - Junior Full Stack Developer Resume.pdf": "/static/media/Ian Buimistr - Junior Full Stack Developer Resume.345afedfdc9af4a1be7e.pdf",
+    "static/media/Ian Baumeister - Junior Full Stack Developer - Resume.pdf": "/static/media/Ian Baumeister - Junior Full Stack Developer - Resume.9f76e9745d0d95f4dd8d.pdf",
     "static/media/project-2.jpg": "/static/media/project-2.958a0b268b6aee590b0c.jpg",
     "static/media/nextchat8.jpg": "/static/media/nextchat8.7ad3b593a5ab057493a3.jpg",
     "static/media/project-3.jpg": "/static/media/project-3.54102d23d3f0c3f94ec6.jpg",
@@ -44,11 +44,11 @@
     "static/media/nextchat11.jpg": "/static/media/nextchat11.7aa751f6b225714c7eba.jpg",
     "index.html": "/index.html",
     "main.c2c3d959.css.map": "/static/css/main.c2c3d959.css.map",
-    "main.e1ede406.js.map": "/static/js/main.e1ede406.js.map",
+    "main.a60ce672.js.map": "/static/js/main.a60ce672.js.map",
     "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2c3d959.css",
-    "static/js/main.e1ede406.js"
+    "static/js/main.a60ce672.js"
   ]
 }
