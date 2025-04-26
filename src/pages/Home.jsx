@@ -28,6 +28,8 @@ import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.jpg";
 import project5 from "../assets/images/project-5.jpg";
 import project6 from "../assets/images/project-6.jpg";
+import project7 from "../assets/images/project-7.jpg";
+import project8 from "../assets/images/project-8.jpg";
 
 const projectImages = {
   1: project1,
@@ -36,6 +38,8 @@ const projectImages = {
   4: project4,
   5: project5,
   6: project6,
+  7: project7,
+  8: project8,
 };
 
 const hobbiesImages = [
@@ -248,7 +252,7 @@ const Home = () => {
         "Material UI",
         "SCSS",
       ],
-      imageNumber: 6,
+      imageNumber: 8,
       githubLink: "https://github.com/ibxibx/mymdb-angular-client",
       demoLink: "https://ibxibx.github.io/mymdb-angular-client/welcome",
     },
@@ -266,7 +270,7 @@ const Home = () => {
         "Gifted Chat",
         "Android Studio",
       ],
-      imageNumber: 5,
+      imageNumber: 7,
       githubLink: "https://github.com/ibxibx/nextchat",
       caseStudyLink: "/case-study-nextchat",
     },
@@ -284,7 +288,7 @@ const Home = () => {
         "Jest",
         "Bootstrap",
       ],
-      imageNumber: 4,
+      imageNumber: 6,
       githubLink: "https://github.com/ibxibx/meetlink",
       demoLink: "https://ibxibx.github.io/meetlink/",
     },
@@ -302,7 +306,7 @@ const Home = () => {
         "HTML",
         "Netlify",
       ],
-      imageNumber: 3,
+      imageNumber: 5,
       githubLink: "https://github.com/ibxibx/mymdb/tree/clean-mymdb-client",
       demoLink: "https://mymdb-app.netlify.app/login",
     },
@@ -320,7 +324,7 @@ const Home = () => {
         "CORS",
         "Heroku",
       ],
-      imageNumber: 2,
+      imageNumber: 4,
       githubLink: "https://github.com/ibxibx/mymdb",
       demoLink: "https://mymdb-app.netlify.app/login",
     },
@@ -330,8 +334,30 @@ const Home = () => {
       description:
         "A responsive React-based portfolio website showcasing web development projects, built with Tailwind CSS and featuring smooth animations and interactive elements.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-      imageNumber: 1,
+      imageNumber: 3,
       githubLink: "https://github.com/ibxibx/portfolio-react",
+      year: "2025",
+    },
+    {
+      number: 7,
+      title: "FinPanel - Personal Finance Dashboard",
+      description:
+        "A comprehensive personal finance dashboard built with React.js as part of the #80DaysOfCode challenge, that combines modern web development practices with practical financial management tools.",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+      imageNumber: 2,
+      githubLink: "https://github.com/ibxibx/finpanel",
+      year: "2025",
+    },
+    {
+      number: 8,
+      title: "Samantha - A Voice AI Agent",
+      description:
+        "Samantha has been built entirely without writing code. She's accessible through phone calls and can assist with brainstorming, fact-checking and more. All conversations can be saved to your Google Drive.",
+      technologies: ["n8n", "Google Cloud API", "Vapi.ai", "GPT-4o-mini"],
+      imageNumber: 1,
+      githubLink: "https://github.com/ibxibx/samantha-voice-ai-agent",
+      caseStudyLink:
+        "https://github.com/ibxibx/samantha-voice-ai-agent/blob/master/Case%20Study%20-%20Samantha%20AI%20Voice%20Agent.pdf",
       year: "2025",
     },
   ];
