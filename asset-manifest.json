@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c2c3d959.css",
-    "main.js": "/static/js/main.7978e11b.js",
+    "main.js": "/static/js/main.8653635b.js",
     "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
     "static/media/hobbies5.jpg": "/static/media/hobbies5.fde514b339bea34e4930.jpg",
     "static/media/hobbies3.jpg": "/static/media/hobbies3.496ea166e8946b46220e.jpg",
@@ -16,17 +16,19 @@
     "static/media/nextchat10.jpg": "/static/media/nextchat10.d70efbf09e0192c790c2.jpg",
     "static/media/nextchat9.jpg": "/static/media/nextchat9.8d23b43d96d5a7159952.jpg",
     "static/media/Ian Baumeister - Junior Full Stack Developer - Resume.pdf": "/static/media/Ian Baumeister - Junior Full Stack Developer - Resume.d4df0675d1ada32b0b43.pdf",
-    "static/media/project-2.jpg": "/static/media/project-2.958a0b268b6aee590b0c.jpg",
+    "static/media/project-1.jpg": "/static/media/project-1.08707b34cec602177bc5.jpg",
+    "static/media/project-4.jpg": "/static/media/project-4.958a0b268b6aee590b0c.jpg",
     "static/media/nextchat8.jpg": "/static/media/nextchat8.7ad3b593a5ab057493a3.jpg",
-    "static/media/project-3.jpg": "/static/media/project-3.54102d23d3f0c3f94ec6.jpg",
+    "static/media/project-5.jpg": "/static/media/project-5.54102d23d3f0c3f94ec6.jpg",
     "static/media/nextchat2.jpg": "/static/media/nextchat2.be3ba454124601e183f2.jpg",
     "static/media/nextchat5.jpg": "/static/media/nextchat5.dd59378d372aa73885a3.jpg",
-    "static/media/project-6.jpg": "/static/media/project-6.df53755053f06455e04b.jpg",
+    "static/media/project-8.jpg": "/static/media/project-8.df53755053f06455e04b.jpg",
     "static/media/nextchat6.jpg": "/static/media/nextchat6.96dbd4a85f088df9911c.jpg",
+    "static/media/project-2.jpg": "/static/media/project-2.50d8d47b7dd596bf25a0.jpg",
     "static/media/nextchat7.jpg": "/static/media/nextchat7.c3493be6330bc73108d0.jpg",
-    "static/media/project-1.jpg": "/static/media/project-1.eeef309fd1a00761ff10.jpg",
-    "static/media/project-5.jpg": "/static/media/project-5.2be1bfc8b52e7645b075.jpg",
-    "static/media/project-4.jpg": "/static/media/project-4.b9c0aa41c05bb08a8c5d.jpg",
+    "static/media/project-3.jpg": "/static/media/project-3.eeef309fd1a00761ff10.jpg",
+    "static/media/project-7.jpg": "/static/media/project-7.2be1bfc8b52e7645b075.jpg",
+    "static/media/project-6.jpg": "/static/media/project-6.b9c0aa41c05bb08a8c5d.jpg",
     "static/media/NeueMachina-Regular.woff": "/static/media/NeueMachina-Regular.9f8f6c8b01ff2430a6a0.woff",
     "static/media/NeueMachina-Ultrabold.woff": "/static/media/NeueMachina-Ultrabold.2098c9c0a9c6171bbe79.woff",
     "static/media/NeueMachina-Light.woff": "/static/media/NeueMachina-Light.fc1a659f89fa6c5db707.woff",
@@ -44,11 +46,11 @@
     "static/media/nextchat11.jpg": "/static/media/nextchat11.7aa751f6b225714c7eba.jpg",
     "index.html": "/index.html",
     "main.c2c3d959.css.map": "/static/css/main.c2c3d959.css.map",
-    "main.7978e11b.js.map": "/static/js/main.7978e11b.js.map",
+    "main.8653635b.js.map": "/static/js/main.8653635b.js.map",
     "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2c3d959.css",
-    "static/js/main.7978e11b.js"
+    "static/js/main.8653635b.js"
   ]
 }
