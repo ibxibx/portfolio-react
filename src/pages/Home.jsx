@@ -255,6 +255,8 @@ const Home = () => {
       imageNumber: 8,
       githubLink: "https://github.com/ibxibx/mymdb-angular-client",
       demoLink: "https://ibxibx.github.io/mymdb-angular-client/welcome",
+      caseStudyLink:
+        "https://github.com/ibxibx/mymdb-angular-client/blob/main/case_study/Case%20Study%20-%20MyMDB%20Angular%20Application.pdf",
     },
     {
       number: 2,
