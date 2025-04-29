@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/">
+    <Router>
       <Layout isLoading={isLoading}>
         <Routes>
           <Route path="/" element={<Home />} />

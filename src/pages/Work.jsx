@@ -123,6 +123,7 @@ const ProjectBox = ({
     </motion.div>
   );
 };
+
 const Work = () => {
   const projects = [
     {
