@@ -358,8 +358,7 @@ const Home = () => {
       technologies: ["n8n", "Google Cloud API", "Vapi.ai", "GPT-4o-mini"],
       imageNumber: 1,
       githubLink: "https://github.com/ibxibx/samantha-voice-ai-agent",
-      caseStudyLink:
-        "https://github.com/ibxibx/samantha-voice-ai-agent/blob/master/Case%20Study%20-%20Samantha%20AI%20Voice%20Agent.pdf",
+      caseStudyLink: "/case-study-samantha",
       year: "2025",
     },
   ];
