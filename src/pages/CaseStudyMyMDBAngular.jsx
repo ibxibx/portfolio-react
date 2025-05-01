@@ -146,9 +146,10 @@ const CaseStudyMyMDBAngular = () => {
 
           {/* Project Description */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Project Description
             </h2>
+            <br />
             <div className="prose prose-lg prose-invert max-w-none font-['PP_Neue_Machina']">
               <p>
                 MyMDB is a single-page, responsive movie database application
@@ -171,24 +172,26 @@ const CaseStudyMyMDBAngular = () => {
               </p>
             </div>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex flex-col items-center mt-8">
               <img
                 src={mymdb2}
                 alt="Movie View Screen"
-                className="w-full max-w-2xl rounded-lg mb-2 cursor-pointer"
+                className="w-full max-w-2xl rounded-lg cursor-pointer"
                 onClick={() => openModal(mymdb2)}
               />
-              <p className="text-sm text-center text-gray-400">
+              <p className="text-sm text-center text-gray-400 mt-2">
                 Movie View Screen
               </p>
             </div>
           </section>
+          <br />
 
           {/* Project Objectives */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Project Objectives
             </h2>
+            <br />
             <ul className="list-disc list-inside space-y-2 font-['PP_Neue_Machina']">
               <li>
                 Create a client-side application using Angular to provide an
@@ -220,9 +223,10 @@ const CaseStudyMyMDBAngular = () => {
 
           {/* Tech Stack and Specs */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Tech Stack and Specs
             </h2>
+            <br />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6 font-['PP_Neue_Machina']">
                 <ul className="list-disc list-inside space-y-2">
@@ -251,9 +255,10 @@ const CaseStudyMyMDBAngular = () => {
 
           {/* User Stories */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               User Stories
             </h2>
+            <br />
             <ul className="list-disc list-inside space-y-4 font-['PP_Neue_Machina']">
               <li>
                 As a user, I want to be able to register and log in to the
@@ -284,9 +289,10 @@ const CaseStudyMyMDBAngular = () => {
 
           {/* Project Structure */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Project Structure
             </h2>
+            <br />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <p>
@@ -345,13 +351,14 @@ const CaseStudyMyMDBAngular = () => {
               </div>
             </div>
           </section>
+          <br />
+          <br />
 
           {/* Building Steps */}
           <section className="space-y-16 mb-16">
             <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-8">
               Building Steps
             </h2>
-
             {/* Step 1 */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
@@ -633,13 +640,15 @@ const CaseStudyMyMDBAngular = () => {
               </div>
             </div>
           </section>
+          <br />
+          <br />
 
           {/* Technical Challenges and Solutions */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Technical Challenges and Solutions
             </h2>
-
+            <br />
             <div className="space-y-8 font-['PP_Neue_Machina']">
               <div>
                 <h3 className="text-xl mb-4">
@@ -735,12 +744,14 @@ const CaseStudyMyMDBAngular = () => {
               </div>
             </div>
           </section>
+          <br />
 
           {/* Skills Acquired */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Skills Acquired
             </h2>
+            <br />
             <p className="mb-4 font-['PP_Neue_Machina']">
               Through the development of the MyMDB Angular client application, I
               gained proficiency in several key areas:
@@ -790,12 +801,14 @@ const CaseStudyMyMDBAngular = () => {
               </li>
             </ul>
           </section>
+          <br />
 
           {/* Final Thoughts and Reflections */}
           <section className="mb-16">
-            <h2 className="text-2xl font-['PP_Object_Sans'] mb-6">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
               Final Thoughts and Reflections
             </h2>
+            <br />
             <div className="space-y-4 font-['PP_Neue_Machina']">
               <p>
                 Developing the MyMDB Angular client application was a
