@@ -6,6 +6,8 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import CaseStudyNextChat from "./pages/CaseStudyNextChat";
+import CaseStudySamantha from "./pages/CaseStudySamantha";
+// import CaseStudyMyMDBAngular from "./pages/CaseStudyMyMDBAngular";
 import "./styles/decorations.css";
 import "./styles/variables.css";
 
@@ -28,6 +30,11 @@ const App = () => {
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/case-study-nextchat" element={<CaseStudyNextChat />} />
+          <Route path="/case-study-samantha" element={<CaseStudySamantha />} />
+          {/* <Route
+            path="/case-study-mymdb-angular"
+            element={<CaseStudyMyMDBAngular />}
+          /> */}
         </Routes>
       </Layout>
     </Router>
