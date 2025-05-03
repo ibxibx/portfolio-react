@@ -31,7 +31,6 @@ const CaseStudySamantha = () => {
   };
 
   const Modal = ({ isOpen, onClose, image }) => {
-    // Early return moved to after AnimatePresence to handle exit animations properly
     return (
       <AnimatePresence>
         {isOpen && (
@@ -42,40 +41,42 @@ const CaseStudySamantha = () => {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80"
             onClick={onClose}
           >
-            <motion.div
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              className="relative max-w-4xl w-full max-h-[90vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={image}
-                alt="Full size view"
-                className="w-full h-full object-contain rounded-lg"
-                loading="eager"
-              />
-              <button
-                onClick={onClose}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-colors"
-                aria-label="Close modal"
+            <div className="relative max-w-3xl max-h-[80vh] w-auto h-auto">
+              <motion.div
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.95 }}
+                className="relative bg-black bg-opacity-20 rounded-lg"
+                onClick={(e) => e.stopPropagation()}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                <img
+                  src={image}
+                  alt="Full size view"
+                  className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg"
+                  loading="eager"
+                />
+                <button
+                  onClick={onClose}
+                  className="absolute top-2 right-2 text-white hover:text-gray-300 p-2 rounded-full bg-black bg-opacity-70 hover:bg-opacity-90 transition-colors"
+                  aria-label="Close modal"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </motion.div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
