@@ -30,6 +30,7 @@ import project5 from "../assets/images/project-5.jpg";
 import project6 from "../assets/images/project-6.jpg";
 import project7 from "../assets/images/project-7.jpg";
 import project8 from "../assets/images/project-8.jpg";
+import project9 from "../assets/images/project-9.jpg";
 
 const projectImages = {
   1: project1,
@@ -40,6 +41,7 @@ const projectImages = {
   6: project6,
   7: project7,
   8: project8,
+  9: project9,
 };
 
 const hobbiesImages = [
@@ -252,7 +254,7 @@ const Home = () => {
         "Material UI",
         "SCSS",
       ],
-      imageNumber: 8,
+      imageNumber: 9,
       githubLink: "https://github.com/ibxibx/mymdb-angular-client",
       demoLink: "https://ibxibx.github.io/mymdb-angular-client/welcome",
       caseStudyLink: "/case-study-mymdb-angular",
@@ -271,7 +273,7 @@ const Home = () => {
         "Gifted Chat",
         "Android Studio",
       ],
-      imageNumber: 7,
+      imageNumber: 8,
       githubLink: "https://github.com/ibxibx/nextchat",
       caseStudyLink: "/case-study-nextchat",
     },
@@ -289,7 +291,7 @@ const Home = () => {
         "Jest",
         "Bootstrap",
       ],
-      imageNumber: 6,
+      imageNumber: 7,
       githubLink: "https://github.com/ibxibx/meetlink",
       demoLink: "https://ibxibx.github.io/meetlink/",
     },
@@ -307,7 +309,7 @@ const Home = () => {
         "HTML",
         "Netlify",
       ],
-      imageNumber: 5,
+      imageNumber: 6,
       githubLink: "https://github.com/ibxibx/mymdb/tree/clean-mymdb-client",
       demoLink: "https://mymdb-app.netlify.app/login",
     },
@@ -325,7 +327,7 @@ const Home = () => {
         "CORS",
         "Heroku",
       ],
-      imageNumber: 4,
+      imageNumber: 5,
       githubLink: "https://github.com/ibxibx/mymdb",
       demoLink: "https://mymdb-app.netlify.app/login",
     },
@@ -335,7 +337,7 @@ const Home = () => {
       description:
         "A responsive React-based portfolio website showcasing web development projects, built with Tailwind CSS and featuring smooth animations and interactive elements.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-      imageNumber: 3,
+      imageNumber: 4,
       githubLink: "https://github.com/ibxibx/portfolio-react",
       year: "2025",
     },
@@ -345,7 +347,7 @@ const Home = () => {
       description:
         "A comprehensive personal finance dashboard built with React.js as part of the #80DaysOfCode challenge, that combines modern web development practices with practical financial management tools.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-      imageNumber: 2,
+      imageNumber: 3,
       githubLink: "https://github.com/ibxibx/finpanel",
       year: "2025",
     },
@@ -355,9 +357,29 @@ const Home = () => {
       description:
         "Samantha has been built entirely without writing code. She's accessible through phone calls and can assist with brainstorming, fact-checking and more. All conversations can be saved to your Google Drive.",
       technologies: ["n8n", "Google Cloud API", "Vapi.ai", "GPT-4o-mini"],
-      imageNumber: 1,
+      imageNumber: 2,
       githubLink: "https://github.com/ibxibx/samantha-voice-ai-agent",
       caseStudyLink: "/case-study-samantha",
+      year: "2025",
+    },
+    {
+      number: 9,
+      title:
+        "Jasmin Catering - Intelligent Email Automation Platform (Collaborative Project)",
+      description:
+        "Jasmin Catering is an AI Agent solution that enhances the catering workflow by handling customer inquiries and generating/sending multiple offers based on the available menu items and other details (providing three packages) with prices by email.",
+      technologies: [
+        "Azure",
+        "Python",
+        "Azure Container Apps",
+        "GPT-4o-mini",
+        "IMAP/SMTP"
+        "Slack API",
+        "Docker",
+        "GitHub Actions",
+      "Azure Key Vault"],
+      imageNumber: 1,
+      githubLink: "https://github.com/ibxibx/jasmin-catering-ai-agent",
       year: "2025",
     },
   ];
