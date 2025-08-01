@@ -250,10 +250,9 @@ const Work = () => {
     },
     {
       number: 9,
-      title:
-        "Jasmin Catering - Intelligent Email Automation Platform (Collaborative Project)",
+      title: "Jasmin Catering - Intelligent Email Automation Platform",
       description:
-        "Jasmin Catering is an AI Agent solution that enhances the catering workflow by handling customer inquiries and generating/sending multiple offers based on the available menu items and other details (providing three packages) with prices by email.",
+        "Jasmin Catering (Collaborative Project) - is an AI Agent solution that enhances the catering workflow by handling customer inquiries and generating/sending multiple offers based on the available menu items and other details (providing three packages) with prices by email.",
       technologies: [
         "Azure",
         "Python",
