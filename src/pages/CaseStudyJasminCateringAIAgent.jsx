@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// Import your project images here
+
 import jasminCatering1 from "../assets/images/jasmin-catering-1.jpg";
 import jasminCatering2 from "../assets/images/jasmin-catering-2.jpg";
 import jasminCatering3 from "../assets/images/jasmin-catering-3.jpg";
@@ -132,6 +132,9 @@ const CaseStudyJasminCateringAIAgent = () => {
                 </p>
                 <p className="mb-2">
                   <strong>Collaborator:</strong> Matthias Buchhorn-Roth
+                </p>
+                <p className="mb-2">
+                  <strong>Client:</strong> Jasmin Catering, Fadi Zaim
                 </p>
                 <p>
                   <strong>Tech Stack:</strong> Azure Container Apps Jobs, Azure OpenAI GPT-4o, Vector Store RAG, Python, Docker, Slack API
