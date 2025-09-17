@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import CaseStudyNextChat from "./pages/CaseStudyNextChat";
 import CaseStudySamantha from "./pages/CaseStudySamantha";
 import CaseStudyMyMDBAngular from "./pages/CaseStudyMyMDBAngular";
+import CaseStudyJasminCateringAIAgent from "./pages/CaseStudyJasminCateringAIAgent"
 import "./styles/decorations.css";
 import "./styles/variables.css";
 
@@ -35,6 +36,7 @@ const App = () => {
             path="/case-study-mymdb-angular"
             element={<CaseStudyMyMDBAngular />}
           />
+          <Route path="/case-study-jasmin-catering-ai-agent" element={<CaseStudyJasminCateringAIAgent />} />
         </Routes>
       </Layout>
     </Router>

@@ -13,6 +13,9 @@ import jasminCatering9 from "../assets/images/jasmin-catering-9.jpg";
 import jasminCatering10 from "../assets/images/jasmin-catering-10.jpg";
 import jasminCatering11 from "../assets/images/jasmin-catering-11.jpg";
 import jasminCatering12 from "../assets/images/jasmin-catering-12.jpg";
+import jasminCatering13 from "../assets/images/jasmin-catering-13.jpg";
+import jasminCatering14 from "../assets/images/jasmin-catering-14.jpg";
+import jasminCatering15 from "../assets/images/jasmin-catering-15.jpg";
 
 const CaseStudyJasminCateringAIAgent = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -173,12 +176,12 @@ const CaseStudyJasminCateringAIAgent = () => {
             <div className="flex flex-col items-center mt-8">
               <img
                 src={jasminCatering2}
-                alt="Azure AI Assistant Demo"
+                alt="Teamwork between Matthias and Ian"
                 className="w-full max-w-2xl rounded-lg cursor-pointer"
                 onClick={() => openModal(jasminCatering2)}
               />
               <p className="text-sm text-center text-gray-400 mt-2">
-                Azure AI Foundry Assistant Processing Customer Inquiries with Vector Store RAG
+                Teamwork. Matthias and Ian
               </p>
             </div>
           </section>
@@ -261,7 +264,58 @@ const CaseStudyJasminCateringAIAgent = () => {
                   onClick={() => openModal(jasminCatering3)}
                 />
                 <p className="text-sm text-center text-gray-400 mt-2">
-                  Cloud-Native Scale-to-Zero Architecture with AI Foundry
+                  Cloud Architecture Overview
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Tech Stack Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering6}
+                  alt="AI Assistant Configuration"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering6)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  AI Assistant with gpt-4.1 (in Azure AI Foundry)
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering7}
+                  alt="Vector Store Dashboard"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering7)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  Assistant Vector Store Dashboard (RAG in Azure AI Foundry)
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering9}
+                  alt="Agent Properties"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering9)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  Agent Properties (Azure AI Foundry)
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering13}
+                  alt="Key Vault Secrets"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering13)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  AI Agent Key Vault Secrets (Azure AI Foundry)
                 </p>
               </div>
             </div>
@@ -304,7 +358,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                   onClick={() => openModal(jasminCatering4)}
                 />
                 <p className="text-sm text-center text-gray-400 mt-2">
-                  Advanced Email Processing with Duplicate Prevention
+                  AI-Powered Development Workflow
                 </p>
               </div>
             </div>
@@ -365,13 +419,39 @@ const CaseStudyJasminCateringAIAgent = () => {
               </div>
               <div className="flex flex-col items-center">
                 <img
-                  src={jasminCatering5}
+                  src={jasminCatering14}
                   alt="Performance Dashboard"
                   className="w-full rounded-lg cursor-pointer"
-                  onClick={() => openModal(jasminCatering5)}
+                  onClick={() => openModal(jasminCatering14)}
                 />
                 <p className="text-sm text-center text-gray-400 mt-2">
-                  Real-time Performance Monitoring and Business Metrics
+                  AI Agent Activity. Cost Management and Analysis Dashboard (Azure AI Foundry)
+                </p>
+              </div>
+            </div>
+
+            {/* Slack Monitoring Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering10}
+                  alt="Slack Monitoring Overview"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering10)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  Slack Channels with Logs for Agent Activity Monitoring
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={jasminCatering11}
+                  alt="Slack Email Logs"
+                  className="w-full rounded-lg cursor-pointer"
+                  onClick={() => openModal(jasminCatering11)}
+                />
+                <p className="text-sm text-center text-gray-400 mt-2">
+                  Slack Channel "Email-Requests-And-Response" Logs
                 </p>
               </div>
             </div>
@@ -419,13 +499,13 @@ const CaseStudyJasminCateringAIAgent = () => {
               </div>
               <div className="flex flex-col items-center">
                 <img
-                  src={jasminCatering6}
+                  src={jasminCatering12}
                   alt="Project Architecture"
                   className="w-full rounded-lg mb-2 cursor-pointer"
-                  onClick={() => openModal(jasminCatering6)}
+                  onClick={() => openModal(jasminCatering12)}
                 />
                 <p className="text-sm text-center text-gray-400">
-                  Organized Project Structure with Deployment Scripts
+                  AI Agent Documents in Deployment (GitHub)
                 </p>
               </div>
             </div>
@@ -460,14 +540,14 @@ const CaseStudyJasminCateringAIAgent = () => {
               <div>
                 <div className="space-y-4">
                   <img
-                    src={jasminCatering7}
-                    alt="Azure Container Apps Jobs Configuration"
+                    src={jasminCatering5}
+                    alt="Claude Code CLI Building and Testing"
                     className="w-full rounded-lg cursor-pointer"
-                    onClick={() => openModal(jasminCatering7)}
+                    onClick={() => openModal(jasminCatering5)}
                   />
                 </div>
                 <p className="text-sm text-center text-gray-400 mt-2">
-                  Azure Container Apps Jobs with Cron Scheduling
+                  Claude Code CLI - Building and Testing
                 </p>
               </div>
             </div>
@@ -484,64 +564,36 @@ const CaseStudyJasminCateringAIAgent = () => {
                 <div className="space-y-4">
                   <img
                     src={jasminCatering8}
-                    alt="Vector Store RAG Implementation"
+                    alt="Assistant Playground Testing"
                     className="w-full rounded-lg cursor-pointer"
                     onClick={() => openModal(jasminCatering8)}
                   />
                 </div>
                 <p className="text-sm text-center text-gray-400 mt-2">
-                  Azure AI Foundry Vector Store with 6-Document Knowledge Base
+                  Assistant / Agent Playground Testing (Azure AI Foundry)
                 </p>
               </div>
             </div>
 
-            {/* Step 4 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Continue with remaining steps... */}
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">4. Sophisticated Email Processing & Duplicate Prevention</h3>
                 <p>
                   I developed a robust email system with web.de integration using IMAP/SMTP with app-specific passwords. The critical breakthrough was implementing UNSEEN email filtering combined with hash-based EmailTracker and mark-as-read functionality to guarantee each email is processed exactly once. This eliminated the initial duplicate response problem and ensures 100% reliability in customer communications.
                 </p>
               </div>
-              <div>
-                <div className="space-y-4">
-                  <img
-                    src={jasminCatering9}
-                    alt="Email Processing Flow with UNSEEN Filter"
-                    className="w-full rounded-lg cursor-pointer"
-                    onClick={() => openModal(jasminCatering9)}
-                  />
-                </div>
-                <p className="text-sm text-center text-gray-400 mt-2">
-                  Advanced Email Processing with Duplicate Prevention
-                </p>
-              </div>
             </div>
 
-            {/* Step 5 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">5. Real-time Slack Integration & Business Intelligence</h3>
                 <p>
                   I integrated comprehensive Slack monitoring with dedicated channels (#email-requests-and-response, #jasmin-catering-logs) providing real-time visibility into system operations, customer inquiries, AI-generated responses, and system health metrics. This enables immediate response to any issues and provides valuable business intelligence about inquiry patterns, processing times, and system performance.
                 </p>
               </div>
-              <div>
-                <div className="space-y-4">
-                  <img
-                    src={jasminCatering10}
-                    alt="Slack Integration Dashboard"
-                    className="w-full rounded-lg cursor-pointer"
-                    onClick={() => openModal(jasminCatering10)}
-                  />
-                </div>
-                <p className="text-sm text-center text-gray-400 mt-2">
-                  Real-time Slack Monitoring with Business Intelligence
-                </p>
-              </div>
             </div>
 
-            {/* Step 6 */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">6. Production Containerization & CI/CD Pipeline</h3>
@@ -551,53 +603,24 @@ const CaseStudyJasminCateringAIAgent = () => {
               </div>
             </div>
 
-            {/* Step 7 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">7. Comprehensive Testing & Quality Assurance</h3>
                 <p>
                   I implemented extensive testing suites including duplicate prevention verification, email processing validation, and AI response quality assessment. Created automated test scripts that verify end-to-end functionality with 100% success rate, 37-second processing time for 5 emails, and generation of professional German responses meeting all business requirements.
                 </p>
               </div>
-              <div>
-                <div className="space-y-4">
-                  <img
-                    src={jasminCatering11}
-                    alt="Testing Suite Results"
-                    className="w-full rounded-lg cursor-pointer"
-                    onClick={() => openModal(jasminCatering11)}
-                  />
-                </div>
-                <p className="text-sm text-center text-gray-400 mt-2">
-                  Comprehensive Testing Suite with 100% Success Rate
-                </p>
-              </div>
             </div>
 
-            {/* Step 8 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">8. Knowledge Base Optimization & Documentation</h3>
                 <p>
                   I created extensive technical documentation including README.md (567 lines), CLAUDE.md (439 lines) for future development guidance, and organized all business knowledge into 6 Vector Store documents with specific file IDs for optimal AI performance. Each document serves a specific purpose from business conditions to response templates, ensuring consistent quality and compliance.
                 </p>
               </div>
-              <div>
-                <div className="space-y-4">
-                  <img
-                    src={jasminCatering12}
-                    alt="Documentation and Knowledge Base"
-                    className="w-full rounded-lg cursor-pointer"
-                    onClick={() => openModal(jasminCatering12)}
-                  />
-                </div>
-                <p className="text-sm text-center text-gray-400 mt-2">
-                  Comprehensive Documentation and Knowledge Base Structure
-                </p>
-              </div>
             </div>
 
-            {/* Step 9 */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">9. Production Deployment & Performance Optimization</h3>
@@ -607,7 +630,6 @@ const CaseStudyJasminCateringAIAgent = () => {
               </div>
             </div>
 
-            {/* Step 10 */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
               <div className="space-y-4 font-['PP_Neue_Machina']">
                 <h3 className="text-xl mb-4">10. Production Validation & Business Impact Assessment</h3>
@@ -811,11 +833,25 @@ const CaseStudyJasminCateringAIAgent = () => {
               <p>
                 This experience fundamentally advanced my capabilities in AI automation engineering, particularly in understanding how to balance technical sophistication with practical business needs, cost optimization with reliability requirements, and cultural authenticity with modern automation efficiency. The successful deployment provides a robust foundation for tackling similar AI automation challenges across diverse industries while maintaining the highest standards of professional quality and business value delivery.
               </p>
-              <br />
-              <br />
-              <br />
-              <br />
             </div>
+
+            {/* Final Project Presentation */}
+            <div className="flex flex-col items-center mt-12">
+              <img
+                src={jasminCatering15}
+                alt="Project Presentation at CODE University"
+                className="w-full max-w-2xl rounded-lg cursor-pointer"
+                onClick={() => openModal(jasminCatering15)}
+              />
+              <p className="text-sm text-center text-gray-400 mt-2">
+                Presentation and Demo of the Project at CODE University (Matthias and Ian)
+              </p>
+            </div>
+            
+            <br />
+            <br />
+            <br />
+            <br />
           </section>
         </div>
       </div>
