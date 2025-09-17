@@ -266,6 +266,7 @@ const Work = () => {
       ],
       imageNumber: 1,
       githubLink: "https://github.com/ibxibx/jasmin-catering-ai-agent",
+      caseStudyLink: "/case-study-jasmin-catering-ai-agent",
       year: "2025",
     },
   ];

@@ -217,6 +217,7 @@ const CaseStudyJasminCateringAIAgent = () => {
               </li>
             </ul>
           </section>
+          <br />
 
           {/* Tech Stack and Specs */}
           <section className="mb-16">
@@ -235,6 +236,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                   <li><strong>API Endpoint:</strong> Sweden Central Cognitive Services</li>
                   <li><strong>SDK:</strong> Azure AI SDK for Python with conversation threading</li>
                 </ul>
+                <br />
                 
                 <h3 className="text-xl mb-4 mt-8">Vector Store Knowledge Base</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -245,6 +247,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                   <li><strong>response-examples.md:</strong> Professional examples (File ID: assistant-W65tS9JgAPCra86jNmh2wY)</li>
                   <li><strong>vegetarian-offer-template.md:</strong> Menu offerings (File ID: assistant-X3MxAxuGEeQnm7rEJq2z3Q)</li>
                 </ul>
+                <br />
 
                 <h3 className="text-xl mb-4 mt-8">Scale-to-Zero Architecture</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -269,7 +272,6 @@ const CaseStudyJasminCateringAIAgent = () => {
               </div>
             </div>
 
-            {/* Additional Tech Stack Images */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               <div className="flex flex-col items-center">
                 <img
@@ -340,6 +342,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                   <li><strong>Email ID Tracking:</strong> Unique identifier system for each message</li>
                   <li><strong>Target Filtering:</strong> Only processes emails sent TO ma3u-test@email.de</li>
                 </ul>
+                <br />
                 
                 <h3 className="text-xl mb-4 mt-8">IMAP/SMTP Integration</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -406,6 +409,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                   <li><strong>Cost Efficiency:</strong> $60-96/month (48% reduction)</li>
                   <li><strong>Email Accuracy:</strong> Zero duplicates since UNSEEN implementation</li>
                 </ul>
+                <br />
                 
                 <h3 className="text-xl mb-4 mt-8">Business Impact Metrics</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -486,6 +490,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                     <strong>core/rag_system.py:</strong> Vector Store RAG implementation with 6-document knowledge base
                   </li>
                 </ul>
+                <br />
                 
                 <h3 className="text-xl mb-4 mt-6">Deployment Infrastructure</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -730,7 +735,6 @@ const CaseStudyJasminCateringAIAgent = () => {
               Advanced Skills Mastery & Technical Expertise
             </h2>
             <br />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6 font-['PP_Neue_Machina']">
                 <div>
                   <h3 className="text-xl mb-4">Azure AI Foundry & Advanced AI Services</h3>
@@ -742,7 +746,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                     <li><strong>AI Performance Optimization:</strong> Balancing response quality, speed (37-second processing), and cost efficiency</li>
                   </ul>
                 </div>
-                
+                <br />
                 <div>
                   <h3 className="text-xl mb-4">Enterprise Cloud Architecture & Scale-to-Zero Design</h3>
                   <ul className="list-disc list-inside space-y-2">
@@ -752,7 +756,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                     <li><strong>Cost Engineering:</strong> Architected $60-96/month solution vs. traditional $150+ approaches without sacrificing performance</li>
                   </ul>
                 </div>
-                
+                <br />
                 <div>
                   <h3 className="text-xl mb-4">Advanced Email System Engineering</h3>
                   <ul className="list-disc list-inside space-y-2">
@@ -763,7 +767,8 @@ const CaseStudyJasminCateringAIAgent = () => {
                   </ul>
                 </div>
               </div>
-              
+              <br />
+              <br />
               <div className="space-y-6 font-['PP_Neue_Machina']">
                 <div>
                   <h3 className="text-xl mb-4">DevOps & Enterprise CI/CD Pipeline Engineering</h3>
@@ -774,7 +779,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                     <li><strong>Federated Identity Setup:</strong> Lower-privilege authentication strategies for enterprise security compliance</li>
                   </ul>
                 </div>
-                
+                <br />
                 <div>
                   <h3 className="text-xl mb-4">Production System Reliability & Monitoring</h3>
                   <ul className="list-disc list-inside space-y-2">
@@ -784,7 +789,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                     <li><strong>Security Best Practices:</strong> Zero-credential exposure with Azure Key Vault and secure deployment patterns</li>
                   </ul>
                 </div>
-                
+                <br />
                 <div>
                   <h3 className="text-xl mb-4">Business Process Automation & Cultural Integration</h3>
                   <ul className="list-disc list-inside space-y-2">
@@ -795,7 +800,6 @@ const CaseStudyJasminCateringAIAgent = () => {
                   </ul>
                 </div>
               </div>
-            </div>
           </section>
           <br />
 
@@ -844,7 +848,7 @@ const CaseStudyJasminCateringAIAgent = () => {
                 onClick={() => openModal(jasminCatering15)}
               />
               <p className="text-sm text-center text-gray-400 mt-2">
-                Presentation and Demo of the Project at CODE University (Matthias and Ian)
+                Presentation and Demo of the Project at the CODE University Berlin (Matthias and Ian)
               </p>
             </div>
             
