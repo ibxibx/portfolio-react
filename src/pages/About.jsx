@@ -128,7 +128,7 @@ const About = () => {
                       technical skills, I aim to contribute to forward-thinking
                       companies that create innovative solutions that have a
                       meaningful impact on people's lives. I particularly like
-                      AI-, bio-, fin-tech, auto-motive, health-, robotics-,
+                      AI-, bio-, fin-tech, auto-motive, health-, energy-, robotics-,
                       media-tech and related fields. If you’re interested in
                       working together or learning more about what I do, feel
                       free to message me or use the contact form below.
@@ -351,16 +351,6 @@ const About = () => {
                   >
                     <span className="text-white/50">5.</span>
                     <span>instagram</span>
-                    <ArrowUpRight size={12} />
-                  </a>
-                  <a
-                    href="https://www.x.com/ibxavo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:text-white transition-colors"
-                  >
-                    <span className="text-white/50">6.</span>
-                    <span>x twitter</span>
                     <ArrowUpRight size={12} />
                   </a>
                 </div>
