@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, FileText, X } from "lucide-react";
 import profile500x500 from "../assets/images/profile500x500.jpg";
-import resumePDF from "../assets/docs/Ian Baumeister - Junior Full Stack Developer - Resume.pdf";
+import resumePDF from "../assets/docs/Ian Baumeister - Full Stack Engineer - Resume.pdf";
 import hobbies1 from "../assets/images/hobbies1.jpg";
 import hobbies2 from "../assets/images/hobbies2.jpg";
 import hobbies3 from "../assets/images/hobbies3.jpg";
