@@ -281,7 +281,7 @@ const About = () => {
                 </div>
                 <a
                   href={resumePDF}
-                  download="Ian Baumeister - Junior Full Stack Developer - Resume.pdf"
+                  download="Ian Baumeister - Full Stack Engineer - Resume.pdf"
                   className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
                 >
                   <span className="text-white/50">1.</span>
