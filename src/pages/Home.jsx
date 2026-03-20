@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
@@ -246,28 +246,6 @@ const Home = () => {
   const projects = [
     {
       number: 1,
-      title: "WorkScanAI - AI Workflow Automation Analyzer",
-      description:
-        "A full-stack SaaS platform that analyzes workplace workflows and delivers AI readiness scores, automation ROI projections, agentification roadmaps, and risk flags â€” across Individual, Team, and Company contexts. Built with Next.js, FastAPI, Claude Haiku, and SQLite on Render.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Python",
-        "FastAPI",
-        "Anthropic Claude",
-        "Tailwind CSS",
-        "SQLite",
-        "Vercel",
-        "Render",
-        "Resend",
-      ],
-      imageNumber: 10,
-      githubLink: "https://github.com/ibxibx/workscanai",
-      demoLink: "https://workscanai.vercel.app",
-      year: "2025",
-    },
-    {
-      number: 2,
       title: "MyMDB - My Movie Database (Angular / Client Side)",
       description:
         "A client-side application built with Angular that interfaces with a movie API, allowing users to browse, search, and manage their favorite movies while maintaining their own watchlist and profile information.",
@@ -284,7 +262,7 @@ const Home = () => {
       caseStudyLink: "/case-study-mymdb-angular",
     },
     {
-      number: 3,
+      number: 2,
       title: "NextChat - A React Native Mobile App",
       description:
         "A React Native mobile chat application using Expo and Firebase that enables real-time communication through text, images, and location sharing with offline capabilities.",
@@ -302,7 +280,7 @@ const Home = () => {
       caseStudyLink: "/case-study-nextchat",
     },
     {
-      number: 4,
+      number: 3,
       title: "MeetLink - A PWA for Meetups and Events",
       description:
         "A serverless progressive web application built with React that uses Google Calendar API to fetch and display upcoming events for specific cities, featuring data visualization and offline functionality.",
@@ -320,7 +298,7 @@ const Home = () => {
       demoLink: "https://ibxibx.github.io/meetlink/",
     },
     {
-      number: 5,
+      number: 4,
       title: "MyMDB - My Movie Database (Client Side)",
       description:
         "A single-page movie database application built with React and Bootstrap that allows users to browse, search, and filter movies while managing their favorites list.",
@@ -338,7 +316,7 @@ const Home = () => {
       demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
-      number: 6,
+      number: 5,
       title: "MyMDB - My Movie Database (Server Side)",
       description:
         "A comprehensive MERN stack implementation of the movie database that combines MongoDB, Express.js, React, and Node.js to provide a complete solution for movie browsing and user management.",
@@ -356,7 +334,7 @@ const Home = () => {
       demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
-      number: 7,
+      number: 6,
       title: "My Portfolio Website in React",
       description:
         "A responsive React-based portfolio website showcasing web development projects, built with Tailwind CSS and featuring smooth animations and interactive elements.",
@@ -366,7 +344,7 @@ const Home = () => {
       year: "2025",
     },
     {
-      number: 8,
+      number: 7,
       title: "FinPanel - Personal Finance Dashboard",
       description:
         "A comprehensive personal finance dashboard built with React.js as part of the #80DaysOfCode challenge, that combines modern web development practices with practical financial management tools.",
@@ -376,7 +354,7 @@ const Home = () => {
       year: "2025",
     },
     {
-      number: 9,
+      number: 8,
       title: "Samantha - A Voice AI Agent",
       description:
         "Samantha has been built entirely without writing code. She's accessible through phone calls and can assist with brainstorming, fact-checking and more. All conversations can be saved to your Google Drive.",
@@ -387,7 +365,7 @@ const Home = () => {
       year: "2025",
     },
     {
-      number: 10,
+      number: 9,
       title: "Jasmin Catering - Intelligent Email Automation Platform",
       description:
         "Jasmin Catering (Collaborative Project) - is an AI Agent solution that enhances the catering workflow by handling customer inquiries and generating/sending multiple offers based on the available menu items and other details (providing three packages) with prices by email.",
@@ -405,6 +383,28 @@ const Home = () => {
       imageNumber: 1,
       githubLink: "https://github.com/ibxibx/jasmin-catering-ai-agent",
       caseStudyLink: "/case-study-jasmin-catering-ai-agent",
+      year: "2025",
+    },
+    {
+      number: 10,
+      title: "WorkScanAI - AI Workflow Automation Analyzer",
+      description:
+        "A full-stack SaaS platform that analyzes workplace workflows and delivers AI readiness scores, automation ROI projections, agentification roadmaps, and risk flags — across Individual, Team, and Company contexts. Built with Next.js, FastAPI, Claude Haiku, and SQLite on Render.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "Anthropic Claude",
+        "Tailwind CSS",
+        "SQLite",
+        "Vercel",
+        "Render",
+        "Resend",
+      ],
+      imageNumber: 10,
+      githubLink: "https://github.com/ibxibx/workscanai",
+      demoLink: "https://workscanai.vercel.app",
       year: "2025",
     },
   ];
