@@ -10,6 +10,7 @@ import project6 from "../assets/images/project-6.jpg";
 import project7 from "../assets/images/project-7.jpg";
 import project8 from "../assets/images/project-8.jpg";
 import project9 from "../assets/images/project-9.jpg";
+import project10 from "../assets/images/project-10.jpg";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
@@ -23,6 +24,7 @@ const projectImages = {
   7: project7,
   8: project8,
   9: project9,
+  10: project10,
 };
 
 const ProjectLink = ({ href, text }) =>
@@ -130,6 +132,28 @@ const Work = () => {
   const projects = [
     {
       number: 1,
+      title: "WorkScanAI - AI Workflow Automation Analyzer",
+      description:
+        "A full-stack SaaS platform that analyzes workplace workflows and delivers AI readiness scores, automation ROI projections, agentification roadmaps, and risk flags — across Individual, Team, and Company contexts. Built with Next.js, FastAPI, Claude Haiku, and SQLite on Render.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "Anthropic Claude",
+        "Tailwind CSS",
+        "SQLite",
+        "Vercel",
+        "Render",
+        "Resend",
+      ],
+      imageNumber: 10,
+      githubLink: "https://github.com/ibxibx/workscanai",
+      demoLink: "https://workscanai.vercel.app",
+      year: "2025",
+    },
+    {
+      number: 2,
       title: "MyMDB - My Movie Database (Angular / Client Side)",
       description:
         "A client-side application built with Angular that interfaces with a movie API, allowing users to browse, search, and manage their favorite movies while maintaining their own watchlist and profile information.",
@@ -146,7 +170,7 @@ const Work = () => {
       caseStudyLink: "/case-study-mymdb-angular",
     },
     {
-      number: 2,
+      number: 3,
       title: "NextChat - A React Native Mobile App",
       description:
         "A React Native mobile chat application using Expo and Firebase that enables real-time communication through text, images, and location sharing with offline capabilities.",
@@ -164,7 +188,7 @@ const Work = () => {
       caseStudyLink: "/case-study-nextchat",
     },
     {
-      number: 3,
+      number: 4,
       title: "MeetLink - A PWA for Meetups and Events",
       description:
         "A serverless progressive web application built with React that uses Google Calendar API to fetch and display upcoming events for specific cities, featuring data visualization and offline functionality.",
@@ -182,7 +206,7 @@ const Work = () => {
       demoLink: "https://ibxibx.github.io/meetlink/",
     },
     {
-      number: 4,
+      number: 5,
       title: "MyMDB - My Movie Database (Client Side)",
       description:
         "A single-page movie database application built with React and Bootstrap that allows users to browse, search, and filter movies while managing their favorites list.",
@@ -200,7 +224,7 @@ const Work = () => {
       demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
-      number: 5,
+      number: 6,
       title: "MyMDB - My Movie Database (Server Side)",
       description:
         "A comprehensive MERN stack implementation of the movie database that combines MongoDB, Express.js, React, and Node.js to provide a complete solution for movie browsing and user management.",
@@ -218,7 +242,7 @@ const Work = () => {
       demoLink: "https://mymdb-app.netlify.app/login",
     },
     {
-      number: 6,
+      number: 7,
       title: "My Portfolio Website in React",
       description:
         "A responsive React-based portfolio website showcasing web development projects, built with Tailwind CSS and featuring smooth animations and interactive elements.",
@@ -228,7 +252,7 @@ const Work = () => {
       year: "2025",
     },
     {
-      number: 7,
+      number: 8,
       title: "FinPanel - Personal Finance Dashboard",
       description:
         "A comprehensive personal finance dashboard built with React.js as part of the #80DaysOfCode challenge, that combines modern web development practices with practical financial management tools.",
@@ -238,7 +262,7 @@ const Work = () => {
       year: "2025",
     },
     {
-      number: 8,
+      number: 9,
       title: "Samantha - A Voice AI Agent",
       description:
         "Samantha has been built entirely without writing code. She's accessible through phone calls and can assist with brainstorming, fact-checking and more. All conversations can be saved to your Google Drive.",
@@ -249,7 +273,7 @@ const Work = () => {
       year: "2025",
     },
     {
-      number: 9,
+      number: 10,
       title: "Jasmin Catering - Intelligent Email Automation Platform",
       description:
         "Jasmin Catering (Collaborative Project) - is an AI Agent solution that enhances the catering workflow by handling customer inquiries and generating/sending multiple offers based on the available menu items and other details (providing three packages) with prices by email.",
