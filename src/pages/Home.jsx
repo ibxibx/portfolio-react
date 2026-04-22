@@ -405,7 +405,7 @@ const Home = () => {
       imageNumber: 10,
       githubLink: "https://github.com/ibxibx/workscanai",
       demoLink: "https://workscanai.vercel.app",
-      year: "2025",
+      year: "2026",
     },
   ];
 
