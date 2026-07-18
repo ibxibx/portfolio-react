@@ -6,10 +6,10 @@ const SectionHero = () => {
   const title = (
     <h1 className="font-['PP_Object_Sans'] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[96px] leading-tight tracking-[-0.04em] max-w-[360px] sm:max-w-[480px] md:max-w-none mx-auto">
       Hi, I'm Ian,
-      <br />a <span className="text-[#4ADE80]">creative</span> product engineer
+      <br />a product engineer
       <br />
-      with a <span className="text-[#4ADE80]">design</span> & startup development
-      background
+      with a <span className="text-[#4ADE80]">design</span> &{" "}
+      <span className="text-[#4ADE80]">startup</span> development background
     </h1>
   );
 
