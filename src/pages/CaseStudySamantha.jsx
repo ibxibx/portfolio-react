@@ -121,7 +121,7 @@ const CaseStudySamantha = () => {
                   A Voice AI Agent
                 </h3>
                 <p className="mb-2">
-                  <strong>Developer:</strong> Ian Baumeister
+                  <strong>AI Product Engineer:</strong> Ian Baumeister
                 </p>
                 <p>
                   <strong>Repository:</strong>{" "}
@@ -251,7 +251,7 @@ const CaseStudySamantha = () => {
               <p>
                 The project aimed to create not just a technical demonstration
                 but a genuinely useful tool that showcases how modern AI
-                capabilities can be harnessed by developers of all levels of
+                capabilities can be harnessed by AI Product Engineers of all levels of
                 seniority.
               </p>
             </div>
@@ -999,8 +999,8 @@ const CaseStudySamantha = () => {
                   </ul>
                 </div>
                 <p>
-                  These skills have significantly enhanced my capabilities as a
-                  developer and prepared me for more complex projects involving
+                  These skills have significantly enhanced my capabilities as an
+                  AI Product Engineer and prepared me for more complex projects involving
                   AI, automation, and integration work.
                 </p>
               </div>

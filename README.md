@@ -1,4 +1,4 @@
-# 🚀 Ian Baumeister - Full Stack Developer Portfolio
+# 🚀 Ian Baumeister - AI Product Engineer Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-4ADE80?style=for-the-badge&logo=react&logoColor=white)](https://ibxibx.github.io/portfolio-react)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/avoiann)

@@ -118,7 +118,7 @@ const CaseStudyNextChat = () => {
                   a React Native App
                 </h3>
                 <p className="mb-2">
-                  <strong>Developer:</strong> Ian Baumeister
+                  <strong>AI Product Engineer:</strong> Ian Baumeister
                 </p>
                 <p>
                   <strong>Repository:</strong>{" "}

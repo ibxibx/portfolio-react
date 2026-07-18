@@ -656,7 +656,7 @@ const CaseStudyMyMDBAngular = () => {
                 </h3>
                 <p>
                   <strong>Challenge:</strong> As a first-time Angular and
-                  TypeScript developer, adapting to TypeScript's strict typing
+                  TypeScript AI Product Engineer, adapting to TypeScript's strict typing
                   system required a significant mindset shift from JavaScript's
                   more flexible approach.
                 </p>
@@ -856,7 +856,7 @@ const CaseStudyMyMDBAngular = () => {
                 efficiently handle.
               </p>
               <p>
-                For developers interested in testing the application without
+                For AI Product Engineers interested in testing the application without
                 creating a new account, you can use these credentials: -
                 Username: testuser1 - Password: Test123!
               </p>
