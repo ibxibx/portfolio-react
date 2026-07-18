@@ -8,8 +8,8 @@ const SectionHero = () => {
       Hi, I'm Ian,
       <br />a product engineer
       <br />
-      with a <span className="text-[#4ADE80]">design</span> &{" "}
-      <span className="text-[#4ADE80]">startup</span> development background
+      with <span className="text-[#4ADE80]">design</span> &{" "}
+      <span className="text-[#4ADE80]">startup development</span> background
     </h1>
   );
 
