@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import PrivacyPolicyModal from "./PrivacyPolicyModal";
 import SuccessModal from "./SuccessModal";
+import { CALENDLY_URL, WORKSCANAI_URL } from "../constants/links";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -97,6 +98,39 @@ const Contact = () => {
                 </span>
                 <br />I reply within a day, max. within 48 hours.
               </p>
+            </div>
+
+            <div className="mb-8 pt-8 border-t border-white/10">
+              <h2 className="text-2xl font-mono mb-2">book-a-call</h2>
+              <p className="text-sm font-neue-machina">
+                Prefer to talk it through? Book a free 30-minute discovery call
+                straight into my calendar — pick a slot that suits you and
+                you're all set.
+                <br />
+                <br />
+                By the way: if your business still runs on legacy workflows that
+                quietly eat time and budget, take my{" "}
+                <a
+                  href={WORKSCANAI_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Intelligent Workflow Analyser
+                </a>{" "}
+                for a spin first. It scores any role or workflow for automation
+                potential, estimates the ROI, and hands you ready-to-import
+                automation blueprints — in under a minute, free. It's a strong
+                head start for our conversation.
+              </p>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-6 px-6 py-2 font-mono bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
+              >
+                schedule-30-min →
+              </a>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6 font-mono">
