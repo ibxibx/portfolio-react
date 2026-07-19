@@ -108,8 +108,8 @@ const Contact = () => {
                 you're all set.
                 <br />
                 <br />
-                By the way: if your business still runs on legacy workflows that
-                quietly eat time and budget, take my{" "}
+                By the way: want to test if your business can be modernized with
+                automation? Take my{" "}
                 <a
                   href={WORKSCANAI_URL}
                   target="_blank"
@@ -118,10 +118,11 @@ const Contact = () => {
                 >
                   Intelligent Workflow Analyser
                 </a>{" "}
-                for a spin first. It scores any role or workflow for automation
-                potential, estimates the ROI, and hands you ready-to-import
-                automation blueprints — in under a minute, free. It's a strong
-                head start for our conversation.
+                for a spin first. It scores any workflow for automation
+                potential and is meant to save you money and time, estimates the
+                ROI, and hands you ready automation blueprints — in under a
+                minute for free. I'm very much looking forward to our call and
+                am curious to hear about your workflow analysis.
               </p>
               <a
                 href={CALENDLY_URL}
@@ -129,7 +130,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="inline-block mt-6 px-6 py-2 font-mono bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
               >
-                schedule-30-min →
+                schedule a 30-min call →
               </a>
             </div>
 
