@@ -265,6 +265,7 @@ const Home = () => {
       imageNumber: 10,
       githubLink: "https://github.com/ibxibx/workscanai",
       demoLink: "https://workscanai.vercel.app",
+      caseStudyLink: "/case-study-workscanai",
       year: "2026",
     },
     {

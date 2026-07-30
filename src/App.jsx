@@ -9,6 +9,7 @@ import CaseStudyNextChat from "./pages/CaseStudyNextChat";
 import CaseStudySamantha from "./pages/CaseStudySamantha";
 import CaseStudyMyMDBAngular from "./pages/CaseStudyMyMDBAngular";
 import CaseStudyJasminCateringAIAgent from "./pages/CaseStudyJasminCateringAIAgent"
+import CaseStudyWorkScanAI from "./pages/CaseStudyWorkScanAI"
 import "./styles/decorations.css";
 import "./styles/variables.css";
 
@@ -37,6 +38,7 @@ const App = () => {
             element={<CaseStudyMyMDBAngular />}
           />
           <Route path="/case-study-jasmin-catering-ai-agent" element={<CaseStudyJasminCateringAIAgent />} />
+          <Route path="/case-study-workscanai" element={<CaseStudyWorkScanAI />} />
         </Routes>
       </Layout>
     </Router>
