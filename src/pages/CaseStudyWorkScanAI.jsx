@@ -270,6 +270,103 @@ const CaseStudyWorkScanAI = () => {
           </section>
           <br />
 
+          {/* Complete Feature Set */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-2">
+              Complete Feature Set
+            </h2>
+            <p className="text-center text-sm text-gray-400 mb-8 font-['PP_Neue_Machina']">
+              35+ shipped features, grouped by function.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 font-['PP_Neue_Machina'] text-sm">
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">📥 Input &amp; Data Capture</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Voice input — real-time transcription via the Web Speech API</li>
+                  <li>Document upload — 20+ formats (PDF, Word, Excel, PowerPoint, images) via Claude Vision OCR</li>
+                  <li>Manual entry with dynamic add/remove task controls</li>
+                  <li>Job Scanner — enter a job title, Tavily web-searches the role, Claude extracts tasks and context</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">🧠 Core Analysis Engine</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>AI-readiness scoring — 0–100% composite per task</li>
+                  <li>Decision-layer analysis — flags human-judgment vs. fully automatable tasks</li>
+                  <li>900-day automation countdown clock per task</li>
+                  <li>Human Edge Score — what AI can't replace</li>
+                  <li>ROI calculator — €/yr, hours reclaimed, FTE equivalent, payback period</li>
+                  <li>Implementation roadmap — 3-phase plan with milestones</li>
+                  <li>Agentification roadmap — Human-in-Loop → Supervised → Full Delegation</li>
+                  <li>Orchestration blueprint per automatable task</li>
+                  <li>Risk &amp; compliance flags — PII, financial, legal</li>
+                  <li>Live analysis progress streamed over SSE</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">🎯 Role-Based Output</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Career Pivot Plan (Individual)</li>
+                  <li>90-Day Sprint Plan (Team/Startup)</li>
+                  <li>Board-Ready executive summary (Company)</li>
+                  <li>Industry benchmark vs. sector average and AI-first top 10%</li>
+                  <li>AI-First Competitor Gap — cost of inaction</li>
+                  <li>Headcount signal — FTE freed, redeployment guidance</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">⚙️ Automation &amp; n8n Export</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Ready-to-import n8n canvas per Job Scanner result</li>
+                  <li>One column per task, real trigger→process→output chains</li>
+                  <li>Downloadable as a single JSON file</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">📊 Reporting, Sharing &amp; Retention</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Full PDF + DOCX export, full parity with the web dashboard</li>
+                  <li>Shareable public report URL with auto-generated OG image</li>
+                  <li>Visual dashboard — all analyses, aggregate stats, savings</li>
+                  <li>Email-gated full report — visitor unlock captures a lead</li>
+                  <li>Quick-win retention digest — T+3 automated follow-up email</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">🌐 Growth, SEO &amp; Discovery</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Programmatic SEO hub — per-role automation breakdown pages</li>
+                  <li>Public industry sample-report gallery</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">🌍 Localization</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Full bilingual EN/DE — landing, scanner, dashboard, reports, PDFs, emails</li>
+                  <li>3D flag toggle for the language switch</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">🔐 Security, Privacy &amp; Compliance</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Magic-link / OTP auth — no passwords, brute-force locked</li>
+                  <li>Rate limiting — DB-backed daily cap, reCAPTCHA v3, owner bypass</li>
+                  <li>GDPR/TTDSG cookie consent — explicit opt-in, Privacy + Impressum pages</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5 sm:col-span-2">
+                <h3 className="text-lg mb-3">📈 Analytics &amp; Admin Operations</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80 sm:columns-2 sm:gap-8">
+                  <li className="break-inside-avoid">Dual analytics stack — PostHog + a first-party, privacy-safe page-view tracker</li>
+                  <li className="break-inside-avoid">Admin geo dashboard — country/city traffic, 1/3/6-month windows</li>
+                  <li className="break-inside-avoid">Cold-start warming state instead of a blank error</li>
+                  <li className="break-inside-avoid">Admin dashboard — usage stats, submissions, backfill + rate-limit tools</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <br />
+
           {/* Tech Stack and Specs */}
           <section className="mb-16">
             <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
@@ -325,6 +422,14 @@ const CaseStudyWorkScanAI = () => {
                     <strong>Render</strong> deployment with keep-alive and
                     cold-start recovery logic
                   </li>
+                  <li>
+                    <strong>Tavily Search API</strong> — real job-posting
+                    research powering the Job Scanner
+                  </li>
+                  <li>
+                    <strong>Resend</strong> — transactional email for the OTP
+                    login flow and gated report unlocks
+                  </li>
                 </ul>
               </div>
               <div className="flex flex-col items-center space-y-8">
@@ -350,6 +455,54 @@ const CaseStudyWorkScanAI = () => {
                     Phased implementation roadmap
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+          <br />
+
+          {/* Analysis Intelligence */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
+              Analysis Intelligence
+            </h2>
+            <br />
+            <div className="prose prose-lg prose-invert max-w-none font-['PP_Neue_Machina']">
+              <p>
+                The scoring engine is the core of the product, so I built it
+                to resist the obvious failure mode: an AI tool that scores
+                everything suspiciously high. Each task gets a composite
+                score across four weighted sub-scores — Repeatability (30%),
+                Data Availability (30%), Error Tolerance (20%, deliberately
+                kept low for strategic tasks), and Integration (20%) — and a{" "}
+                <strong>Decision Layer</strong> that explicitly separates
+                tasks AI can fully own (<code>none</code>) from ones where AI
+                preps and a human decides (<code>partial</code>) or where
+                human judgment is required throughout (<code>full</code>).
+                Strategic work like backlog prioritization or stakeholder
+                alignment is deliberately capped below 70%, with a
+                recommendation that reads{" "}
+                <em>"AI surfaces X, human decides Y given [constraints]"</em>{" "}
+                instead of just listing tools.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 font-['PP_Neue_Machina'] text-sm">
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">Per-Task Signals</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>900-day automation countdown — Automate NOW / 12–24mo / 24–48mo / Safe 48+mo</li>
+                  <li>Human Edge Score — per-task irreplaceability</li>
+                  <li>Agentification phase — Human-in-Loop → Supervised → Full Delegation</li>
+                  <li>Orchestration blueprint — multi-agent pipeline per automatable task</li>
+                  <li>Risk &amp; compliance flags — PII, financial, legal concerns</li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">Context-Aware Report Sections</h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li><strong>Individual:</strong> Countdown Clock, Human Edge Score, Career Pivot Plan</li>
+                  <li><strong>Team/Startup:</strong> Velocity Impact, FTE equivalent, 90-Day Sprint Plan</li>
+                  <li><strong>Company/Dept:</strong> Competitor Gap, Headcount Signal, Industry Benchmark, Board-Ready Summary</li>
+                </ul>
               </div>
             </div>
           </section>
@@ -383,6 +536,18 @@ const CaseStudyWorkScanAI = () => {
                 input modes mid-upload, and honest error messages when parsing
                 genuinely fails rather than a silent hang.
               </p>
+              <br />
+              <p>
+                A related constraint shaped the whole request architecture:
+                Vercel's Hobby-tier serverless functions hard-kill at 10
+                seconds, but a full analysis takes 25-31 seconds. Rather than
+                fight that limit, I route the handful of long-running
+                endpoints (<code>/api/analyze</code>,{" "}
+                <code>/api/parse-tasks</code>, <code>/api/extract-tasks</code>
+                , and both Job Scanner steps) directly from the browser to
+                Render, bypassing the Next.js proxy entirely, while every
+                other endpoint still goes through the normal proxy path.
+              </p>
             </div>
           </section>
           <br />
@@ -415,6 +580,46 @@ const CaseStudyWorkScanAI = () => {
                 regenerate canvases for existing workflows as the library
                 improved.
               </p>
+            </div>
+          </section>
+          <br />
+
+          {/* Authentication & Security */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
+              Passwordless Auth &amp; Security Hardening
+            </h2>
+            <br />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina'] text-sm">
+              <div className="space-y-4">
+                <h3 className="text-lg mb-2">Magic-Link / OTP Login</h3>
+                <p>
+                  There are no passwords. A user enters their email, gets a
+                  4-digit OTP by transactional email in their own language,
+                  and enters it in an auto-advancing 4-box input. The code is
+                  generated with Python's <code>secrets.choice</code>{" "}
+                  (CSPRNG) rather than <code>random</code>, and verified with
+                  a constant-time <code>compare_digest</code> so timing can't
+                  leak the correct code. Five failed attempts within the
+                  15-minute TTL locks further tries until a fresh code is
+                  requested.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-lg mb-2">Rate Limiting &amp; Abuse Prevention</h3>
+                <p>
+                  Every analysis is capped per IP <em>and</em> per signed-in
+                  email, enforced at the database level rather than in
+                  memory, with reCAPTCHA v3 scoring as a second layer. The
+                  site owner and admin bypass the cap via an{" "}
+                  <code>OWNER_IP</code> allowlist that supports exact IPs,
+                  ISP-block prefixes, or a full wildcard for local dev — and
+                  every admin/cron endpoint is centralized behind one
+                  <code>require_admin</code> dependency that fails closed
+                  (rejects everything) if the secret is unset, rather than
+                  silently falling back to a default.
+                </p>
+              </div>
             </div>
           </section>
           <br />
@@ -454,6 +659,46 @@ const CaseStudyWorkScanAI = () => {
                 — a legal requirement for any product actually serving German
                 users that's easy to skip when you're moving fast, and that I
                 treated as a launch blocker rather than a nice-to-have.
+              </p>
+            </div>
+          </section>
+          <br />
+
+          {/* Shareable Reports, Export & Growth */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
+              Shareable Reports, Export &amp; Growth Loops
+            </h2>
+            <br />
+            <div className="prose prose-lg prose-invert max-w-none font-['PP_Neue_Machina']">
+              <p>
+                Every analysis gets a unique 6-character share code and a
+                public, no-auth-required report page. I built a dynamic Open
+                Graph image generator (Next.js edge <code>ImageResponse</code>
+                ) so that link, when pasted into LinkedIn, Twitter, or Slack,
+                renders as a rich card with a score-coloured glow, the
+                headline automation percentage, annual savings, and a
+                countdown urgency label — not a generic blank preview. A
+                standardised legal/accuracy disclaimer renders at the bottom
+                of every report surface, web, PDF, and DOCX alike, and both
+                exports have full section parity with the web dashboard.
+              </p>
+              <br />
+              <p>
+                Two growth mechanics build on top of that public surface:
+                visitors can unlock the full PDF and n8n export by entering
+                their email — captured as a lead the moment the request comes
+                in, before the send even attempts, so a delivery failure
+                never loses the lead — and a daily cron job finds report
+                viewers from three days earlier and emails them their single
+                highest-ROI quick win as a low-friction second touch. On the
+                acquisition side, a programmatic{" "}
+                <code>/automatable</code> hub generates a dedicated, crawlable
+                page per job role with its own task-by-task breakdown, and a
+                public <code>/templates</code> gallery showcases real sample
+                reports across industry verticals — both built for organic
+                search and for the newer reality that answer engines like
+                ChatGPT and Copilot surface content from the same index.
               </p>
             </div>
           </section>
@@ -501,12 +746,17 @@ const CaseStudyWorkScanAI = () => {
                     older analyses
                   </li>
                   <li>
-                    Growth surfaces built on top of the same data: a
-                    public sample-report gallery, a vertical-templates gallery
-                    (industry-specific sample wedges), programmatic SEO/GEO
-                    role pages, one-click LinkedIn sharing with a dynamic OG
-                    image, an email-gated full report for lead capture, and an
-                    automated "quick win of the week" T+3 retention email
+                    A dedicated <strong>user table</strong> (every registered
+                    email with workflow counts) and an{" "}
+                    <strong>all-submissions table</strong> with expandable
+                    task detail and direct links to both the authenticated
+                    results page and the public share link for each workflow
+                  </li>
+                  <li>
+                    <strong>Maintenance tools:</strong> backfill endpoints to
+                    regenerate n8n canvases or confidence scores on older
+                    workflows, and a reset-rate-limits tool to manually clear
+                    a rate-limited IP or email during support
                   </li>
                 </ul>
               </div>
@@ -552,7 +802,72 @@ const CaseStudyWorkScanAI = () => {
                 actually working and iterate on the parts of the funnel that
                 are leaking users.
               </li>
+              <li>
+                As a returning visitor, I want to log in without ever
+                choosing a password, so getting back into my dashboard is one
+                email and a 4-digit code, not a forgotten-password flow.
+              </li>
             </ul>
+          </section>
+          <br />
+
+          {/* Real Numbers from Production */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-6">
+              Real Numbers From Production
+            </h2>
+            <br />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina'] text-sm">
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">
+                  Example: n8n Product Manager (Company context, 27 tasks)
+                </h3>
+                <p className="mb-3">
+                  <strong>62%</strong> automation score ·{" "}
+                  <strong>€23,855/yr</strong> saved ·{" "}
+                  <strong>795 hours</strong> reclaimed ·{" "}
+                  <strong>0.4 FTE</strong> equivalent
+                </p>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>
+                    "Triage Slack messages" — 89% AI-ready, Automate NOW,
+                    Phase 2: Supervised
+                  </li>
+                  <li>
+                    "Prioritise product backlog" — 56% AI-ready, Decision
+                    Layer: partial
+                  </li>
+                  <li>
+                    "Attend engineering standup" — 35% AI-ready, 48+ months,
+                    not automatable
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-5">
+                <h3 className="text-lg mb-3">
+                  Real Sample Reports, Three Professions
+                </h3>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>
+                    <strong>HR &amp; Recruiting</strong> — 82% score ·
+                    €7,426/yr saved · 149 hours reclaimed
+                  </li>
+                  <li>
+                    <strong>Legal &amp; Compliance</strong> — 79% score ·
+                    €10,540/yr saved · 210 hours reclaimed
+                  </li>
+                  <li>
+                    <strong>Marketing &amp; Sales</strong> — 69% score ·
+                    €12,790/yr saved · 256 hours reclaimed (26-page deep-dive
+                    with career pivot analysis)
+                  </li>
+                </ul>
+                <p className="mt-3 text-white/60">
+                  All three are genuine, full-length production PDF exports —
+                  nothing trimmed for the demo.
+                </p>
+              </div>
+            </div>
           </section>
           <br />
 
@@ -746,6 +1061,66 @@ const CaseStudyWorkScanAI = () => {
                   rather than after a failed request.
                 </p>
               </div>
+            </div>
+          </section>
+          <br />
+          <br />
+
+          {/* Additional Engineering Lessons */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-['PP_Object_Sans'] text-center mb-2">
+              More Lessons From Production
+            </h2>
+            <p className="text-center text-sm text-gray-400 mb-8 font-['PP_Neue_Machina']">
+              Shorter, real fixes that shaped how the codebase is built today.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-['PP_Neue_Machina'] text-sm text-white/80">
+              <p>
+                <strong>One Claude call per analysis, not N:</strong> tasks
+                were originally scored with a separate sequential API call
+                each — batching every task into a single request per analysis
+                fixed both latency and Render free-tier timeouts.
+              </p>
+              <p>
+                <strong>Infinite Turbopack rebuild loop:</strong> a local
+                SQLite file living inside the project directory triggered the
+                file watcher on every write — moved the DB path outside the
+                project entirely.
+              </p>
+              <p>
+                <strong>Turso 400 on every INSERT:</strong> SQLAlchemy's bare
+                COMMIT didn't match what Turso's HTTP pipeline API expected —
+                fixed by buffering the whole transaction and flushing it as
+                one atomic batch.
+              </p>
+              <p>
+                <strong>Frontend crashed on plain-text errors:</strong> calling
+                <code>.json()</code> on a non-JSON error response threw — a
+                small <code>safeJson()</code> helper reads as text first and
+                falls back gracefully.
+              </p>
+              <p>
+                <strong>Vercel proxy 503s on POST:</strong> the proxy forwarded
+                the original <code>content-length</code> header, which no
+                longer matched the re-buffered body — stripped and
+                recalculated it from the actual buffer.
+              </p>
+              <p>
+                <strong>CORS preflight failures:</strong> FastAPI's CORS
+                middleware wasn't handling OPTIONS before routing kicked in —
+                added an explicit catch-all OPTIONS handler.
+              </p>
+              <p>
+                <strong>PDF task numbers rendered vertically:</strong>{" "}
+                two-digit task numbers (10-27) wrapped onto two lines in a
+                too-narrow column — widened it and reduced the font size.
+              </p>
+              <p>
+                <strong>Career Pivot section silently disappeared:</strong> it
+                was wrapped in a truthy-check that skipped rendering whenever
+                the AI didn't return pivot data — now always renders with a
+                sensible fallback.
+              </p>
             </div>
           </section>
           <br />
