@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d6c1a9fc.css",
-    "main.js": "/static/js/main.6edc405e.js",
+    "main.js": "/static/js/main.a7960377.js",
     "static/js/453.5721f686.chunk.js": "/static/js/453.5721f686.chunk.js",
     "static/media/hobbies5.jpg": "/static/media/hobbies5.fde514b339bea34e4930.jpg",
     "static/media/project-10.jpg": "/static/media/project-10.871642095d4ec45e06f2.jpg",
@@ -37,10 +37,10 @@
     "static/media/jasmin-catering-10.jpg": "/static/media/jasmin-catering-10.c177164b2a6bcdb92335.jpg",
     "static/media/jasmin-catering-14.jpg": "/static/media/jasmin-catering-14.a93356a66cc343f3671b.jpg",
     "static/media/nextchat3.jpg": "/static/media/nextchat3.7e780aea187028afffb7.jpg",
+    "static/media/profile500x500.jpg": "/static/media/profile500x500.73306326181ef27d04fc.jpg",
     "static/media/samantha7.jpg": "/static/media/samantha7.672ca670fd7e07253793.jpg",
     "static/media/jasmin-catering-1.jpg": "/static/media/jasmin-catering-1.2f28bb633aada620f717.jpg",
     "static/media/mymdb3.jpg": "/static/media/mymdb3.d96a15a8f2c1129ff148.jpg",
-    "static/media/profile500x500.jpg": "/static/media/profile500x500.928d87c47fa13eac65b7.jpg",
     "static/media/project-1.jpg": "/static/media/project-1.c33f68282177adfafa12.jpg",
     "static/media/mymdb10.jpg": "/static/media/mymdb10.f742b09271034a2303c8.jpg",
     "static/media/mymdb1.png": "/static/media/mymdb1.d36749751491921f77a4.png",
@@ -88,11 +88,11 @@
     "static/media/nextchat11.jpg": "/static/media/nextchat11.7aa751f6b225714c7eba.jpg",
     "index.html": "/index.html",
     "main.d6c1a9fc.css.map": "/static/css/main.d6c1a9fc.css.map",
-    "main.6edc405e.js.map": "/static/js/main.6edc405e.js.map",
+    "main.a7960377.js.map": "/static/js/main.a7960377.js.map",
     "453.5721f686.chunk.js.map": "/static/js/453.5721f686.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6c1a9fc.css",
-    "static/js/main.6edc405e.js"
+    "static/js/main.a7960377.js"
   ]
 }
