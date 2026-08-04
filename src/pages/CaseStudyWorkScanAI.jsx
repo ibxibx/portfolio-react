@@ -81,7 +81,7 @@ const CaseStudyWorkScanAI = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-lg">
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-5xl mb-12 font-light text-center font-['PP_Object_Sans']"
             initial={{ opacity: 0, y: -20 }}
@@ -278,7 +278,7 @@ const CaseStudyWorkScanAI = () => {
             <p className="text-center text-sm text-gray-400 mb-8 font-['PP_Neue_Machina']">
               35+ shipped features, grouped by function.
             </p>
-            <div className="flex flex-col gap-4 font-['PP_Neue_Machina'] text-sm">
+            <div className="flex flex-col gap-4 font-['PP_Neue_Machina']">
               <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">📥 Input &amp; Data Capture</h3>
                 <ul className="list-disc list-inside space-y-1.5 text-white/80">
@@ -349,7 +349,7 @@ const CaseStudyWorkScanAI = () => {
               <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">🔐 Security, Privacy &amp; Compliance</h3>
                 <ul className="list-disc list-inside space-y-1.5 text-white/80">
-                  <li>Magic-link / OTP auth — no passwords, brute-force locked</li>
+                  <li>(tested, stored, planned) Magic-link / OTP auth — no passwords, brute-force locked</li>
                   <li>Rate limiting — DB-backed daily cap, reCAPTCHA v3, owner bypass</li>
                   <li>GDPR/TTDSG cookie consent — explicit opt-in, Privacy + Impressum pages</li>
                 </ul>
@@ -485,7 +485,7 @@ const CaseStudyWorkScanAI = () => {
                 instead of just listing tools.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 font-['PP_Neue_Machina'] text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 font-['PP_Neue_Machina']">
               <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">Per-Task Signals</h3>
                 <ul className="list-disc list-inside space-y-1.5 text-white/80">
@@ -590,11 +590,23 @@ const CaseStudyWorkScanAI = () => {
               Passwordless Auth &amp; Security Hardening
             </h2>
             <br />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina'] text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina']">
               <div className="space-y-4">
-                <h3 className="text-lg mb-2">Magic-Link / OTP Login</h3>
+                <h3 className="text-lg mb-2">
+                  <span className="text-white/50">
+                    (tested, stored, planned)
+                  </span>{" "}
+                  Magic-Link / OTP Login
+                </h3>
                 <p>
-                  There are no passwords. A user enters their email, gets a
+                  Not yet the live authentication method — the flow is fully
+                  built and tested, and generated codes are stored, but it's
+                  still planned rather than wired in as the production login
+                  gate. As designed: there are no passwords. A user enters
+                  their email, gets a{" "}
+                  <span className="text-white/50">
+                    (tested, stored, planned)
+                  </span>{" "}
                   4-digit OTP by transactional email in their own language,
                   and enters it in an auto-advancing 4-box input. The code is
                   generated with Python's <code>secrets.choice</code>{" "}
@@ -805,7 +817,11 @@ const CaseStudyWorkScanAI = () => {
               <li>
                 As a returning visitor, I want to log in without ever
                 choosing a password, so getting back into my dashboard is one
-                email and a 4-digit code, not a forgotten-password flow.
+                email and a{" "}
+                <span className="text-white/50">
+                  (tested, stored, planned)
+                </span>{" "}
+                4-digit code, not a forgotten-password flow.
               </li>
             </ul>
           </section>
@@ -817,7 +833,7 @@ const CaseStudyWorkScanAI = () => {
               Real Numbers From Production
             </h2>
             <br />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina'] text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-['PP_Neue_Machina']">
               <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">
                   Example: n8n Product Manager (Company context, 27 tasks)
@@ -950,7 +966,7 @@ const CaseStudyWorkScanAI = () => {
             <div className="space-y-8 font-['PP_Neue_Machina']">
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 1: An Unreliable Third-Party Automation API
+                  <strong>Challenge 1:</strong> An Unreliable Third-Party Automation API
                 </h3>
                 <p>
                   n8n's public template search returned mismatched or broken
@@ -969,7 +985,7 @@ const CaseStudyWorkScanAI = () => {
 
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 2: Silent Failures on Render's Cold Starts
+                  <strong>Challenge 2:</strong> Silent Failures on Render's Cold Starts
                 </h3>
                 <p>
                   The free-tier backend spinning down after idle time meant
@@ -988,7 +1004,7 @@ const CaseStudyWorkScanAI = () => {
 
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 3: A Detached-Session Write Bug in Turso
+                  <strong>Challenge 3:</strong> A Detached-Session Write Bug in Turso
                 </h3>
                 <p>
                   Writing the generated n8n workflow JSON back to the database
@@ -1006,7 +1022,7 @@ const CaseStudyWorkScanAI = () => {
 
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 4: An Invalid Model String Taking Down Extraction
+                  <strong>Challenge 4:</strong> An Invalid Model String Taking Down Extraction
                 </h3>
                 <p>
                   A typo'd Claude model identifier in the extraction routes
@@ -1025,7 +1041,7 @@ const CaseStudyWorkScanAI = () => {
 
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 5: Secrets and Bypasses Living in Source Control
+                  <strong>Challenge 5:</strong> Secrets and Bypasses Living in Source Control
                 </h3>
                 <p>
                   An admin secret and an owner-IP quota bypass had been
@@ -1044,8 +1060,8 @@ const CaseStudyWorkScanAI = () => {
 
               <div>
                 <h3 className="text-xl mb-4">
-                  Challenge 6: A Turbopack Tree-Shaking Bug Silently Breaking a
-                  Quota Check
+                  <strong>Challenge 6:</strong> A Turbopack Tree-Shaking Bug
+                  Silently Breaking a Quota Check
                 </h3>
                 <p>
                   A quota-check function scoped inside a component was being
@@ -1074,7 +1090,7 @@ const CaseStudyWorkScanAI = () => {
             <p className="text-center text-sm text-gray-400 mb-8 font-['PP_Neue_Machina']">
               Shorter, real fixes that shaped how the codebase is built today.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-['PP_Neue_Machina'] text-sm text-white/80">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-['PP_Neue_Machina'] text-white/80">
               <p>
                 <strong>One Claude call per analysis, not N:</strong> tasks
                 were originally scored with a separate sequential API call

@@ -83,7 +83,7 @@ const CaseStudyNextChat = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="h-full overflow-y-auto scrollbar-thin">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-lg">
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-5xl mb-12 font-light text-center font-['PP_Object_Sans']"
             initial={{ opacity: 0, y: -20 }}
