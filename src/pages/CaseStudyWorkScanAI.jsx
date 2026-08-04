@@ -278,7 +278,7 @@ const CaseStudyWorkScanAI = () => {
             <p className="text-center text-sm text-gray-400 mb-8 font-['PP_Neue_Machina']">
               35+ shipped features, grouped by function.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 font-['PP_Neue_Machina'] text-sm">
+            <div className="flex flex-col gap-4 font-['PP_Neue_Machina'] text-sm">
               <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">📥 Input &amp; Data Capture</h3>
                 <ul className="list-disc list-inside space-y-1.5 text-white/80">
@@ -354,13 +354,13 @@ const CaseStudyWorkScanAI = () => {
                   <li>GDPR/TTDSG cookie consent — explicit opt-in, Privacy + Impressum pages</li>
                 </ul>
               </div>
-              <div className="bg-white/5 rounded-lg p-5 sm:col-span-2">
+              <div className="bg-white/5 rounded-lg p-5">
                 <h3 className="text-lg mb-3">📈 Analytics &amp; Admin Operations</h3>
-                <ul className="list-disc list-inside space-y-1.5 text-white/80 sm:columns-2 sm:gap-8">
-                  <li className="break-inside-avoid">Dual analytics stack — PostHog + a first-party, privacy-safe page-view tracker</li>
-                  <li className="break-inside-avoid">Admin geo dashboard — country/city traffic, 1/3/6-month windows</li>
-                  <li className="break-inside-avoid">Cold-start warming state instead of a blank error</li>
-                  <li className="break-inside-avoid">Admin dashboard — usage stats, submissions, backfill + rate-limit tools</li>
+                <ul className="list-disc list-inside space-y-1.5 text-white/80">
+                  <li>Dual analytics stack — PostHog + a first-party, privacy-safe page-view tracker</li>
+                  <li>Admin geo dashboard — country/city traffic, 1/3/6-month windows</li>
+                  <li>Cold-start warming state instead of a blank error</li>
+                  <li>Admin dashboard — usage stats, submissions, backfill + rate-limit tools</li>
                 </ul>
               </div>
             </div>

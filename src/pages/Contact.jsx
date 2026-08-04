@@ -101,7 +101,9 @@ const Contact = () => {
             </div>
 
             <div className="mb-8 pt-8 border-t border-white/10">
-              <h2 className="text-2xl font-mono mb-2">book-a-call</h2>
+              <h2 className="text-2xl font-mono mb-2 text-primary">
+                book-a-call
+              </h2>
               <p className="text-sm font-neue-machina">
                 Prefer to talk it through? Book a free 30-minute discovery call
                 straight into my calendar — pick a slot that suits you and
