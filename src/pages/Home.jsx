@@ -540,7 +540,7 @@ const Home = () => {
                       companies that create innovative solutions that have a
                       meaningful impact on people's lives. I particularly like
                       AI-, bio-, fin-tech, auto-motive, health-, energy-,
-                      robotics-, media-tech and related fields. If youâ€™re
+                      robotics-, media-tech and related fields. If you're
                       interested in working together or learning more about what
                       I do, feel free to message me or use the contact form
                       below.
