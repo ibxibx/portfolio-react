@@ -101,9 +101,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-8 pt-8 border-t border-white/10">
-              <h2 className="text-2xl font-mono mb-2 text-primary">
-                book-a-call
-              </h2>
+              <h2 className="text-2xl font-mono mb-2">book-a-call</h2>
               <p className="text-sm font-neue-machina">
                 Prefer to talk it through? Book a free 30-minute discovery call
                 straight into my calendar — pick a slot that suits you and
@@ -130,7 +128,7 @@ const Contact = () => {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-6 px-6 py-2 font-mono bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
+                className="inline-block mt-6 px-6 py-2 font-mono text-primary bg-black/50 border border-white/10 rounded hover:bg-white/5 transition-colors duration-200"
               >
                 schedule a 30-min call →
               </a>
