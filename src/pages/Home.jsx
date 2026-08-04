@@ -507,7 +507,7 @@ const Home = () => {
                       The intersection of creativity and technology led me to
                       co-found three startups, where I managed and marketed
                       diverse real estate portfolios across Europe and the USA.
-                      Working closely with AI Product Engineers and immersing myself in
+                      Working closely with software engineers and immersing myself in
                       the tech ecosystem sparked a deeper fascination with
                       software development.
                     </p>
