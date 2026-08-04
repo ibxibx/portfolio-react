@@ -625,6 +625,11 @@ const Home = () => {
                   <li className="break-inside-avoid mb-3">Node.js</li>
                   <li className="break-inside-avoid mb-3">Angular</li>
                   <li className="break-inside-avoid mb-3">Python</li>
+                  <li className="break-inside-avoid mb-3">FastAPI</li>
+                  <li className="break-inside-avoid mb-3">Docker</li>
+                  <li className="break-inside-avoid mb-3">
+                    AI Agents &amp; LLM Systems
+                  </li>
                   <li className="break-inside-avoid mb-3">API</li>
                   <li className="break-inside-avoid mb-3">
                     HTML and CSS / SCSS
