@@ -186,11 +186,21 @@ const About = () => {
                     <div className="w-3 h-3 rounded-full bg-white/20" />
                   </div>
                 </div>
-                <img
-                  src={profile500x500}
-                  alt="Ian Baumeister"
-                  className="w-full h-auto rounded-lg object-cover"
-                />
+                <div
+                  className="cursor-pointer overflow-hidden rounded-lg"
+                  onClick={() =>
+                    setSelectedImage({
+                      src: profile500x500,
+                      alt: "Ian Baumeister",
+                    })
+                  }
+                >
+                  <img
+                    src={profile500x500}
+                    alt="Ian Baumeister"
+                    className="w-full h-auto rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </motion.div>
 
               {/* Skills Box */}
@@ -382,7 +392,8 @@ const About = () => {
           <div className="relative max-w-full max-h-full">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-4 -right-4 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+              className="absolute top-2 right-2 text-white hover:text-gray-300 p-2 rounded-full bg-black bg-opacity-70 hover:bg-opacity-90 transition-colors"
+              aria-label="Close modal"
             >
               <X className="text-white" size={24} />
             </button>
