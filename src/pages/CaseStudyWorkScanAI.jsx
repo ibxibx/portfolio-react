@@ -98,7 +98,7 @@ const CaseStudyWorkScanAI = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="w-64 mb-8"
+                className="w-[28rem] max-w-full mb-8"
               >
                 <img
                   src={logoImg}
@@ -163,8 +163,9 @@ const CaseStudyWorkScanAI = () => {
             <br />
             <div className="prose prose-lg prose-invert max-w-none font-['PP_Neue_Machina']">
               <p>
-                WorkScanAI is a full-stack SaaS platform I designed, built, and
-                ship solo: it analyzes a person's or team's day-to-day
+                WorkScanAI is a full-stack SaaS platform I designed, am
+                continuously building and shipping solo: it analyzes a person's
+                or team's day-to-day
                 workflows and tells them, task by task, what an AI agent can
                 automate today, what it can't, and what that's actually worth
                 in euros and hours per year. A user submits their tasks by
