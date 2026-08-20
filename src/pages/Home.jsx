@@ -843,16 +843,16 @@ const Home = () => {
                     <span>click to send a message</span>
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                   </motion.div>
-
-                  <motion.div
-                    className="absolute inset-0 border border-white/10 rounded-lg"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 }}
-                  />
-
-                  <motion.div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80]/0 via-[#4ADE80]/5 to-[#4ADE80]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
+
+                <motion.div
+                  className="absolute inset-0 border border-white/10 rounded-lg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                />
+
+                <motion.div className="absolute inset-0 bg-gradient-to-r from-[#4ADE80]/0 via-[#4ADE80]/5 to-[#4ADE80]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
             </Link>
           </div>
